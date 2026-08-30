@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CALM - Component Ablation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=IBM+Plex+Mono:wght@450&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#505f76",
+                      "error-container": "#ffdad6",
+                      "tertiary-container": "#bc4800",
+                      "tertiary-fixed": "#ffdbcd",
+                      "inverse-primary": "#b4c5ff",
+                      "on-tertiary-fixed": "#360f00",
+                      "on-primary-container": "#eeefff",
+                      "on-primary-fixed": "#00174b",
+                      "surface-tint": "#0053db",
+                      "primary": "#004ac6",
+                      "primary-container": "#2563eb",
+                      "on-error-container": "#93000a",
+                      "on-secondary-container": "#54647a",
+                      "on-tertiary": "#ffffff",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "on-surface": "#191c1e",
+                      "primary-fixed": "#dbe1ff",
+                      "tertiary": "#943700",
+                      "secondary-container": "#d0e1fb",
+                      "secondary-fixed": "#d3e4fe",
+                      "inverse-surface": "#2e3132",
+                      "error": "#ba1a1a",
+                      "on-secondary-fixed": "#0b1c30",
+                      "surface-dim": "#d9dadc",
+                      "inverse-on-surface": "#f0f1f3",
+                      "on-tertiary-container": "#ffede6",
+                      "on-tertiary-fixed-variant": "#7d2d00",
+                      "surface-container-low": "#f2f4f6",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb596",
+                      "surface": "#f8f9fb",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed-dim": "#b7c8e1",
+                      "on-primary": "#ffffff",
+                      "on-surface-variant": "#434655",
+                      "surface-container-highest": "#e1e2e4",
+                      "outline": "#737686",
+                      "background": "#f8f9fb",
+                      "surface-variant": "#e1e2e4",
+                      "surface-bright": "#f8f9fb",
+                      "surface-container": "#edeef0",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "on-secondary": "#ffffff",
+                      "on-secondary-fixed-variant": "#38485d",
+                      "surface-container-high": "#e7e8ea",
+                      "outline-variant": "#c3c6d7",
+                      "on-background": "#191c1e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "container-max": "1440px",
+                      "xs": "4px",
+                      "base": "4px",
+                      "md": "16px",
+                      "sm": "8px",
+                      "lg": "24px",
+                      "xl": "48px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "h1": [
+                              "Inter"
+                      ],
+                      "display": [
+                              "Inter"
+                      ],
+                      "code-md": [
+                              "IBM Plex Mono"
+                      ],
+                      "code-sm": [
+                              "IBM Plex Mono"
+                      ],
+                      "h2": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "11px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "h1": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "code-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "450"
+                              }
+                      ],
+                      "code-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "450"
+                              }
+                      ],
+                      "h2": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-sm text-body-sm min-h-screen antialiased flex">
+<!-- SideNavBar -->
+<nav class="w-[220px] h-screen fixed left-0 top-0 bg-surface-container-lowest border-r border-outline-variant flex flex-col overflow-y-auto z-50">
+<div class="p-lg flex items-center gap-sm border-b border-outline-variant">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]">account_circle</span>
+</div>
+<div>
+<h1 class="font-h1 text-h1 text-primary">CALM</h1>
+<p class="font-body-sm text-body-sm tracking-tight text-secondary">Systems Analytics</p>
+</div>
+</div>
+<div class="flex-1 py-md flex flex-col gap-xs px-sm">
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Overview</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span>Lifecycle</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+<span>Prediction</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="memory">memory</span>
+<span>Memory</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="speed">speed</span>
+<span>Benchmarks</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-primary font-bold bg-surface-container-low opacity-80 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="science">science</span>
+<span>Ablation</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+<span>Agent Memory</span>
+</a>
+</div>
+<div class="p-md border-t border-outline-variant">
+<button class="w-full bg-primary text-on-primary font-body-sm text-body-sm py-sm rounded-lg hover:opacity-90 transition-opacity">
+                Simulation Toggle
+            </button>
+<a class="mt-sm flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="flex-1 ml-[220px] flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="h-[64px] fixed top-0 right-0 left-[220px] bg-surface-container-lowest border-b border-outline-variant flex justify-between items-center px-lg w-full z-40">
+<div class="flex items-center gap-sm">
+<h2 class="font-h2 text-h2 text-primary tracking-tight">Component Ablation</h2>
+</div>
+<div class="flex items-center gap-md">
+<div class="flex items-center gap-sm">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+<button class="px-md py-[6px] border border-outline-variant rounded-lg text-primary font-body-sm hover:bg-surface-container-low transition-colors">
+                    Mode Selector
+                </button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-1 mt-[64px] p-lg max-w-container-max mx-auto w-full">
+<!-- Header Section -->
+<div class="mb-lg">
+<h1 class="font-display text-display text-on-surface mb-xs">Component Ablation</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Measure the effect of individual CALM components.</p>
+</div>
+<!-- Dashboard Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-lg">
+<!-- Ablation Impact Chart -->
+<div class="xl:col-span-2 bg-surface-container-lowest border border-outline-variant rounded-lg p-md">
+<div class="flex justify-between items-center mb-md pb-sm border-b border-outline-variant">
+<h3 class="font-h2 text-h2 text-on-surface">Ablation Impact (Delta vs Full CALM)</h3>
+<span class="font-label-caps text-label-caps px-sm py-xs bg-surface-container-high rounded-full text-secondary">METRIC: HIT RATE</span>
+</div>
+<div class="space-y-md mt-lg">
+<!-- Chart Bar 1 -->
+<div>
+<div class="flex justify-between font-code-sm text-code-sm text-secondary mb-xs">
+<span>w/o Prediction</span>
+<span class="text-error">-12.4%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full w-[87.6%]"></div>
+<div class="bg-error-container h-full w-[12.4%]"></div>
+</div>
+</div>
+<!-- Chart Bar 2 -->
+<div>
+<div class="flex justify-between font-code-sm text-code-sm text-secondary mb-xs">
+<span>w/o Burst Detection</span>
+<span class="text-error">-8.2%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full w-[91.8%]"></div>
+<div class="bg-error-container h-full w-[8.2%]"></div>
+</div>
+</div>
+<!-- Chart Bar 3 -->
+<div>
+<div class="flex justify-between font-code-sm text-code-sm text-secondary mb-xs">
+<span>w/o Hysteresis</span>
+<span class="text-error">-4.1%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full w-[95.9%]"></div>
+<div class="bg-error-container h-full w-[4.1%]"></div>
+</div>
+</div>
+<!-- Chart Bar 4 -->
+<div>
+<div class="flex justify-between font-code-sm text-code-sm text-secondary mb-xs">
+<span>Full CALM (Baseline)</span>
+<span class="text-secondary">0.0%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full w-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interpretation Panel -->
+<div class="bg-surface-container-low rounded-lg p-md border border-outline-variant flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-sm mb-sm text-primary">
+<span class="material-symbols-outlined">lightbulb</span>
+<h3 class="font-h2 text-h2">Key Takeaways</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                             Removing the <span class="font-code-sm bg-surface-container-lowest px-1 py-0.5 rounded border border-outline-variant">Prediction</span> component yields the most significant performance degradation across all tested workloads.
+                         </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mt-sm">
+                             Burst Detection provides critical stabilization during high-throughput phases, reducing thrashing by over 15%.
+                         </p>
+</div>
+</div>
+<!-- Detailed Results Table -->
+<div class="xl:col-span-3 bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden">
+<div class="p-md border-b border-outline-variant">
+<h3 class="font-h2 text-h2 text-on-surface">Detailed Results</h3>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest font-label-caps text-label-caps text-secondary border-b border-outline-variant">
+<th class="p-sm font-semibold pl-md">Variant</th>
+<th class="p-sm font-semibold">Hit Rate</th>
+<th class="p-sm font-semibold">Latency (ms)</th>
+<th class="p-sm font-semibold">Memory (MB)</th>
+<th class="p-sm font-semibold">Thrashing</th>
+<th class="p-sm font-semibold pr-md">Delta (Hit Rate)</th>
+</tr>
+</thead>
+<tbody class="font-code-sm text-code-sm">
+<tr class="border-b border-outline-variant hover:bg-surface-container-lowest transition-colors">
+<td class="p-sm pl-md text-on-surface">Full CALM</td>
+<td class="p-sm text-primary">94.2%</td>
+<td class="p-sm">1.2</td>
+<td class="p-sm">256</td>
+<td class="p-sm">Low</td>
+<td class="p-sm pr-md text-secondary">-</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container-lowest transition-colors">
+<td class="p-sm pl-md text-on-surface">w/o Prediction</td>
+<td class="p-sm">81.8%</td>
+<td class="p-sm text-error">3.4</td>
+<td class="p-sm">240</td>
+<td class="p-sm text-error">High</td>
+<td class="p-sm pr-md text-error">-12.4%</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container-lowest transition-colors">
+<td class="p-sm pl-md text-on-surface">w/o Burst Detect</td>
+<td class="p-sm">86.0%</td>
+<td class="p-sm">2.1</td>
+<td class="p-sm">248</td>
+<td class="p-sm text-error">Med</td>
+<td class="p-sm pr-md text-error">-8.2%</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="p-sm pl-md text-on-surface">w/o Hysteresis</td>
+<td class="p-sm">90.1%</td>
+<td class="p-sm">1.5</td>
+<td class="p-sm">250</td>
+<td class="p-sm">Low</td>
+<td class="p-sm pr-md text-error">-4.1%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

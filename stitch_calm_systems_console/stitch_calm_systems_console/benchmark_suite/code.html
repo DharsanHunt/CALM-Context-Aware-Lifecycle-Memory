@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CALM - Benchmark Suite</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=IBM+Plex+Mono:wght@450&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#505f76",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#bc4800",
+                    "tertiary-fixed": "#ffdbcd",
+                    "inverse-primary": "#b4c5ff",
+                    "on-tertiary-fixed": "#360f00",
+                    "on-primary-container": "#eeefff",
+                    "on-primary-fixed": "#00174b",
+                    "surface-tint": "#0053db",
+                    "primary": "#004ac6",
+                    "primary-container": "#2563eb",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#54647a",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-surface": "#191c1e",
+                    "primary-fixed": "#dbe1ff",
+                    "tertiary": "#943700",
+                    "secondary-container": "#d0e1fb",
+                    "secondary-fixed": "#d3e4fe",
+                    "inverse-surface": "#2e3132",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#0b1c30",
+                    "surface-dim": "#d9dadc",
+                    "inverse-on-surface": "#f0f1f3",
+                    "on-tertiary-container": "#ffede6",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "surface-container-low": "#f2f4f6",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "surface": "#f8f9fb",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#b7c8e1",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#434655",
+                    "surface-container-highest": "#e1e2e4",
+                    "outline": "#737686",
+                    "background": "#f8f9fb",
+                    "surface-variant": "#e1e2e4",
+                    "surface-bright": "#f8f9fb",
+                    "surface-container": "#edeef0",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#38485d",
+                    "surface-container-high": "#e7e8ea",
+                    "outline-variant": "#c3c6d7",
+                    "on-background": "#191c1e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "16px",
+                    "container-max": "1440px",
+                    "xs": "4px",
+                    "base": "4px",
+                    "md": "16px",
+                    "sm": "8px",
+                    "lg": "24px",
+                    "xl": "48px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "h1": ["Inter"],
+                    "display": ["Inter"],
+                    "code-md": ["IBM Plex Mono"],
+                    "code-sm": ["IBM Plex Mono"],
+                    "h2": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["11px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "h1": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "code-md": ["14px", {"lineHeight": "20px", "fontWeight": "450"}],
+                    "code-sm": ["12px", {"lineHeight": "16px", "fontWeight": "450"}],
+                    "h2": ["18px", {"lineHeight": "28px", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            gap: 16px;
+        }
+        
+        .card-base {
+            background-color: theme('colors.surface-container-lowest');
+            border: 1px solid theme('colors.surface-variant');
+            border-radius: theme('borderRadius.xl');
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-sm antialiased h-screen flex overflow-hidden">
+<!-- SideNavBar -->
+<nav class="w-[220px] h-screen fixed left-0 top-0 border-r border-outline-variant bg-surface-container-lowest flex flex-col z-50">
+<div class="p-lg">
+<h1 class="font-h1 text-h1 text-primary">CALM</h1>
+<p class="font-body-sm text-body-sm text-secondary tracking-tight">Systems Analytics</p>
+</div>
+<div class="flex-1 overflow-y-auto px-sm py-md flex flex-col gap-xs">
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="dashboard">dashboard</span>
+<span>Overview</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="analytics">analytics</span>
+<span>Lifecycle</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="query_stats">query_stats</span>
+<span>Prediction</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="memory">memory</span>
+<span>Memory</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-primary font-bold bg-surface-container-low transition-all duration-200 opacity-80" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="speed" data-weight="fill" style="font-variation-settings: 'FILL' 1;">speed</span>
+<span>Benchmarks</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="science">science</span>
+<span>Ablation</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="smart_toy">smart_toy</span>
+<span>Agent Memory</span>
+</a>
+</div>
+<div class="p-md mt-auto">
+<button class="w-full py-sm bg-primary text-on-primary rounded-lg font-body-sm font-medium hover:bg-primary-container transition-colors">
+                Simulation Toggle
+            </button>
+<div class="mt-sm pt-sm border-t border-outline-variant flex flex-col gap-xs">
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</div>
+</div>
+</nav>
+<!-- TopAppBar -->
+<header class="h-[64px] fixed top-0 right-0 left-[220px] bg-surface-container-lowest border-b border-outline-variant flex justify-between items-center px-lg z-40">
+<div class="flex items-center">
+<span class="font-h2 text-h2 text-primary font-bold hidden">CALM</span> <!-- Hidden as per responsive rules, but kept for semantic value if needed -->
+</div>
+<div class="flex items-center gap-md">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-200 p-sm rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-200 p-sm rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="h-6 w-[1px] bg-outline-variant mx-sm"></div>
+<button class="flex items-center gap-sm bg-surface-container-low px-md py-sm rounded-lg border border-outline-variant hover:border-primary transition-colors text-body-sm font-medium">
+                Mode Selector
+                <span class="material-symbols-outlined text-[18px]" data-icon="arrow_drop_down">arrow_drop_down</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-[220px] mt-[64px] p-lg flex-1 overflow-y-auto h-[calc(100vh-64px)] w-[calc(100vw-220px)]">
+<!-- Header -->
+<div class="mb-lg">
+<h2 class="font-display text-display text-on-surface mb-xs">Benchmark Suite</h2>
+<p class="font-body-lg text-body-lg text-secondary">Compare CALM against standard memory-management strategies.</p>
+</div>
+<!-- Toolbar -->
+<div class="card-base p-sm mb-lg flex items-center justify-between bg-surface-container-low border-none rounded-xl">
+<div class="flex gap-sm">
+<select class="bg-surface-container-lowest border border-outline-variant text-body-sm rounded-lg px-md py-sm focus:border-primary focus:ring-0 outline-none w-40">
+<option>Workload: Mixed</option>
+<option>Workload: Bursty</option>
+<option>Workload: Sequential</option>
+</select>
+<select class="bg-surface-container-lowest border border-outline-variant text-body-sm rounded-lg px-md py-sm focus:border-primary focus:ring-0 outline-none w-32">
+<option>Budget: 512MB</option>
+<option>Budget: 1GB</option>
+<option>Budget: 2GB</option>
+</select>
+<select class="bg-surface-container-lowest border border-outline-variant text-body-sm rounded-lg px-md py-sm focus:border-primary focus:ring-0 outline-none w-32">
+<option>Runs: 100</option>
+<option>Runs: 500</option>
+</select>
+</div>
+<div class="flex items-center gap-sm">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg flex items-center px-sm">
+<span class="material-symbols-outlined text-secondary text-[16px] mr-xs" data-icon="shuffle">shuffle</span>
+<input class="border-none bg-transparent text-body-sm py-sm focus:ring-0 outline-none w-24 text-secondary" type="text" value="Seed: 42"/>
+</div>
+<button class="bg-primary text-on-primary px-md py-sm rounded-lg font-medium hover:bg-primary-container transition-colors flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]" data-icon="play_arrow">play_arrow</span>
+                    Run Suite
+                </button>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="bento-grid">
+<!-- Strategy Comparison Table -->
+<div class="col-span-12 lg:col-span-4 card-base flex flex-col">
+<div class="px-md py-sm border-b border-outline-variant bg-surface-container-low flex justify-between items-center">
+<h3 class="font-label-caps text-label-caps text-secondary uppercase">Strategy Comparison</h3>
+<span class="material-symbols-outlined text-secondary text-[18px]" data-icon="sort">sort</span>
+</div>
+<div class="p-sm flex-1 overflow-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline-variant">
+<th class="font-label-caps text-label-caps text-secondary pb-xs px-sm font-medium">Rank</th>
+<th class="font-label-caps text-label-caps text-secondary pb-xs px-sm font-medium">Strategy</th>
+<th class="font-label-caps text-label-caps text-secondary pb-xs px-sm text-right font-medium">Score</th>
+</tr>
+</thead>
+<tbody class="font-code-sm text-code-sm">
+<tr class="border-b border-surface-variant hover:bg-surface-container-low transition-colors">
+<td class="py-sm px-sm text-secondary">06</td>
+<td class="py-sm px-sm">Random</td>
+<td class="py-sm px-sm text-right text-error">42.1</td>
+</tr>
+<tr class="border-b border-surface-variant hover:bg-surface-container-low transition-colors">
+<td class="py-sm px-sm text-secondary">05</td>
+<td class="py-sm px-sm">LRU</td>
+<td class="py-sm px-sm text-right">65.4</td>
+</tr>
+<tr class="border-b border-surface-variant hover:bg-surface-container-low transition-colors">
+<td class="py-sm px-sm text-secondary">04</td>
+<td class="py-sm px-sm">LFU</td>
+<td class="py-sm px-sm text-right">68.2</td>
+</tr>
+<tr class="border-b border-surface-variant hover:bg-surface-container-low transition-colors">
+<td class="py-sm px-sm text-secondary">03</td>
+<td class="py-sm px-sm">Reactive</td>
+<td class="py-sm px-sm text-right">74.9</td>
+</tr>
+<tr class="border-b border-surface-variant hover:bg-surface-container-low transition-colors">
+<td class="py-sm px-sm text-secondary">02</td>
+<td class="py-sm px-sm">Predictive</td>
+<td class="py-sm px-sm text-right">82.5</td>
+</tr>
+<tr class="bg-secondary-container bg-opacity-20 border-l-2 border-primary">
+<td class="py-sm px-sm text-primary font-bold">01</td>
+<td class="py-sm px-sm text-primary font-bold">CALM</td>
+<td class="py-sm px-sm text-right text-primary font-bold">96.3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Metric Grid -->
+<div class="col-span-12 lg:col-span-8 card-base flex flex-col">
+<div class="px-md py-sm border-b border-outline-variant bg-surface-container-low">
+<h3 class="font-label-caps text-label-caps text-secondary uppercase">Metric Grid (Delta to Baseline)</h3>
+</div>
+<div class="p-md grid grid-cols-2 gap-md flex-1">
+<!-- Chart 1: Hit Rate -->
+<div class="flex flex-col gap-xs">
+<span class="font-body-sm text-body-sm text-secondary">Cache Hit Rate</span>
+<div class="flex items-center gap-sm">
+<span class="w-16 font-code-sm text-code-sm text-right text-secondary">CALM</span>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[92%]"></div>
+</div>
+<span class="w-8 font-code-sm text-code-sm">92%</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="w-16 font-code-sm text-code-sm text-right text-secondary">LRU</span>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-outline-variant w-[65%]"></div>
+</div>
+<span class="w-8 font-code-sm text-code-sm">65%</span>
+</div>
+</div>
+<!-- Chart 2: Latency -->
+<div class="flex flex-col gap-xs">
+<span class="font-body-sm text-body-sm text-secondary">Launch Latency (ms)</span>
+<div class="flex items-center gap-sm">
+<span class="w-16 font-code-sm text-code-sm text-right text-secondary">CALM</span>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden flex justify-end">
+<div class="h-full bg-primary w-[25%]"></div>
+</div>
+<span class="w-8 font-code-sm text-code-sm">12ms</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="w-16 font-code-sm text-code-sm text-right text-secondary">LRU</span>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden flex justify-end">
+<div class="h-full bg-outline-variant w-[85%]"></div>
+</div>
+<span class="w-8 font-code-sm text-code-sm">45ms</span>
+</div>
+</div>
+<!-- Chart 3: Peak Mem -->
+<div class="flex flex-col gap-xs mt-sm">
+<span class="font-body-sm text-body-sm text-secondary">Peak Memory (MB)</span>
+<div class="flex items-center gap-sm">
+<span class="w-16 font-code-sm text-code-sm text-right text-secondary">CALM</span>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[40%]"></div>
+</div>
+<span class="w-8 font-code-sm text-code-sm">412</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="w-16 font-code-sm text-code-sm text-right text-secondary">LRU</span>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-outline-variant w-[95%]"></div>
+</div>
+<span class="w-8 font-code-sm text-code-sm">890</span>
+</div>
+</div>
+<!-- Chart 4: Thrashing -->
+<div class="flex flex-col gap-xs mt-sm">
+<span class="font-body-sm text-body-sm text-secondary">Thrashing Events</span>
+<div class="flex items-center gap-sm">
+<span class="w-16 font-code-sm text-code-sm text-right text-secondary">CALM</span>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden flex justify-end">
+<div class="h-full bg-primary w-[5%]"></div>
+</div>
+<span class="w-8 font-code-sm text-code-sm">2</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="w-16 font-code-sm text-code-sm text-right text-secondary">LRU</span>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden flex justify-end">
+<div class="h-full bg-outline-variant w-[60%]"></div>
+</div>
+<span class="w-8 font-code-sm text-code-sm">48</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Performance Heatmap -->
+<div class="col-span-12 lg:col-span-8 card-base flex flex-col min-h-[300px]">
+<div class="px-md py-sm border-b border-outline-variant bg-surface-container-low flex justify-between items-center">
+<h3 class="font-label-caps text-label-caps text-secondary uppercase">Performance Matrix</h3>
+<div class="flex gap-xs items-center">
+<span class="w-2 h-2 rounded-full bg-surface-container"></span>
+<span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+<span class="w-2 h-2 rounded-full bg-primary opacity-50"></span>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-[10px] text-secondary ml-xs">Low to High</span>
+</div>
+</div>
+<div class="p-md flex-1 flex flex-col justify-center">
+<!-- Faux Heatmap -->
+<div class="grid grid-cols-5 gap-xs font-code-sm text-code-sm text-center">
+<div></div>
+<div class="text-secondary pb-sm">Random</div>
+<div class="text-secondary pb-sm">Predictable</div>
+<div class="text-secondary pb-sm">Bursty</div>
+<div class="text-secondary pb-sm">Sequential</div>
+<div class="text-secondary text-right pr-sm py-sm">LRU</div>
+<div class="bg-surface-container rounded-md flex items-center justify-center p-sm">0.4</div>
+<div class="bg-primary-fixed rounded-md flex items-center justify-center p-sm">0.7</div>
+<div class="bg-surface-container rounded-md flex items-center justify-center p-sm">0.3</div>
+<div class="bg-primary opacity-50 text-white rounded-md flex items-center justify-center p-sm">0.8</div>
+<div class="text-secondary text-right pr-sm py-sm">Predictive</div>
+<div class="bg-surface-container rounded-md flex items-center justify-center p-sm">0.3</div>
+<div class="bg-primary text-white rounded-md flex items-center justify-center p-sm">0.9</div>
+<div class="bg-primary-fixed rounded-md flex items-center justify-center p-sm">0.6</div>
+<div class="bg-primary opacity-50 text-white rounded-md flex items-center justify-center p-sm">0.8</div>
+<div class="text-primary font-bold text-right pr-sm py-sm">CALM</div>
+<div class="bg-primary-fixed rounded-md flex items-center justify-center p-sm text-on-surface">0.7</div>
+<div class="bg-primary text-white rounded-md flex items-center justify-center p-sm font-bold">0.98</div>
+<div class="bg-primary text-white rounded-md flex items-center justify-center p-sm font-bold">0.92</div>
+<div class="bg-primary text-white rounded-md flex items-center justify-center p-sm font-bold">0.95</div>
+</div>
+</div>
+</div>
+<!-- Statistical Summary -->
+<div class="col-span-12 lg:col-span-4 card-base flex flex-col">
+<div class="px-md py-sm border-b border-outline-variant bg-surface-container-low">
+<h3 class="font-label-caps text-label-caps text-secondary uppercase">Statistical Summary (CALM)</h3>
+</div>
+<div class="p-sm flex-1">
+<table class="w-full text-left border-collapse">
+<tbody class="font-code-sm text-code-sm">
+<tr class="border-b border-surface-variant">
+<td class="py-md px-sm text-secondary">Mean Score</td>
+<td class="py-md px-sm text-right font-medium">94.2</td>
+</tr>
+<tr class="border-b border-surface-variant">
+<td class="py-md px-sm text-secondary">Std Dev (σ)</td>
+<td class="py-md px-sm text-right">±1.4</td>
+</tr>
+<tr class="border-b border-surface-variant">
+<td class="py-md px-sm text-secondary">Min</td>
+<td class="py-md px-sm text-right text-secondary">89.1</td>
+</tr>
+<tr>
+<td class="py-md px-sm text-secondary">Max</td>
+<td class="py-md px-sm text-right text-primary font-medium">98.4</td>
+</tr>
+</tbody>
+</table>
+<div class="mt-md px-sm">
+<div class="bg-[#F1F5F9] rounded-md p-sm border border-outline-variant border-opacity-50 font-code-sm text-[10px] text-secondary">
+                            Run ID: 0x4F2A_B890
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CALM - System Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@450&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary": "#505f76",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#bc4800",
+                        "tertiary-fixed": "#ffdbcd",
+                        "inverse-primary": "#b4c5ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-primary-container": "#eeefff",
+                        "on-primary-fixed": "#00174b",
+                        "surface-tint": "#0053db",
+                        "primary": "#004ac6",
+                        "primary-container": "#2563eb",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#54647a",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-surface": "#191c1e",
+                        "primary-fixed": "#dbe1ff",
+                        "tertiary": "#943700",
+                        "secondary-container": "#d0e1fb",
+                        "secondary-fixed": "#d3e4fe",
+                        "inverse-surface": "#2e3132",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#0b1c30",
+                        "surface-dim": "#d9dadc",
+                        "inverse-on-surface": "#f0f1f3",
+                        "on-tertiary-container": "#ffede6",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "surface-container-low": "#f2f4f6",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "surface": "#f8f9fb",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#434655",
+                        "surface-container-highest": "#e1e2e4",
+                        "outline": "#737686",
+                        "background": "#f8f9fb",
+                        "surface-variant": "#e1e2e4",
+                        "surface-bright": "#f8f9fb",
+                        "surface-container": "#edeef0",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "surface-container-high": "#e7e8ea",
+                        "outline-variant": "#c3c6d7",
+                        "on-background": "#191c1e"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "gutter": "16px",
+                        "container-max": "1440px",
+                        "xs": "4px",
+                        "base": "4px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "xl": "48px"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Inter", "sans-serif"],
+                        "label-caps": ["Inter", "sans-serif"],
+                        "body-sm": ["Inter", "sans-serif"],
+                        "h1": ["Inter", "sans-serif"],
+                        "display": ["Inter", "sans-serif"],
+                        "code-md": ["IBM Plex Mono", "monospace"],
+                        "code-sm": ["IBM Plex Mono", "monospace"],
+                        "h2": ["Inter", "sans-serif"]
+                    },
+                    fontSize: {
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "h1": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "code-md": ["14px", { "lineHeight": "20px", "fontWeight": "450" }],
+                        "code-sm": ["12px", { "lineHeight": "16px", "fontWeight": "450" }],
+                        "h2": ["18px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Hide scrollbar for clean nav */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .chart-grid {
+            background-size: 100% 40px;
+            background-image: linear-gradient(to bottom, transparent 39px, #edeef0 40px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-lg min-h-screen">
+<!-- Shared Component: SideNavBar -->
+<nav class="w-[220px] h-screen fixed left-0 top-0 bg-surface-container-lowest border-r border-outline-variant flex flex-col overflow-y-auto no-scrollbar z-50">
+<!-- Header -->
+<div class="p-lg border-b border-outline-variant flex items-center gap-md">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-h2 text-h2">
+                C
+            </div>
+<div>
+<h1 class="font-h1 text-h1 text-primary">CALM</h1>
+<p class="font-label-caps text-label-caps text-secondary uppercase">Systems Analytics</p>
+</div>
+</div>
+<!-- Tabs -->
+<div class="flex-1 py-md flex flex-col gap-xs px-sm">
+<!-- Active Tab: Overview -->
+<a class="flex items-center gap-sm px-md py-sm rounded text-primary font-bold bg-surface-container-low transition-all duration-200 opacity-80" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="font-body-sm text-body-sm tracking-tight">Overview</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">analytics</span>
+<span class="font-body-sm text-body-sm tracking-tight">Lifecycle</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">query_stats</span>
+<span class="font-body-sm text-body-sm tracking-tight">Prediction</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">memory</span>
+<span class="font-body-sm text-body-sm tracking-tight">Memory</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+<span class="font-body-sm text-body-sm tracking-tight">Benchmarks</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">science</span>
+<span class="font-body-sm text-body-sm tracking-tight">Ablation</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+<span class="font-body-sm text-body-sm tracking-tight">Agent Memory</span>
+</a>
+</div>
+<!-- Footer -->
+<div class="p-sm border-t border-outline-variant">
+<button class="w-full flex items-center justify-center gap-sm py-sm px-md rounded bg-primary text-on-primary font-body-sm text-body-sm hover:opacity-90 transition-opacity mb-sm">
+                Simulation Toggle
+            </button>
+<a class="flex items-center gap-sm px-md py-sm rounded text-secondary font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="font-body-sm text-body-sm tracking-tight">Settings</span>
+</a>
+</div>
+</nav>
+<!-- Shared Component: TopAppBar -->
+<header class="h-[64px] fixed top-0 right-0 left-[220px] bg-surface-container-lowest border-b border-outline-variant flex justify-between items-center px-lg z-40">
+<div class="flex items-center gap-md">
+<h2 class="font-h2 text-h2 text-on-surface">System Overview</h2>
+</div>
+<div class="flex items-center gap-md">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-200 w-8 h-8 flex items-center justify-center rounded hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-200 w-8 h-8 flex items-center justify-center rounded hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<div class="w-px h-6 bg-outline-variant mx-xs"></div>
+<button class="font-body-sm text-body-sm text-primary font-medium flex items-center gap-xs hover:bg-surface-container-low px-sm py-xs rounded transition-colors">
+                Mode Selector
+                <span class="material-symbols-outlined text-[16px]">arrow_drop_down</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-[220px] pt-[64px] min-h-screen p-lg max-w-[1600px] mx-auto animate-fade-in-up" style="animation-delay: 0.1s;">
+<!-- Header / Context -->
+<div class="mb-lg">
+<p class="font-body-lg text-body-lg text-secondary">Monitor memory pressure, predictions, and lifecycle activity.</p>
+</div>
+<!-- Row 1: KPIs -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-md mb-lg">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-md flex flex-col justify-between hover:bg-surface-bright transition-colors duration-200">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Cache Hit Rate</span>
+<div class="mt-sm mb-xs">
+<span class="font-code-md text-display text-on-surface">86.4%</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px] text-tertiary">arrow_upward</span>
+<span class="font-body-sm text-body-sm text-secondary">+8.7% vs LRU</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-md flex flex-col justify-between hover:bg-surface-bright transition-colors duration-200">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Avg Launch Latency</span>
+<div class="mt-sm mb-xs">
+<span class="font-code-md text-display text-on-surface">0.84s</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px] text-primary">arrow_downward</span>
+<span class="font-body-sm text-body-sm text-secondary">-0.12s vs LRU</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-md flex flex-col justify-between hover:bg-surface-bright transition-colors duration-200">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Peak Memory</span>
+<div class="mt-sm mb-xs">
+<span class="font-code-md text-display text-on-surface">2.84 GB</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px] text-primary">arrow_downward</span>
+<span class="font-body-sm text-body-sm text-secondary">-12% vs Reactive</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-md flex flex-col justify-between hover:bg-surface-bright transition-colors duration-200">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Prediction Accuracy</span>
+<div class="mt-sm mb-xs">
+<span class="font-code-md text-display text-on-surface">81.2%</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px] text-tertiary">arrow_upward</span>
+<span class="font-body-sm text-body-sm text-secondary">+5.4%</span>
+</div>
+</div>
+<!-- Metric 5 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-md flex flex-col justify-between hover:bg-surface-bright transition-colors duration-200">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Thrashing Events</span>
+<div class="mt-sm mb-xs">
+<span class="font-code-md text-display text-on-surface">12</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px] text-primary">arrow_downward</span>
+<span class="font-body-sm text-body-sm text-secondary">-4 events</span>
+</div>
+</div>
+</div>
+<!-- Row 2: Charts -->
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-lg mb-lg">
+<!-- Memory Pressure Chart -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded flex flex-col h-[320px]">
+<div class="p-md border-b border-outline-variant flex justify-between items-center bg-surface-bright">
+<h3 class="font-h2 text-h2 text-on-surface">Memory Pressure</h3>
+<span class="font-code-sm text-code-sm text-secondary bg-surface-container px-2 py-1 rounded">Last 60s</span>
+</div>
+<div class="flex-1 relative p-md pl-xl pb-lg chart-grid">
+<!-- Y Axis -->
+<div class="absolute left-4 top-4 bottom-8 flex flex-col justify-between text-right w-8">
+<span class="font-code-sm text-[10px] text-error">Crit</span>
+<span class="font-code-sm text-[10px] text-tertiary">High</span>
+<span class="font-code-sm text-[10px] text-secondary">Low</span>
+</div>
+<!-- Threshold Lines -->
+<div class="absolute left-xl right-md top-[20%] border-t border-dashed border-error/50"></div>
+<div class="absolute left-xl right-md top-[50%] border-t border-dashed border-tertiary/50"></div>
+<!-- Line Chart SVG representation -->
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 400 200">
+<!-- Area fill -->
+<path d="M0,180 L40,160 L80,170 L120,120 L160,140 L200,90 L240,130 L280,60 L320,80 L360,40 L400,50 L400,200 L0,200 Z" fill="url(#blue-grad)" opacity="0.1"></path>
+<!-- Line -->
+<polyline fill="none" points="0,180 40,160 80,170 120,120 160,140 200,90 240,130 280,60 320,80 360,40 400,50" stroke="#004ac6" stroke-linejoin="round" stroke-width="2" vector-effect="non-scaling-stroke"></polyline>
+<!-- Gradients -->
+<defs>
+<lineargradient id="blue-grad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#004ac6"></stop>
+<stop offset="100%" stop-color="transparent"></stop>
+</lineargradient>
+</defs>
+</svg>
+<!-- X Axis (simulated) -->
+<div class="absolute left-xl right-md bottom-2 flex justify-between">
+<span class="font-code-sm text-[10px] text-secondary">-60s</span>
+<span class="font-code-sm text-[10px] text-secondary">-30s</span>
+<span class="font-code-sm text-[10px] text-secondary">Now</span>
+</div>
+</div>
+</div>
+<!-- Lifecycle Distribution -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded flex flex-col h-[320px]">
+<div class="p-md border-b border-outline-variant bg-surface-bright">
+<h3 class="font-h2 text-h2 text-on-surface">Lifecycle Distribution</h3>
+</div>
+<div class="flex-1 p-lg flex flex-col justify-center">
+<!-- The Stacked Bar -->
+<div class="w-full h-12 rounded overflow-hidden flex shadow-sm mb-lg">
+<div class="h-full bg-primary" style="width: 25%;" title="Active: 25%"></div>
+<div class="h-full bg-secondary" style="width: 45%;" title="Cached: 45%"></div>
+<div class="h-full bg-tertiary" style="width: 20%;" title="Compressed: 20%"></div>
+<div class="h-full bg-surface-variant" style="width: 10%;" title="Archived: 10%"></div>
+</div>
+<!-- Legend -->
+<div class="grid grid-cols-2 gap-y-sm gap-x-md">
+<div class="flex items-center justify-between p-sm rounded bg-surface border border-outline-variant/30">
+<div class="flex items-center gap-sm">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="font-body-sm text-body-sm text-on-surface">Active</span>
+</div>
+<span class="font-code-sm text-code-sm">25%</span>
+</div>
+<div class="flex items-center justify-between p-sm rounded bg-surface border border-outline-variant/30">
+<div class="flex items-center gap-sm">
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<span class="font-body-sm text-body-sm text-on-surface">Cached</span>
+</div>
+<span class="font-code-sm text-code-sm">45%</span>
+</div>
+<div class="flex items-center justify-between p-sm rounded bg-surface border border-outline-variant/30">
+<div class="flex items-center gap-sm">
+<div class="w-3 h-3 rounded-full bg-tertiary"></div>
+<span class="font-body-sm text-body-sm text-on-surface">Compressed</span>
+</div>
+<span class="font-code-sm text-code-sm">20%</span>
+</div>
+<div class="flex items-center justify-between p-sm rounded bg-surface border border-outline-variant/30">
+<div class="flex items-center gap-sm">
+<div class="w-3 h-3 rounded-full bg-surface-variant"></div>
+<span class="font-body-sm text-body-sm text-on-surface">Archived</span>
+</div>
+<span class="font-code-sm text-code-sm">10%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 3: Table & Prediction -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-lg mb-lg">
+<!-- Table (col-span-2) -->
+<div class="lg:col-span-2 bg-surface-container-lowest border border-outline-variant rounded flex flex-col overflow-hidden">
+<div class="p-md border-b border-outline-variant bg-surface-bright flex justify-between items-center">
+<h3 class="font-h2 text-h2 text-on-surface">Recent Lifecycle Activity</h3>
+<button class="font-body-sm text-body-sm text-primary hover:underline">View All</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant">
+<th class="py-sm px-md font-label-caps text-label-caps text-secondary uppercase font-semibold">Time</th>
+<th class="py-sm px-md font-label-caps text-label-caps text-secondary uppercase font-semibold">Item</th>
+<th class="py-sm px-md font-label-caps text-label-caps text-secondary uppercase font-semibold">Prev State</th>
+<th class="py-sm px-md font-label-caps text-label-caps text-secondary uppercase font-semibold">New State</th>
+<th class="py-sm px-md font-label-caps text-label-caps text-secondary uppercase font-semibold">Reason</th>
+<th class="py-sm px-md font-label-caps text-label-caps text-secondary uppercase font-semibold text-right">Priority</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm">
+<tr class="border-b border-outline-variant hover:bg-surface-bright transition-colors">
+<td class="py-sm px-md font-code-sm text-secondary">10:42:01</td>
+<td class="py-sm px-md text-on-surface font-medium">com.slack.app</td>
+<td class="py-sm px-md"><span class="bg-surface-container px-2 py-1 rounded text-secondary text-xs">ACTIVE</span></td>
+<td class="py-sm px-md"><span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded text-xs">CACHED</span></td>
+<td class="py-sm px-md text-secondary">User switch</td>
+<td class="py-sm px-md text-right font-code-sm">0.82</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-bright transition-colors">
+<td class="py-sm px-md font-code-sm text-secondary">10:41:45</td>
+<td class="py-sm px-md text-on-surface font-medium">chrome.tabs.3</td>
+<td class="py-sm px-md"><span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded text-xs">CACHED</span></td>
+<td class="py-sm px-md"><span class="bg-primary-container text-on-primary-container px-2 py-1 rounded text-xs">ACTIVE</span></td>
+<td class="py-sm px-md text-secondary">Prediction Hit</td>
+<td class="py-sm px-md text-right font-code-sm">0.95</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-bright transition-colors">
+<td class="py-sm px-md font-code-sm text-secondary">10:40:12</td>
+<td class="py-sm px-md text-on-surface font-medium">spotify.bg</td>
+<td class="py-sm px-md"><span class="bg-surface-container px-2 py-1 rounded text-secondary text-xs">CACHED</span></td>
+<td class="py-sm px-md"><span class="bg-surface-variant text-on-surface-variant px-2 py-1 rounded text-xs">ARCHIVED</span></td>
+<td class="py-sm px-md text-secondary">Memory pressure</td>
+<td class="py-sm px-md text-right font-code-sm">0.12</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-bright transition-colors">
+<td class="py-sm px-md font-code-sm text-secondary">10:38:55</td>
+<td class="py-sm px-md text-on-surface font-medium">com.figma.desktop</td>
+<td class="py-sm px-md"><span class="bg-surface-variant text-on-surface-variant px-2 py-1 rounded text-xs">ARCHIVED</span></td>
+<td class="py-sm px-md"><span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded text-xs">CACHED</span></td>
+<td class="py-sm px-md text-secondary">Pre-fetch (Context)</td>
+<td class="py-sm px-md text-right font-code-sm">0.78</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-bright transition-colors">
+<td class="py-sm px-md font-code-sm text-secondary">10:35:20</td>
+<td class="py-sm px-md text-on-surface font-medium">vscode.workspace.1</td>
+<td class="py-sm px-md"><span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded text-xs">CACHED</span></td>
+<td class="py-sm px-md"><span class="bg-tertiary-container text-on-tertiary-container px-2 py-1 rounded text-xs">COMPRESSED</span></td>
+<td class="py-sm px-md text-secondary">Idle timer</td>
+<td class="py-sm px-md text-right font-code-sm">0.45</td>
+</tr>
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="py-sm px-md font-code-sm text-secondary">10:31:04</td>
+<td class="py-sm px-md text-on-surface font-medium">terminal.session.4</td>
+<td class="py-sm px-md"><span class="bg-tertiary-container text-on-tertiary-container px-2 py-1 rounded text-xs">COMPRESSED</span></td>
+<td class="py-sm px-md"><span class="bg-surface-variant text-on-surface-variant px-2 py-1 rounded text-xs">ARCHIVED</span></td>
+<td class="py-sm px-md text-secondary">Memory pressure</td>
+<td class="py-sm px-md text-right font-code-sm">0.21</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Prediction Summary Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded flex flex-col">
+<div class="p-md border-b border-outline-variant bg-surface-bright">
+<h3 class="font-h2 text-h2 text-on-surface">Next Context Prediction</h3>
+</div>
+<div class="flex-1 p-lg flex flex-col justify-center items-center relative">
+<!-- Decorative background pattern -->
+<div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(#004ac6 1px, transparent 1px); background-size: 16px 16px;"></div>
+<div class="flex items-center justify-between w-full max-w-[280px] z-10 relative">
+<!-- Current -->
+<div class="flex flex-col items-center gap-sm">
+<div class="w-12 h-12 rounded-full bg-surface border border-outline-variant flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px] text-secondary">language</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary uppercase">Current</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Chrome</span>
+</div>
+<!-- Arrow & Meta -->
+<div class="flex flex-col items-center">
+<span class="font-code-sm text-code-sm text-primary mb-1">P=0.89</span>
+<div class="h-px w-16 bg-primary relative">
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 border-t border-r border-primary rotate-45"></div>
+</div>
+<span class="font-label-caps text-[9px] text-tertiary uppercase mt-1 bg-tertiary-fixed text-on-tertiary-fixed px-1 rounded">High Conf</span>
+</div>
+<!-- Predicted -->
+<div class="flex flex-col items-center gap-sm">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center shadow-sm ring-4 ring-primary/10">
+<span class="material-symbols-outlined text-[24px] text-on-primary-container icon-fill">smart_display</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary uppercase">Predicted</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">YouTube</span>
+</div>
+</div>
+<div class="mt-xl w-full bg-surface p-sm rounded border border-outline-variant/50 text-center z-10">
+<span class="font-code-sm text-code-sm text-secondary">Pre-fetching assets to CACHE level 1.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 4: CALM vs Baselines -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-lg flex flex-col">
+<div class="mb-lg border-b border-outline-variant pb-sm">
+<h3 class="font-h2 text-h2 text-on-surface">CALM vs Baselines (Normalized Performance)</h3>
+</div>
+<!-- Abstract Grouped Bar Chart using Flexbox -->
+<div class="flex justify-around items-end h-[200px] w-full pt-md pb-8 relative chart-grid border-b border-outline-variant">
+<!-- Legend -->
+<div class="absolute top-0 right-0 flex gap-md">
+<div class="flex items-center gap-xs"><div class="w-3 h-3 bg-surface-variant"></div><span class="font-code-sm text-xs">LRU</span></div>
+<div class="flex items-center gap-xs"><div class="w-3 h-3 bg-secondary"></div><span class="font-code-sm text-xs">LFU</span></div>
+<div class="flex items-center gap-xs"><div class="w-3 h-3 bg-tertiary"></div><span class="font-code-sm text-xs">Reactive</span></div>
+<div class="flex items-center gap-xs"><div class="w-3 h-3 bg-primary"></div><span class="font-code-sm text-xs font-bold text-primary">CALM</span></div>
+</div>
+<!-- Group 1: Hit Rate (Higher is better) -->
+<div class="flex flex-col items-center gap-sm h-full justify-end relative w-1/5">
+<div class="flex items-end gap-1 h-[140px]">
+<div class="w-6 bg-surface-variant h-[60%]" title="LRU: 60%"></div>
+<div class="w-6 bg-secondary h-[65%]" title="LFU: 65%"></div>
+<div class="w-6 bg-tertiary h-[75%]" title="Reactive: 75%"></div>
+<div class="w-6 bg-primary h-[95%]" title="CALM: 95%"></div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary absolute -bottom-6">Hit Rate ↑</span>
+</div>
+<!-- Group 2: Latency (Lower is better, inverted for normalized visual or kept low) -->
+<div class="flex flex-col items-center gap-sm h-full justify-end relative w-1/5">
+<div class="flex items-end gap-1 h-[140px]">
+<div class="w-6 bg-surface-variant h-[90%]" title="LRU: High"></div>
+<div class="w-6 bg-secondary h-[85%]" title="LFU: High"></div>
+<div class="w-6 bg-tertiary h-[60%]" title="Reactive: Med"></div>
+<div class="w-6 bg-primary h-[25%]" title="CALM: Low"></div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary absolute -bottom-6">Latency ↓</span>
+</div>
+<!-- Group 3: Memory (Lower is better) -->
+<div class="flex flex-col items-center gap-sm h-full justify-end relative w-1/5">
+<div class="flex items-end gap-1 h-[140px]">
+<div class="w-6 bg-surface-variant h-[80%]" title="LRU: High"></div>
+<div class="w-6 bg-secondary h-[75%]" title="LFU: High"></div>
+<div class="w-6 bg-tertiary h-[95%]" title="Reactive: Very High"></div>
+<div class="w-6 bg-primary h-[40%]" title="CALM: Low"></div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary absolute -bottom-6">Memory ↓</span>
+</div>
+<!-- Group 4: Thrashing (Lower is better) -->
+<div class="flex flex-col items-center gap-sm h-full justify-end relative w-1/5">
+<div class="flex items-end gap-1 h-[140px]">
+<div class="w-6 bg-surface-variant h-[70%]" title="LRU: Med"></div>
+<div class="w-6 bg-secondary h-[65%]" title="LFU: Med"></div>
+<div class="w-6 bg-tertiary h-[40%]" title="Reactive: Low"></div>
+<div class="w-6 bg-primary h-[15%]" title="CALM: Very Low"></div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary absolute -bottom-6">Thrashing ↓</span>
+</div>
+</div>
+</div>
+</main>
+</body></html>

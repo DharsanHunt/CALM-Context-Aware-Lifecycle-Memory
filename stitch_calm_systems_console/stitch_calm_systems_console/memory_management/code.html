@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CALM - Memory Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#505f76",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#bc4800",
+                        "tertiary-fixed": "#ffdbcd",
+                        "inverse-primary": "#b4c5ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-primary-container": "#eeefff",
+                        "on-primary-fixed": "#00174b",
+                        "surface-tint": "#0053db",
+                        "primary": "#004ac6",
+                        "primary-container": "#2563eb",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#54647a",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-surface": "#191c1e",
+                        "primary-fixed": "#dbe1ff",
+                        "tertiary": "#943700",
+                        "secondary-container": "#d0e1fb",
+                        "secondary-fixed": "#d3e4fe",
+                        "inverse-surface": "#2e3132",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#0b1c30",
+                        "surface-dim": "#d9dadc",
+                        "inverse-on-surface": "#f0f1f3",
+                        "on-tertiary-container": "#ffede6",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "surface-container-low": "#f2f4f6",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "surface": "#f8f9fb",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#434655",
+                        "surface-container-highest": "#e1e2e4",
+                        "outline": "#737686",
+                        "background": "#f8f9fb",
+                        "surface-variant": "#e1e2e4",
+                        "surface-bright": "#f8f9fb",
+                        "surface-container": "#edeef0",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "surface-container-high": "#e7e8ea",
+                        "outline-variant": "#c3c6d7",
+                        "on-background": "#191c1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "container-max": "1440px",
+                        "xs": "4px",
+                        "base": "4px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "xl": "48px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "h1": ["Inter"],
+                        "display": ["Inter"],
+                        "code-md": ["IBM Plex Mono"],
+                        "code-sm": ["IBM Plex Mono"],
+                        "h2": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "h1": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "code-md": ["14px", { "lineHeight": "20px", "fontWeight": "450" }],
+                        "code-sm": ["12px", { "lineHeight": "16px", "fontWeight": "450" }],
+                        "h2": ["18px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #F7F8FA; color: #191c1e; }
+        .card { background-color: #FFFFFF; border: 1px solid #E4E7EB; border-radius: 8px; }
+        .table-row { border-bottom: 1px solid #E4E7EB; }
+        .table-row:last-child { border-bottom: none; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        /* Simple inline charts for demonstration */
+        .bar-chart-active { height: 60%; background-color: #2563eb; }
+        .bar-chart-cached { height: 25%; background-color: #b7c8e1; }
+        .bar-chart-compressed { height: 10%; background-color: #737686; }
+        .bar-chart-archived { height: 5%; background-color: #e1e2e4; }
+    </style>
+</head>
+<body class="bg-background flex">
+<!-- SideNavBar -->
+<nav class="w-[220px] h-screen fixed left-0 top-0 flex flex-col border-r border-outline-variant bg-surface-container-lowest z-50 overflow-y-auto">
+<div class="p-lg border-b border-outline-variant">
+<h1 class="font-h1 text-h1 text-primary">CALM</h1>
+<p class="font-body-sm text-body-sm tracking-tight text-secondary mt-xs">Systems Analytics</p>
+</div>
+<div class="p-md">
+<button class="w-full bg-primary text-on-primary font-body-sm text-body-sm py-sm rounded-lg hover:bg-primary-container transition-colors duration-150">Simulation Toggle</button>
+</div>
+<ul class="flex-1 py-sm">
+<li class="px-md py-sm">
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:bg-surface-container-low hover:text-primary transition-colors duration-150" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-body-sm text-body-sm">Overview</span>
+</a>
+</li>
+<li class="px-md py-sm">
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:bg-surface-container-low hover:text-primary transition-colors duration-150" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-body-sm text-body-sm">Lifecycle</span>
+</a>
+</li>
+<li class="px-md py-sm">
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:bg-surface-container-low hover:text-primary transition-colors duration-150" href="#">
+<span class="material-symbols-outlined">query_stats</span>
+<span class="font-body-sm text-body-sm">Prediction</span>
+</a>
+</li>
+<li class="px-md py-sm">
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-primary font-bold bg-surface-container-low" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">memory</span>
+<span class="font-body-sm text-body-sm">Memory</span>
+</a>
+</li>
+<li class="px-md py-sm">
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:bg-surface-container-low hover:text-primary transition-colors duration-150" href="#">
+<span class="material-symbols-outlined">speed</span>
+<span class="font-body-sm text-body-sm">Benchmarks</span>
+</a>
+</li>
+<li class="px-md py-sm">
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:bg-surface-container-low hover:text-primary transition-colors duration-150" href="#">
+<span class="material-symbols-outlined">science</span>
+<span class="font-body-sm text-body-sm">Ablation</span>
+</a>
+</li>
+<li class="px-md py-sm">
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:bg-surface-container-low hover:text-primary transition-colors duration-150" href="#">
+<span class="material-symbols-outlined">smart_toy</span>
+<span class="font-body-sm text-body-sm">Agent Memory</span>
+</a>
+</li>
+</ul>
+<div class="p-md border-t border-outline-variant mt-auto">
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-secondary font-medium hover:bg-surface-container-low hover:text-primary transition-colors duration-150" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body-sm text-body-sm">Settings</span>
+</a>
+<div class="mt-md flex items-center gap-sm px-md">
+<div class="w-8 h-8 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A small circular avatar image showing a generic user profile icon in a minimalist corporate style, primarily light gray and blue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbxTB3zvfZq0D04DNQzBFH0ckz-IvN8_kLLFm16JMDpHweUmNnVCWK5IJR5keO5pom6qXsFaiH20Ijc6mhO739WOcQXpIQc_EpQBhWoSJrFsq_corgAX5ue-dd17YfUrQMrY1wQ40sFgerxcAx_RLNKDawxNLAAWJaeH30ASC_EAghAuqDQ0gKC4Vc2HTp0dT23c-5EWVInboF3oL18DHqJAsNeYGhZQdSpC7nhOeEfkNqSW5lY_Ts"/>
+</div>
+</div>
+</div>
+</nav>
+<!-- TopAppBar -->
+<header class="h-[64px] fixed top-0 right-0 left-[220px] bg-surface-container-lowest border-b border-outline-variant flex justify-between items-center px-lg z-40">
+<div>
+<!-- Breadcrumbs or context could go here, left empty for now to match json -->
+</div>
+<div class="flex items-center gap-md">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined">tune</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="ml-sm px-md py-sm border border-outline-variant rounded-lg text-primary font-body-sm text-body-sm hover:bg-surface-container-low transition-colors duration-200">Mode Selector</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-[220px] mt-[64px] p-lg w-full max-w-container-max mx-auto overflow-x-hidden">
+<!-- Header Section -->
+<div class="mb-lg">
+<h2 class="font-display text-display text-on-surface">Memory</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-xs">Monitor memory usage, pressure, compression, and reclamation.</p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md mb-lg">
+<!-- Memory Budget (Span 4) -->
+<div class="card col-span-1 md:col-span-4 p-lg flex flex-col justify-between">
+<div>
+<h3 class="font-h2 text-h2 text-on-surface mb-xs">Memory Budget</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">Current allocation status.</p>
+</div>
+<div class="flex items-end gap-sm mb-md">
+<span class="font-display text-display text-primary">71%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">utilized</span>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden mb-md">
+<div class="h-full bg-primary" style="width: 71%;"></div>
+</div>
+<div class="grid grid-cols-3 gap-sm mt-auto">
+<div>
+<p class="font-label-caps text-label-caps text-secondary uppercase">Used</p>
+<p class="font-code-md text-code-md text-on-surface">11.4 GB</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-secondary uppercase">Avail</p>
+<p class="font-code-md text-code-md text-on-surface">4.6 GB</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-secondary uppercase">Budget</p>
+<p class="font-code-md text-code-md text-on-surface">16.0 GB</p>
+</div>
+</div>
+</div>
+<!-- Resource Analytics (Span 8) -->
+<div class="card col-span-1 md:col-span-8 p-lg flex flex-col">
+<div class="flex justify-between items-center mb-md pb-sm border-b border-outline-variant">
+<h3 class="font-h2 text-h2 text-on-surface">Resource Analytics</h3>
+<div class="flex gap-sm">
+<span class="flex items-center gap-xs font-label-caps text-label-caps text-secondary"><div class="w-2 h-2 rounded-full bg-primary"></div>Usage</span>
+<span class="flex items-center gap-xs font-label-caps text-label-caps text-secondary"><div class="w-2 h-2 rounded-full bg-error"></div>Pressure</span>
+</div>
+</div>
+<div class="flex-1 relative min-h-[200px] w-full flex items-end justify-between px-md pb-md">
+<!-- Placeholder for actual chart, using simple CSS shapes for structure -->
+<div class="absolute inset-0 flex flex-col justify-between py-md z-0 opacity-20">
+<div class="w-full border-t border-outline border-dashed"></div>
+<div class="w-full border-t border-outline border-dashed"></div>
+<div class="w-full border-t border-outline border-dashed"></div>
+<div class="w-full border-t border-outline border-dashed"></div>
+</div>
+<!-- Simulated Data Points -->
+<div class="w-full h-full flex items-end justify-between z-10 pt-md">
+<div class="h-[40%] w-[2px] bg-primary relative"><div class="absolute top-0 w-2 h-2 bg-primary rounded-full -ml-[3px]"></div></div>
+<div class="h-[45%] w-[2px] bg-primary relative"><div class="absolute top-0 w-2 h-2 bg-primary rounded-full -ml-[3px]"></div></div>
+<div class="h-[55%] w-[2px] bg-primary relative"><div class="absolute top-0 w-2 h-2 bg-primary rounded-full -ml-[3px]"></div></div>
+<div class="h-[70%] w-[2px] bg-primary relative"><div class="absolute top-0 w-2 h-2 bg-primary rounded-full -ml-[3px]"></div></div>
+<div class="h-[65%] w-[2px] bg-primary relative"><div class="absolute top-0 w-2 h-2 bg-primary rounded-full -ml-[3px]"></div></div>
+<div class="h-[80%] w-[2px] bg-primary relative"><div class="absolute top-0 w-2 h-2 bg-primary rounded-full -ml-[3px]"></div></div>
+<div class="h-[71%] w-[2px] bg-primary relative"><div class="absolute top-0 w-2 h-2 bg-primary rounded-full -ml-[3px]"></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md mb-lg">
+<!-- Lifecycle Allocation (Span 6) -->
+<div class="card col-span-1 md:col-span-6 p-lg">
+<div class="mb-md pb-sm border-b border-outline-variant">
+<h3 class="font-h2 text-h2 text-on-surface">Lifecycle Allocation</h3>
+</div>
+<div class="flex items-center gap-md h-[120px] mb-md">
+<div class="flex-1 h-8 bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="h-full bg-primary w-[60%]" title="Active: 60%"></div>
+<div class="h-full bg-secondary-fixed-dim w-[25%]" title="Cached: 25%"></div>
+<div class="h-full bg-outline w-[10%]" title="Compressed: 10%"></div>
+<div class="h-full bg-surface-variant w-[5%]" title="Archived: 5%"></div>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-xs text-center">
+<div>
+<div class="w-3 h-3 rounded-full bg-primary mx-auto mb-xs"></div>
+<p class="font-label-caps text-label-caps text-secondary uppercase">Active</p>
+<p class="font-code-sm text-code-sm text-on-surface">6.8 GB</p>
+</div>
+<div>
+<div class="w-3 h-3 rounded-full bg-secondary-fixed-dim mx-auto mb-xs"></div>
+<p class="font-label-caps text-label-caps text-secondary uppercase">Cached</p>
+<p class="font-code-sm text-code-sm text-on-surface">2.9 GB</p>
+</div>
+<div>
+<div class="w-3 h-3 rounded-full bg-outline mx-auto mb-xs"></div>
+<p class="font-label-caps text-label-caps text-secondary uppercase">Compr.</p>
+<p class="font-code-sm text-code-sm text-on-surface">1.1 GB</p>
+</div>
+<div>
+<div class="w-3 h-3 rounded-full bg-surface-variant mx-auto mb-xs"></div>
+<p class="font-label-caps text-label-caps text-secondary uppercase">Archiv.</p>
+<p class="font-code-sm text-code-sm text-on-surface">0.6 GB</p>
+</div>
+</div>
+</div>
+<!-- Compression Efficacy (Span 6) -->
+<div class="card col-span-1 md:col-span-6 p-lg flex flex-col justify-between">
+<div class="mb-md pb-sm border-b border-outline-variant">
+<h3 class="font-h2 text-h2 text-on-surface">Compression Efficacy</h3>
+</div>
+<div class="grid grid-cols-2 gap-md flex-1 items-center">
+<div class="text-center p-md bg-surface-container-lowest border border-outline-variant rounded-lg">
+<p class="font-label-caps text-label-caps text-secondary uppercase mb-xs">Original Size</p>
+<p class="font-code-md text-code-md text-on-surface">4.2 GB</p>
+</div>
+<div class="text-center p-md bg-surface-container-lowest border border-outline-variant rounded-lg">
+<p class="font-label-caps text-label-caps text-secondary uppercase mb-xs">Compressed</p>
+<p class="font-code-md text-code-md text-primary font-bold">1.1 GB</p>
+</div>
+<div class="col-span-2 flex justify-between items-center p-sm bg-surface-container-low rounded-lg mt-sm">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary">save</span>
+<span class="font-body-sm text-body-sm text-on-surface">Space Saved: <span class="font-code-md text-code-md font-semibold">3.1 GB</span></span>
+</div>
+<div class="font-code-md text-code-md text-secondary bg-[#e1e2e4] px-sm py-xs rounded">
+                            Ratio: 3.8:1
+                        </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Memory Items Inventory Table -->
+<div class="card p-0 overflow-hidden">
+<div class="p-lg border-b border-outline-variant">
+<h3 class="font-h2 text-h2 text-on-surface">Memory Items Inventory</h3>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low font-label-caps text-label-caps text-secondary uppercase">
+<th class="p-sm pl-lg font-normal">Item ID</th>
+<th class="p-sm font-normal">State</th>
+<th class="p-sm font-normal text-right">Size</th>
+<th class="p-sm font-normal text-right">Compr. Size</th>
+<th class="p-sm font-normal">Importance</th>
+<th class="p-sm pr-lg font-normal">Retrieval Cost</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface">
+<tr class="table-row hover:bg-surface-bright transition-colors duration-150">
+<td class="p-sm pl-lg"><span class="bg-[#F1F5F9] font-code-sm text-code-sm px-xs py-[2px] rounded text-on-surface-variant">0x8F9A...B12</span></td>
+<td class="p-sm">
+<span class="inline-flex items-center gap-xs px-xs py-[2px] rounded-full bg-primary/10 text-primary font-label-caps text-[10px]">
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div> ACTIVE
+                                </span>
+</td>
+<td class="p-sm font-code-sm text-code-sm text-right">1.2 GB</td>
+<td class="p-sm font-code-sm text-code-sm text-right text-outline">-</td>
+<td class="p-sm">Critical</td>
+<td class="p-sm pr-lg font-code-sm text-code-sm">Low (O(1))</td>
+</tr>
+<tr class="table-row hover:bg-surface-bright transition-colors duration-150">
+<td class="p-sm pl-lg"><span class="bg-[#F1F5F9] font-code-sm text-code-sm px-xs py-[2px] rounded text-on-surface-variant">0x3A2C...F90</span></td>
+<td class="p-sm">
+<span class="inline-flex items-center gap-xs px-xs py-[2px] rounded-full bg-secondary-fixed-dim/20 text-on-secondary-fixed-variant font-label-caps text-[10px]">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></div> CACHED
+                                </span>
+</td>
+<td class="p-sm font-code-sm text-code-sm text-right">850 MB</td>
+<td class="p-sm font-code-sm text-code-sm text-right text-outline">-</td>
+<td class="p-sm">High</td>
+<td class="p-sm pr-lg font-code-sm text-code-sm">Low</td>
+</tr>
+<tr class="table-row hover:bg-surface-bright transition-colors duration-150">
+<td class="p-sm pl-lg"><span class="bg-[#F1F5F9] font-code-sm text-code-sm px-xs py-[2px] rounded text-on-surface-variant">0x7C1B...D44</span></td>
+<td class="p-sm">
+<span class="inline-flex items-center gap-xs px-xs py-[2px] rounded-full bg-outline/20 text-on-surface-variant font-label-caps text-[10px]">
+<div class="w-1.5 h-1.5 rounded-full bg-outline"></div> COMPRESSED
+                                </span>
+</td>
+<td class="p-sm font-code-sm text-code-sm text-right">2.1 GB</td>
+<td class="p-sm font-code-sm text-code-sm text-right">450 MB</td>
+<td class="p-sm">Medium</td>
+<td class="p-sm pr-lg font-code-sm text-code-sm">Medium (O(n))</td>
+</tr>
+<tr class="table-row hover:bg-surface-bright transition-colors duration-150">
+<td class="p-sm pl-lg"><span class="bg-[#F1F5F9] font-code-sm text-code-sm px-xs py-[2px] rounded text-on-surface-variant">0x1D8E...A77</span></td>
+<td class="p-sm">
+<span class="inline-flex items-center gap-xs px-xs py-[2px] rounded-full bg-surface-variant/50 text-secondary font-label-caps text-[10px]">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary"></div> ARCHIVED
+                                </span>
+</td>
+<td class="p-sm font-code-sm text-code-sm text-right">3.4 GB</td>
+<td class="p-sm font-code-sm text-code-sm text-right">600 MB</td>
+<td class="p-sm">Low</td>
+<td class="p-sm pr-lg font-code-sm text-code-sm">High (Disk)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+</body></html>

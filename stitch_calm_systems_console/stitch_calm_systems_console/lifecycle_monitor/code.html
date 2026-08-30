@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CALM - Lifecycle Monitor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=IBM+Plex+Mono:wght@450&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#505f76",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#bc4800",
+                        "tertiary-fixed": "#ffdbcd",
+                        "inverse-primary": "#b4c5ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-primary-container": "#eeefff",
+                        "on-primary-fixed": "#00174b",
+                        "surface-tint": "#0053db",
+                        "primary": "#004ac6",
+                        "primary-container": "#2563eb",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#54647a",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-surface": "#191c1e",
+                        "primary-fixed": "#dbe1ff",
+                        "tertiary": "#943700",
+                        "secondary-container": "#d0e1fb",
+                        "secondary-fixed": "#d3e4fe",
+                        "inverse-surface": "#2e3132",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#0b1c30",
+                        "surface-dim": "#d9dadc",
+                        "inverse-on-surface": "#f0f1f3",
+                        "on-tertiary-container": "#ffede6",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "surface-container-low": "#f2f4f6",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "surface": "#f8f9fb",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#434655",
+                        "surface-container-highest": "#e1e2e4",
+                        "outline": "#737686",
+                        "background": "#f8f9fb",
+                        "surface-variant": "#e1e2e4",
+                        "surface-bright": "#f8f9fb",
+                        "surface-container": "#edeef0",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "surface-container-high": "#e7e8ea",
+                        "outline-variant": "#c3c6d7",
+                        "on-background": "#191c1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "container-max": "1440px",
+                        "xs": "4px",
+                        "base": "4px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "xl": "48px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "h1": ["Inter"],
+                        "display": ["Inter"],
+                        "code-md": ["IBM Plex Mono"],
+                        "code-sm": ["IBM Plex Mono"],
+                        "h2": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "h1": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "code-md": ["14px", { "lineHeight": "20px", "fontWeight": "450" }],
+                        "code-sm": ["12px", { "lineHeight": "16px", "fontWeight": "450" }],
+                        "h2": ["18px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-sm text-body-sm min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest dark:bg-surface-dim h-[64px] fixed top-0 right-0 left-[220px] border-b border-outline-variant dark:border-outline flex justify-between items-center px-lg w-full z-40 flat no shadows hidden md:flex">
+<div class="flex items-center gap-md">
+<h2 class="font-h2 text-h2 text-primary dark:text-primary-fixed">CALM</h2>
+<div class="h-4 w-px bg-outline-variant mx-sm"></div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lifecycle Monitor</span>
+</div>
+<div class="flex items-center gap-md">
+<button class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+</button>
+<button class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="bg-primary text-on-primary px-md py-sm rounded border border-transparent font-label-caps text-label-caps hover:bg-primary-container transition-colors duration-150">Mode Selector</button>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="bg-surface-container-lowest dark:bg-surface-dim w-[220px] h-screen fixed left-0 top-0 border-r border-outline-variant dark:border-outline flex flex-col z-50 overflow-y-auto hidden md:flex">
+<div class="p-lg border-b border-outline-variant">
+<h1 class="font-h1 text-h1 text-primary dark:text-primary-fixed-dim">CALM</h1>
+<p class="font-body-sm text-body-sm tracking-tight text-on-surface-variant mt-xs">Systems Analytics</p>
+</div>
+<div class="flex-1 py-sm">
+<a class="flex items-center gap-md px-lg py-sm text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="dashboard">dashboard</span>
+<span>Overview</span>
+</a>
+<a class="flex items-center gap-md px-lg py-sm text-primary dark:text-primary-fixed-dim font-bold bg-surface-container-low dark:bg-surface-container-high transition-all duration-200 opacity-80 border-r-2 border-primary" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="analytics" data-weight="fill" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span>Lifecycle</span>
+</a>
+<a class="flex items-center gap-md px-lg py-sm text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="query_stats">query_stats</span>
+<span>Prediction</span>
+</a>
+<a class="flex items-center gap-md px-lg py-sm text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="memory">memory</span>
+<span>Memory</span>
+</a>
+<a class="flex items-center gap-md px-lg py-sm text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="speed">speed</span>
+<span>Benchmarks</span>
+</a>
+<a class="flex items-center gap-md px-lg py-sm text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="science">science</span>
+<span>Ablation</span>
+</a>
+<a class="flex items-center gap-md px-lg py-sm text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="smart_toy">smart_toy</span>
+<span>Agent Memory</span>
+</a>
+</div>
+<div class="p-lg border-t border-outline-variant">
+<button class="w-full bg-surface-container text-on-surface px-md py-sm rounded border border-outline-variant font-label-caps text-label-caps hover:bg-surface-container-high transition-colors duration-150 mb-md">Simulation Toggle</button>
+<a class="flex items-center gap-md text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="md:ml-[220px] pt-[64px] min-h-screen flex">
+<div class="flex-1 p-lg max-w-container-max mx-auto space-y-lg overflow-x-hidden">
+<!-- Page Header -->
+<div class="mb-xl border-b border-outline-variant pb-md">
+<h1 class="font-display text-display text-on-surface mb-xs">Lifecycle Monitor</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Track how CALM promotes, demotes, compresses, and archives memory.</p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-md">
+<!-- Lifecycle Flow Diagram -->
+<div class="col-span-12 bg-surface-container-lowest border border-outline-variant rounded-xl p-lg">
+<h3 class="font-h2 text-h2 text-on-surface mb-md">Lifecycle Flow</h3>
+<div class="flex items-center justify-between mt-xl mb-md">
+<div class="flex flex-col items-center gap-sm">
+<div class="w-12 h-12 rounded-full border border-[#166534] bg-[#f0fdf4] flex items-center justify-center text-[#166534]">
+<span class="material-symbols-outlined text-[24px]">bolt</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface">ACTIVE</span>
+</div>
+<div class="flex-1 h-px bg-outline-variant mx-md relative">
+<span class="material-symbols-outlined absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-outline-variant bg-surface-container-lowest px-xs text-[16px]">arrow_forward</span>
+</div>
+<div class="flex flex-col items-center gap-sm">
+<div class="w-12 h-12 rounded-full border border-primary bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">sd_card</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface">CACHED</span>
+</div>
+<div class="flex-1 h-px bg-outline-variant mx-md relative">
+<span class="material-symbols-outlined absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-outline-variant bg-surface-container-lowest px-xs text-[16px]">arrow_forward</span>
+</div>
+<div class="flex flex-col items-center gap-sm">
+<div class="w-12 h-12 rounded-full border border-[#9a3412] bg-[#fff7ed] flex items-center justify-center text-[#9a3412]">
+<span class="material-symbols-outlined text-[24px]">compress</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface">COMPRESSED</span>
+</div>
+<div class="flex-1 h-px bg-outline-variant mx-md relative">
+<span class="material-symbols-outlined absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-outline-variant bg-surface-container-lowest px-xs text-[16px]">arrow_forward</span>
+</div>
+<div class="flex flex-col items-center gap-sm">
+<div class="w-12 h-12 rounded-full border border-outline bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]">inventory_2</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface">ARCHIVED</span>
+</div>
+</div>
+</div>
+<!-- Timeline & Memory Inventory -->
+<div class="col-span-12 xl:col-span-8 space-y-md">
+<!-- Lifecycle Timeline -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg h-64 relative overflow-hidden">
+<h3 class="font-h2 text-h2 text-on-surface mb-md border-b border-outline-variant pb-xs">Lifecycle Timeline (Last 60m)</h3>
+<div class="absolute inset-0 top-14">
+<!-- Placeholder for complex chart -->
+<div class="w-full h-full flex items-center justify-center text-outline-variant font-code-md">
+                                 [ Timeline Visualization Area ]
+                             </div>
+</div>
+</div>
+<!-- Memory Inventory Table -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden">
+<div class="p-md border-b border-outline-variant flex justify-between items-center bg-surface-container-lowest">
+<h3 class="font-h2 text-h2 text-on-surface">Memory Inventory</h3>
+<button class="text-primary hover:text-primary-container font-label-caps text-label-caps flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">filter_list</span> FILTER
+                             </button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low font-label-caps text-label-caps text-on-surface-variant">
+<th class="p-sm pl-md border-b border-outline-variant font-medium">Item ID</th>
+<th class="p-sm border-b border-outline-variant font-medium">State</th>
+<th class="p-sm border-b border-outline-variant font-medium text-right">Priority</th>
+<th class="p-sm border-b border-outline-variant font-medium text-right">Memory</th>
+<th class="p-sm pr-md border-b border-outline-variant font-medium text-right">Time in State</th>
+</tr>
+</thead>
+<tbody class="font-code-sm text-code-sm text-on-surface">
+<tr class="hover:bg-surface-container-lowest border-b border-outline-variant cursor-pointer transition-colors" onclick="document.getElementById('decision-drawer').classList.remove('translate-x-full')">
+<td class="p-sm pl-md">0x8F9A...3B21</td>
+<td class="p-sm">
+<span class="inline-flex items-center gap-xs px-2 py-1 rounded bg-[#f0fdf4] text-[#166534] font-label-caps text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#166534]"></span> ACTIVE
+                                            </span>
+</td>
+<td class="p-sm text-right">0.98</td>
+<td class="p-sm text-right">4.2 MB</td>
+<td class="p-sm pr-md text-right text-on-surface-variant">02:14</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest border-b border-outline-variant cursor-pointer transition-colors">
+<td class="p-sm pl-md bg-[#F1F5F9]">0x4C2B...1D8E</td>
+<td class="p-sm">
+<span class="inline-flex items-center gap-xs px-2 py-1 rounded bg-primary-fixed text-primary font-label-caps text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> CACHED
+                                            </span>
+</td>
+<td class="p-sm text-right">0.64</td>
+<td class="p-sm text-right">1.8 MB</td>
+<td class="p-sm pr-md text-right text-on-surface-variant">14:30</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest border-b border-outline-variant cursor-pointer transition-colors">
+<td class="p-sm pl-md">0x1A5F...9C44</td>
+<td class="p-sm">
+<span class="inline-flex items-center gap-xs px-2 py-1 rounded bg-[#fff7ed] text-[#9a3412] font-label-caps text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#9a3412]"></span> COMPRESSED
+                                            </span>
+</td>
+<td class="p-sm text-right">0.31</td>
+<td class="p-sm text-right">0.4 MB</td>
+<td class="p-sm pr-md text-right text-on-surface-variant">45:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Right Side Drawer (Placeholder Area when closed, but embedded for layout here) -->
+<div class="col-span-12 xl:col-span-4 hidden xl:block">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl h-full flex flex-col">
+<div class="p-md border-b border-outline-variant flex justify-between items-center bg-surface-container-low rounded-t-xl">
+<h3 class="font-h2 text-h2 text-on-surface">Decision Details</h3>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">info</span>
+</div>
+<div class="p-md flex-1 flex flex-col justify-center items-center text-center text-on-surface-variant space-y-sm">
+<span class="material-symbols-outlined text-[32px] text-outline-variant opacity-50">touch_app</span>
+<p class="font-body-sm text-body-sm max-w-[200px]">Select a transition or memory item to view detailed decision metrics.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Decision Drawer Overlay (Hidden by default) -->
+<div class="fixed top-[64px] right-0 w-[360px] h-[calc(100vh-64px)] bg-surface-container-lowest border-l border-outline-variant shadow-xl transform translate-x-full transition-transform duration-300 z-50 flex flex-col" id="decision-drawer">
+<div class="p-md border-b border-outline-variant flex justify-between items-center bg-surface-container-low">
+<h3 class="font-h2 text-h2 text-on-surface">Decision Details</h3>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('decision-drawer').classList.add('translate-x-full')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-md flex-1 overflow-y-auto space-y-lg">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-xs">Item ID</p>
+<p class="font-code-md text-code-md text-on-surface bg-[#F1F5F9] px-2 py-1 rounded inline-block">0x8F9A...3B21</p>
+</div>
+<div class="grid grid-cols-2 gap-md border-t border-outline-variant pt-md">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-xs">Priority Score</p>
+<p class="font-h1 text-h1 text-on-surface">0.98</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-xs">Confidence</p>
+<p class="font-h1 text-h1 text-on-surface">94%</p>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-md">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-xs">Pressure Trend</p>
+<div class="h-24 bg-surface-container-low border border-outline-variant rounded flex items-end p-xs gap-xs mt-sm">
+<!-- Placeholder for mini chart -->
+<div class="w-1/6 bg-primary-fixed h-[40%] rounded-t"></div>
+<div class="w-1/6 bg-primary-fixed h-[60%] rounded-t"></div>
+<div class="w-1/6 bg-primary h-[80%] rounded-t"></div>
+<div class="w-1/6 bg-primary h-[100%] rounded-t"></div>
+<div class="w-1/6 bg-primary-container h-[90%] rounded-t"></div>
+<div class="w-1/6 bg-[#166534] h-[30%] rounded-t"></div>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-md">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-sm">Transition Log</p>
+<ul class="space-y-sm font-code-sm text-code-sm">
+<li class="flex justify-between items-center">
+<span class="text-on-surface-variant">10:42:01</span>
+<span class="text-on-surface">CACHED → ACTIVE</span>
+</li>
+<li class="flex justify-between items-center">
+<span class="text-on-surface-variant">09:15:22</span>
+<span class="text-on-surface">ACTIVE → CACHED</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</body></html>
