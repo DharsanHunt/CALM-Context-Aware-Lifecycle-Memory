@@ -1,0 +1,42 @@
+{
+  "metrics": {
+    "strategy_name": "Pressure-Only",
+    "workload_name": "social_media",
+    "seed": 45,
+    "num_requests": 120,
+    "cache_hit_rate_pct": 81.67,
+    "avg_launch_latency_sec": 0.8717,
+    "p95_launch_latency_sec": 2.4,
+    "p99_launch_latency_sec": 2.4,
+    "avg_ram_mb": 2270.3,
+    "peak_ram_mb": 2475.0,
+    "min_ram_mb": 500.0,
+    "memory_time_mb_ticks": 272440.0,
+    "total_reclaimed_mb": 22745.0,
+    "compression_savings_mb_ticks": 0.0,
+    "budget_violations_count": 0,
+    "thrashing_count": 21,
+    "oscillation_count": 0,
+    "unnecessary_evictions_count": 0,
+    "total_evictions_count": 22,
+    "state_distribution": {
+      "ACTIVE": 20.0,
+      "CACHED": 36.17,
+      "COMPRESSED": 20.33,
+      "ARCHIVED": 23.5
+    },
+    "prediction_top_1_accuracy": 42.86,
+    "prediction_top_3_accuracy": 90.76,
+    "mean_prediction_confidence": 0.1901
+  },
+  "trace_length": 120,
+  "pred_metrics": {
+    "top_1_accuracy": 42.86,
+    "top_3_accuracy": 90.76,
+    "top_k_accuracy": 90.76,
+    "mean_confidence": 0.1901,
+    "mean_entropy": 1.8806,
+    "brier_score": 0.6771,
+    "sample_count": 119
+  }
+}

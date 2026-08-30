@@ -1,0 +1,42 @@
+{
+  "metrics": {
+    "strategy_name": "Random",
+    "workload_name": "adversarial",
+    "seed": 44,
+    "num_requests": 120,
+    "cache_hit_rate_pct": 26.67,
+    "avg_launch_latency_sec": 1.8667,
+    "p95_launch_latency_sec": 2.4,
+    "p99_launch_latency_sec": 2.4,
+    "avg_ram_mb": 1997.5,
+    "peak_ram_mb": 2500.0,
+    "min_ram_mb": 800.0,
+    "memory_time_mb_ticks": 239700.0,
+    "total_reclaimed_mb": 68400.0,
+    "compression_savings_mb_ticks": 0.0,
+    "budget_violations_count": 0,
+    "thrashing_count": 87,
+    "oscillation_count": 0,
+    "unnecessary_evictions_count": 0,
+    "total_evictions_count": 88,
+    "state_distribution": {
+      "ACTIVE": 20.0,
+      "CACHED": 31.67,
+      "COMPRESSED": 0.0,
+      "ARCHIVED": 48.33
+    },
+    "prediction_top_1_accuracy": 85.71,
+    "prediction_top_3_accuracy": 94.96,
+    "mean_prediction_confidence": 0.6017
+  },
+  "trace_length": 120,
+  "pred_metrics": {
+    "top_1_accuracy": 85.71,
+    "top_3_accuracy": 94.96,
+    "top_k_accuracy": 94.96,
+    "mean_confidence": 0.6017,
+    "mean_entropy": 0.9248,
+    "brier_score": 0.2621,
+    "sample_count": 119
+  }
+}

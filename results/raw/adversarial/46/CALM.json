@@ -1,0 +1,42 @@
+{
+  "metrics": {
+    "strategy_name": "CALM",
+    "workload_name": "adversarial",
+    "seed": 46,
+    "num_requests": 120,
+    "cache_hit_rate_pct": 59.17,
+    "avg_launch_latency_sec": 1.4558,
+    "p95_launch_latency_sec": 2.4,
+    "p99_launch_latency_sec": 2.4,
+    "avg_ram_mb": 2278.2,
+    "peak_ram_mb": 2500.0,
+    "min_ram_mb": 500.0,
+    "memory_time_mb_ticks": 273390.0,
+    "total_reclaimed_mb": 62115.0,
+    "compression_savings_mb_ticks": 0.0,
+    "budget_violations_count": 0,
+    "thrashing_count": 48,
+    "oscillation_count": 0,
+    "unnecessary_evictions_count": 0,
+    "total_evictions_count": 49,
+    "state_distribution": {
+      "ACTIVE": 20.0,
+      "CACHED": 28.0,
+      "COMPRESSED": 22.83,
+      "ARCHIVED": 29.17
+    },
+    "prediction_top_1_accuracy": 83.19,
+    "prediction_top_3_accuracy": 94.12,
+    "mean_prediction_confidence": 0.6404
+  },
+  "trace_length": 120,
+  "pred_metrics": {
+    "top_1_accuracy": 83.19,
+    "top_3_accuracy": 94.12,
+    "top_k_accuracy": 94.12,
+    "mean_confidence": 0.6404,
+    "mean_entropy": 0.835,
+    "brier_score": 0.3013,
+    "sample_count": 119
+  }
+}

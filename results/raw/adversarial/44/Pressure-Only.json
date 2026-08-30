@@ -1,0 +1,42 @@
+{
+  "metrics": {
+    "strategy_name": "Pressure-Only",
+    "workload_name": "adversarial",
+    "seed": 44,
+    "num_requests": 120,
+    "cache_hit_rate_pct": 45.83,
+    "avg_launch_latency_sec": 1.635,
+    "p95_launch_latency_sec": 2.4,
+    "p99_launch_latency_sec": 2.4,
+    "avg_ram_mb": 2256.0,
+    "peak_ram_mb": 2500.0,
+    "min_ram_mb": 800.0,
+    "memory_time_mb_ticks": 270715.0,
+    "total_reclaimed_mb": 62700.0,
+    "compression_savings_mb_ticks": 0.0,
+    "budget_violations_count": 0,
+    "thrashing_count": 64,
+    "oscillation_count": 0,
+    "unnecessary_evictions_count": 0,
+    "total_evictions_count": 65,
+    "state_distribution": {
+      "ACTIVE": 20.0,
+      "CACHED": 36.0,
+      "COMPRESSED": 15.0,
+      "ARCHIVED": 29.0
+    },
+    "prediction_top_1_accuracy": 85.71,
+    "prediction_top_3_accuracy": 94.96,
+    "mean_prediction_confidence": 0.6017
+  },
+  "trace_length": 120,
+  "pred_metrics": {
+    "top_1_accuracy": 85.71,
+    "top_3_accuracy": 94.96,
+    "top_k_accuracy": 94.96,
+    "mean_confidence": 0.6017,
+    "mean_entropy": 0.9248,
+    "brier_score": 0.2621,
+    "sample_count": 119
+  }
+}

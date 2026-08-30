@@ -1,0 +1,42 @@
+{
+  "metrics": {
+    "strategy_name": "CALM",
+    "workload_name": "bursty",
+    "seed": 46,
+    "num_requests": 120,
+    "cache_hit_rate_pct": 84.17,
+    "avg_launch_latency_sec": 0.5475,
+    "p95_launch_latency_sec": 2.4,
+    "p99_launch_latency_sec": 2.4,
+    "avg_ram_mb": 2172.8,
+    "peak_ram_mb": 2500.0,
+    "min_ram_mb": 600.0,
+    "memory_time_mb_ticks": 260735.0,
+    "total_reclaimed_mb": 16545.0,
+    "compression_savings_mb_ticks": 0.0,
+    "budget_violations_count": 0,
+    "thrashing_count": 18,
+    "oscillation_count": 0,
+    "unnecessary_evictions_count": 0,
+    "total_evictions_count": 19,
+    "state_distribution": {
+      "ACTIVE": 20.0,
+      "CACHED": 21.5,
+      "COMPRESSED": 21.83,
+      "ARCHIVED": 36.67
+    },
+    "prediction_top_1_accuracy": 67.23,
+    "prediction_top_3_accuracy": 89.08,
+    "mean_prediction_confidence": 0.3448
+  },
+  "trace_length": 120,
+  "pred_metrics": {
+    "top_1_accuracy": 67.23,
+    "top_3_accuracy": 89.08,
+    "top_k_accuracy": 89.08,
+    "mean_confidence": 0.3448,
+    "mean_entropy": 1.5213,
+    "brier_score": 0.5359,
+    "sample_count": 119
+  }
+}

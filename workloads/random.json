@@ -1,0 +1,3215 @@
+{
+  "name": "random_seed42",
+  "workload_type": "random",
+  "seed": 42,
+  "num_events": 400,
+  "items": [
+    "Chrome",
+    "YouTube",
+    "Spotify",
+    "Gemini",
+    "WhatsApp"
+  ],
+  "events": [
+    {
+      "tick": 0,
+      "timestamp": "2026-05-12 09:00:00",
+      "item_id": "Chrome",
+      "ram_mb": 1153,
+      "context_type": "APP",
+      "importance": 0.77
+    },
+    {
+      "tick": 1,
+      "timestamp": "2026-05-12 09:02:02",
+      "item_id": "YouTube",
+      "ram_mb": 944,
+      "context_type": "APP",
+      "importance": 0.45
+    },
+    {
+      "tick": 2,
+      "timestamp": "2026-05-12 09:05:21",
+      "item_id": "Chrome",
+      "ram_mb": 1204,
+      "context_type": "APP",
+      "importance": 0.42
+    },
+    {
+      "tick": 3,
+      "timestamp": "2026-05-12 09:06:44",
+      "item_id": "YouTube",
+      "ram_mb": 914,
+      "context_type": "APP",
+      "importance": 0.7
+    },
+    {
+      "tick": 4,
+      "timestamp": "2026-05-12 09:10:07",
+      "item_id": "Chrome",
+      "ram_mb": 1233,
+      "context_type": "APP",
+      "importance": 0.75
+    },
+    {
+      "tick": 5,
+      "timestamp": "2026-05-12 09:12:54",
+      "item_id": "YouTube",
+      "ram_mb": 925,
+      "context_type": "APP",
+      "importance": 0.54
+    },
+    {
+      "tick": 6,
+      "timestamp": "2026-05-12 09:13:55",
+      "item_id": "Gemini",
+      "ram_mb": 770,
+      "context_type": "APP",
+      "importance": 0.75
+    },
+    {
+      "tick": 7,
+      "timestamp": "2026-05-12 09:16:22",
+      "item_id": "YouTube",
+      "ram_mb": 877,
+      "context_type": "APP",
+      "importance": 0.88
+    },
+    {
+      "tick": 8,
+      "timestamp": "2026-05-12 09:18:48",
+      "item_id": "Chrome",
+      "ram_mb": 1198,
+      "context_type": "APP",
+      "importance": 0.45
+    },
+    {
+      "tick": 9,
+      "timestamp": "2026-05-12 09:21:16",
+      "item_id": "Gemini",
+      "ram_mb": 755,
+      "context_type": "APP",
+      "importance": 0.76
+    },
+    {
+      "tick": 10,
+      "timestamp": "2026-05-12 09:24:33",
+      "item_id": "Chrome",
+      "ram_mb": 1198,
+      "context_type": "APP",
+      "importance": 0.44
+    },
+    {
+      "tick": 11,
+      "timestamp": "2026-05-12 09:26:48",
+      "item_id": "WhatsApp",
+      "ram_mb": 529,
+      "context_type": "APP",
+      "importance": 0.84
+    },
+    {
+      "tick": 12,
+      "timestamp": "2026-05-12 09:29:20",
+      "item_id": "Spotify",
+      "ram_mb": 640,
+      "context_type": "APP",
+      "importance": 0.43
+    },
+    {
+      "tick": 13,
+      "timestamp": "2026-05-12 09:33:09",
+      "item_id": "YouTube",
+      "ram_mb": 887,
+      "context_type": "APP",
+      "importance": 0.89
+    },
+    {
+      "tick": 14,
+      "timestamp": "2026-05-12 09:35:08",
+      "item_id": "WhatsApp",
+      "ram_mb": 498,
+      "context_type": "APP",
+      "importance": 0.54
+    },
+    {
+      "tick": 15,
+      "timestamp": "2026-05-12 09:38:50",
+      "item_id": "WhatsApp",
+      "ram_mb": 470,
+      "context_type": "APP",
+      "importance": 0.59
+    },
+    {
+      "tick": 16,
+      "timestamp": "2026-05-12 09:40:43",
+      "item_id": "Gemini",
+      "ram_mb": 839,
+      "context_type": "APP",
+      "importance": 0.87
+    },
+    {
+      "tick": 17,
+      "timestamp": "2026-05-12 09:44:28",
+      "item_id": "Chrome",
+      "ram_mb": 1231,
+      "context_type": "APP",
+      "importance": 0.49
+    },
+    {
+      "tick": 18,
+      "timestamp": "2026-05-12 09:46:30",
+      "item_id": "Chrome",
+      "ram_mb": 1198,
+      "context_type": "APP",
+      "importance": 0.53
+    },
+    {
+      "tick": 19,
+      "timestamp": "2026-05-12 09:50:13",
+      "item_id": "Gemini",
+      "ram_mb": 778,
+      "context_type": "APP",
+      "importance": 0.74
+    },
+    {
+      "tick": 20,
+      "timestamp": "2026-05-12 09:51:27",
+      "item_id": "YouTube",
+      "ram_mb": 854,
+      "context_type": "APP",
+      "importance": 0.8
+    },
+    {
+      "tick": 21,
+      "timestamp": "2026-05-12 09:54:09",
+      "item_id": "YouTube",
+      "ram_mb": 877,
+      "context_type": "APP",
+      "importance": 0.86
+    },
+    {
+      "tick": 22,
+      "timestamp": "2026-05-12 09:57:34",
+      "item_id": "WhatsApp",
+      "ram_mb": 490,
+      "context_type": "APP",
+      "importance": 0.51
+    },
+    {
+      "tick": 23,
+      "timestamp": "2026-05-12 10:00:41",
+      "item_id": "YouTube",
+      "ram_mb": 932,
+      "context_type": "APP",
+      "importance": 0.63
+    },
+    {
+      "tick": 24,
+      "timestamp": "2026-05-12 10:02:48",
+      "item_id": "Chrome",
+      "ram_mb": 1245,
+      "context_type": "APP",
+      "importance": 0.68
+    },
+    {
+      "tick": 25,
+      "timestamp": "2026-05-12 10:04:55",
+      "item_id": "Gemini",
+      "ram_mb": 804,
+      "context_type": "APP",
+      "importance": 0.85
+    },
+    {
+      "tick": 26,
+      "timestamp": "2026-05-12 10:07:37",
+      "item_id": "YouTube",
+      "ram_mb": 867,
+      "context_type": "APP",
+      "importance": 0.65
+    },
+    {
+      "tick": 27,
+      "timestamp": "2026-05-12 10:09:00",
+      "item_id": "Gemini",
+      "ram_mb": 764,
+      "context_type": "APP",
+      "importance": 0.48
+    },
+    {
+      "tick": 28,
+      "timestamp": "2026-05-12 10:10:40",
+      "item_id": "Gemini",
+      "ram_mb": 804,
+      "context_type": "APP",
+      "importance": 0.7
+    },
+    {
+      "tick": 29,
+      "timestamp": "2026-05-12 10:13:18",
+      "item_id": "YouTube",
+      "ram_mb": 909,
+      "context_type": "APP",
+      "importance": 0.66
+    },
+    {
+      "tick": 30,
+      "timestamp": "2026-05-12 10:16:39",
+      "item_id": "WhatsApp",
+      "ram_mb": 451,
+      "context_type": "APP",
+      "importance": 0.74
+    },
+    {
+      "tick": 31,
+      "timestamp": "2026-05-12 10:18:08",
+      "item_id": "Gemini",
+      "ram_mb": 818,
+      "context_type": "APP",
+      "importance": 0.78
+    },
+    {
+      "tick": 32,
+      "timestamp": "2026-05-12 10:21:52",
+      "item_id": "YouTube",
+      "ram_mb": 887,
+      "context_type": "APP",
+      "importance": 0.62
+    },
+    {
+      "tick": 33,
+      "timestamp": "2026-05-12 10:24:48",
+      "item_id": "Chrome",
+      "ram_mb": 1242,
+      "context_type": "APP",
+      "importance": 0.84
+    },
+    {
+      "tick": 34,
+      "timestamp": "2026-05-12 10:26:55",
+      "item_id": "WhatsApp",
+      "ram_mb": 547,
+      "context_type": "APP",
+      "importance": 0.49
+    },
+    {
+      "tick": 35,
+      "timestamp": "2026-05-12 10:28:22",
+      "item_id": "WhatsApp",
+      "ram_mb": 488,
+      "context_type": "APP",
+      "importance": 0.82
+    },
+    {
+      "tick": 36,
+      "timestamp": "2026-05-12 10:31:31",
+      "item_id": "Gemini",
+      "ram_mb": 769,
+      "context_type": "APP",
+      "importance": 0.59
+    },
+    {
+      "tick": 37,
+      "timestamp": "2026-05-12 10:33:12",
+      "item_id": "Spotify",
+      "ram_mb": 649,
+      "context_type": "APP",
+      "importance": 0.86
+    },
+    {
+      "tick": 38,
+      "timestamp": "2026-05-12 10:34:12",
+      "item_id": "Spotify",
+      "ram_mb": 612,
+      "context_type": "APP",
+      "importance": 0.41
+    },
+    {
+      "tick": 39,
+      "timestamp": "2026-05-12 10:36:44",
+      "item_id": "WhatsApp",
+      "ram_mb": 489,
+      "context_type": "APP",
+      "importance": 0.52
+    },
+    {
+      "tick": 40,
+      "timestamp": "2026-05-12 10:38:45",
+      "item_id": "WhatsApp",
+      "ram_mb": 460,
+      "context_type": "APP",
+      "importance": 0.44
+    },
+    {
+      "tick": 41,
+      "timestamp": "2026-05-12 10:41:49",
+      "item_id": "WhatsApp",
+      "ram_mb": 547,
+      "context_type": "APP",
+      "importance": 0.67
+    },
+    {
+      "tick": 42,
+      "timestamp": "2026-05-12 10:43:21",
+      "item_id": "Chrome",
+      "ram_mb": 1210,
+      "context_type": "APP",
+      "importance": 0.87
+    },
+    {
+      "tick": 43,
+      "timestamp": "2026-05-12 10:45:03",
+      "item_id": "YouTube",
+      "ram_mb": 927,
+      "context_type": "APP",
+      "importance": 0.61
+    },
+    {
+      "tick": 44,
+      "timestamp": "2026-05-12 10:46:57",
+      "item_id": "WhatsApp",
+      "ram_mb": 546,
+      "context_type": "APP",
+      "importance": 0.76
+    },
+    {
+      "tick": 45,
+      "timestamp": "2026-05-12 10:48:48",
+      "item_id": "Gemini",
+      "ram_mb": 801,
+      "context_type": "APP",
+      "importance": 0.9
+    },
+    {
+      "tick": 46,
+      "timestamp": "2026-05-12 10:52:34",
+      "item_id": "YouTube",
+      "ram_mb": 916,
+      "context_type": "APP",
+      "importance": 0.63
+    },
+    {
+      "tick": 47,
+      "timestamp": "2026-05-12 10:54:37",
+      "item_id": "YouTube",
+      "ram_mb": 893,
+      "context_type": "APP",
+      "importance": 0.41
+    },
+    {
+      "tick": 48,
+      "timestamp": "2026-05-12 10:57:58",
+      "item_id": "YouTube",
+      "ram_mb": 878,
+      "context_type": "APP",
+      "importance": 0.4
+    },
+    {
+      "tick": 49,
+      "timestamp": "2026-05-12 11:01:39",
+      "item_id": "Chrome",
+      "ram_mb": 1158,
+      "context_type": "APP",
+      "importance": 0.85
+    },
+    {
+      "tick": 50,
+      "timestamp": "2026-05-12 11:04:03",
+      "item_id": "Chrome",
+      "ram_mb": 1180,
+      "context_type": "APP",
+      "importance": 0.54
+    },
+    {
+      "tick": 51,
+      "timestamp": "2026-05-12 11:07:07",
+      "item_id": "YouTube",
+      "ram_mb": 866,
+      "context_type": "APP",
+      "importance": 0.76
+    },
+    {
+      "tick": 52,
+      "timestamp": "2026-05-12 11:10:33",
+      "item_id": "Spotify",
+      "ram_mb": 581,
+      "context_type": "APP",
+      "importance": 0.79
+    },
+    {
+      "tick": 53,
+      "timestamp": "2026-05-12 11:13:17",
+      "item_id": "Chrome",
+      "ram_mb": 1162,
+      "context_type": "APP",
+      "importance": 0.73
+    },
+    {
+      "tick": 54,
+      "timestamp": "2026-05-12 11:15:47",
+      "item_id": "Spotify",
+      "ram_mb": 609,
+      "context_type": "APP",
+      "importance": 0.83
+    },
+    {
+      "tick": 55,
+      "timestamp": "2026-05-12 11:17:00",
+      "item_id": "Gemini",
+      "ram_mb": 832,
+      "context_type": "APP",
+      "importance": 0.45
+    },
+    {
+      "tick": 56,
+      "timestamp": "2026-05-12 11:19:43",
+      "item_id": "Gemini",
+      "ram_mb": 763,
+      "context_type": "APP",
+      "importance": 0.52
+    },
+    {
+      "tick": 57,
+      "timestamp": "2026-05-12 11:21:31",
+      "item_id": "Spotify",
+      "ram_mb": 567,
+      "context_type": "APP",
+      "importance": 0.61
+    },
+    {
+      "tick": 58,
+      "timestamp": "2026-05-12 11:23:42",
+      "item_id": "Spotify",
+      "ram_mb": 559,
+      "context_type": "APP",
+      "importance": 0.62
+    },
+    {
+      "tick": 59,
+      "timestamp": "2026-05-12 11:27:02",
+      "item_id": "Chrome",
+      "ram_mb": 1233,
+      "context_type": "APP",
+      "importance": 0.9
+    },
+    {
+      "tick": 60,
+      "timestamp": "2026-05-12 11:28:05",
+      "item_id": "WhatsApp",
+      "ram_mb": 546,
+      "context_type": "APP",
+      "importance": 0.82
+    },
+    {
+      "tick": 61,
+      "timestamp": "2026-05-12 11:29:47",
+      "item_id": "Spotify",
+      "ram_mb": 611,
+      "context_type": "APP",
+      "importance": 0.51
+    },
+    {
+      "tick": 62,
+      "timestamp": "2026-05-12 11:32:29",
+      "item_id": "WhatsApp",
+      "ram_mb": 471,
+      "context_type": "APP",
+      "importance": 0.59
+    },
+    {
+      "tick": 63,
+      "timestamp": "2026-05-12 11:35:08",
+      "item_id": "YouTube",
+      "ram_mb": 950,
+      "context_type": "APP",
+      "importance": 0.79
+    },
+    {
+      "tick": 64,
+      "timestamp": "2026-05-12 11:37:21",
+      "item_id": "Spotify",
+      "ram_mb": 643,
+      "context_type": "APP",
+      "importance": 0.9
+    },
+    {
+      "tick": 65,
+      "timestamp": "2026-05-12 11:40:43",
+      "item_id": "Gemini",
+      "ram_mb": 812,
+      "context_type": "APP",
+      "importance": 0.48
+    },
+    {
+      "tick": 66,
+      "timestamp": "2026-05-12 11:42:58",
+      "item_id": "YouTube",
+      "ram_mb": 857,
+      "context_type": "APP",
+      "importance": 0.69
+    },
+    {
+      "tick": 67,
+      "timestamp": "2026-05-12 11:46:16",
+      "item_id": "Chrome",
+      "ram_mb": 1190,
+      "context_type": "APP",
+      "importance": 0.43
+    },
+    {
+      "tick": 68,
+      "timestamp": "2026-05-12 11:49:45",
+      "item_id": "Spotify",
+      "ram_mb": 617,
+      "context_type": "APP",
+      "importance": 0.48
+    },
+    {
+      "tick": 69,
+      "timestamp": "2026-05-12 11:52:55",
+      "item_id": "Chrome",
+      "ram_mb": 1173,
+      "context_type": "APP",
+      "importance": 0.43
+    },
+    {
+      "tick": 70,
+      "timestamp": "2026-05-12 11:54:12",
+      "item_id": "Gemini",
+      "ram_mb": 780,
+      "context_type": "APP",
+      "importance": 0.6
+    },
+    {
+      "tick": 71,
+      "timestamp": "2026-05-12 11:57:37",
+      "item_id": "YouTube",
+      "ram_mb": 926,
+      "context_type": "APP",
+      "importance": 0.42
+    },
+    {
+      "tick": 72,
+      "timestamp": "2026-05-12 11:58:57",
+      "item_id": "Spotify",
+      "ram_mb": 624,
+      "context_type": "APP",
+      "importance": 0.68
+    },
+    {
+      "tick": 73,
+      "timestamp": "2026-05-12 12:01:17",
+      "item_id": "WhatsApp",
+      "ram_mb": 476,
+      "context_type": "APP",
+      "importance": 0.73
+    },
+    {
+      "tick": 74,
+      "timestamp": "2026-05-12 12:03:37",
+      "item_id": "YouTube",
+      "ram_mb": 900,
+      "context_type": "APP",
+      "importance": 0.47
+    },
+    {
+      "tick": 75,
+      "timestamp": "2026-05-12 12:07:22",
+      "item_id": "YouTube",
+      "ram_mb": 890,
+      "context_type": "APP",
+      "importance": 0.86
+    },
+    {
+      "tick": 76,
+      "timestamp": "2026-05-12 12:08:40",
+      "item_id": "Chrome",
+      "ram_mb": 1229,
+      "context_type": "APP",
+      "importance": 0.9
+    },
+    {
+      "tick": 77,
+      "timestamp": "2026-05-12 12:10:05",
+      "item_id": "Chrome",
+      "ram_mb": 1177,
+      "context_type": "APP",
+      "importance": 0.65
+    },
+    {
+      "tick": 78,
+      "timestamp": "2026-05-12 12:11:38",
+      "item_id": "WhatsApp",
+      "ram_mb": 458,
+      "context_type": "APP",
+      "importance": 0.84
+    },
+    {
+      "tick": 79,
+      "timestamp": "2026-05-12 12:14:12",
+      "item_id": "YouTube",
+      "ram_mb": 906,
+      "context_type": "APP",
+      "importance": 0.82
+    },
+    {
+      "tick": 80,
+      "timestamp": "2026-05-12 12:18:12",
+      "item_id": "YouTube",
+      "ram_mb": 933,
+      "context_type": "APP",
+      "importance": 0.66
+    },
+    {
+      "tick": 81,
+      "timestamp": "2026-05-12 12:22:02",
+      "item_id": "WhatsApp",
+      "ram_mb": 488,
+      "context_type": "APP",
+      "importance": 0.87
+    },
+    {
+      "tick": 82,
+      "timestamp": "2026-05-12 12:23:28",
+      "item_id": "WhatsApp",
+      "ram_mb": 467,
+      "context_type": "APP",
+      "importance": 0.53
+    },
+    {
+      "tick": 83,
+      "timestamp": "2026-05-12 12:24:55",
+      "item_id": "Gemini",
+      "ram_mb": 769,
+      "context_type": "APP",
+      "importance": 0.54
+    },
+    {
+      "tick": 84,
+      "timestamp": "2026-05-12 12:28:29",
+      "item_id": "YouTube",
+      "ram_mb": 893,
+      "context_type": "APP",
+      "importance": 0.5
+    },
+    {
+      "tick": 85,
+      "timestamp": "2026-05-12 12:32:11",
+      "item_id": "WhatsApp",
+      "ram_mb": 514,
+      "context_type": "APP",
+      "importance": 0.64
+    },
+    {
+      "tick": 86,
+      "timestamp": "2026-05-12 12:33:24",
+      "item_id": "Chrome",
+      "ram_mb": 1204,
+      "context_type": "APP",
+      "importance": 0.81
+    },
+    {
+      "tick": 87,
+      "timestamp": "2026-05-12 12:34:35",
+      "item_id": "Chrome",
+      "ram_mb": 1248,
+      "context_type": "APP",
+      "importance": 0.47
+    },
+    {
+      "tick": 88,
+      "timestamp": "2026-05-12 12:36:42",
+      "item_id": "Chrome",
+      "ram_mb": 1206,
+      "context_type": "APP",
+      "importance": 0.68
+    },
+    {
+      "tick": 89,
+      "timestamp": "2026-05-12 12:39:31",
+      "item_id": "Spotify",
+      "ram_mb": 564,
+      "context_type": "APP",
+      "importance": 0.44
+    },
+    {
+      "tick": 90,
+      "timestamp": "2026-05-12 12:43:27",
+      "item_id": "WhatsApp",
+      "ram_mb": 519,
+      "context_type": "APP",
+      "importance": 0.42
+    },
+    {
+      "tick": 91,
+      "timestamp": "2026-05-12 12:46:01",
+      "item_id": "Spotify",
+      "ram_mb": 568,
+      "context_type": "APP",
+      "importance": 0.61
+    },
+    {
+      "tick": 92,
+      "timestamp": "2026-05-12 12:47:11",
+      "item_id": "YouTube",
+      "ram_mb": 855,
+      "context_type": "APP",
+      "importance": 0.85
+    },
+    {
+      "tick": 93,
+      "timestamp": "2026-05-12 12:49:04",
+      "item_id": "Gemini",
+      "ram_mb": 835,
+      "context_type": "APP",
+      "importance": 0.45
+    },
+    {
+      "tick": 94,
+      "timestamp": "2026-05-12 12:52:27",
+      "item_id": "WhatsApp",
+      "ram_mb": 502,
+      "context_type": "APP",
+      "importance": 0.89
+    },
+    {
+      "tick": 95,
+      "timestamp": "2026-05-12 12:54:06",
+      "item_id": "WhatsApp",
+      "ram_mb": 480,
+      "context_type": "APP",
+      "importance": 0.83
+    },
+    {
+      "tick": 96,
+      "timestamp": "2026-05-12 12:55:51",
+      "item_id": "WhatsApp",
+      "ram_mb": 453,
+      "context_type": "APP",
+      "importance": 0.49
+    },
+    {
+      "tick": 97,
+      "timestamp": "2026-05-12 12:58:16",
+      "item_id": "Gemini",
+      "ram_mb": 802,
+      "context_type": "APP",
+      "importance": 0.8
+    },
+    {
+      "tick": 98,
+      "timestamp": "2026-05-12 13:00:19",
+      "item_id": "YouTube",
+      "ram_mb": 950,
+      "context_type": "APP",
+      "importance": 0.75
+    },
+    {
+      "tick": 99,
+      "timestamp": "2026-05-12 13:02:56",
+      "item_id": "WhatsApp",
+      "ram_mb": 510,
+      "context_type": "APP",
+      "importance": 0.51
+    },
+    {
+      "tick": 100,
+      "timestamp": "2026-05-12 13:05:53",
+      "item_id": "YouTube",
+      "ram_mb": 879,
+      "context_type": "APP",
+      "importance": 0.51
+    },
+    {
+      "tick": 101,
+      "timestamp": "2026-05-12 13:09:41",
+      "item_id": "Chrome",
+      "ram_mb": 1192,
+      "context_type": "APP",
+      "importance": 0.54
+    },
+    {
+      "tick": 102,
+      "timestamp": "2026-05-12 13:10:58",
+      "item_id": "WhatsApp",
+      "ram_mb": 485,
+      "context_type": "APP",
+      "importance": 0.58
+    },
+    {
+      "tick": 103,
+      "timestamp": "2026-05-12 13:14:08",
+      "item_id": "YouTube",
+      "ram_mb": 918,
+      "context_type": "APP",
+      "importance": 0.57
+    },
+    {
+      "tick": 104,
+      "timestamp": "2026-05-12 13:15:15",
+      "item_id": "Chrome",
+      "ram_mb": 1183,
+      "context_type": "APP",
+      "importance": 0.49
+    },
+    {
+      "tick": 105,
+      "timestamp": "2026-05-12 13:17:22",
+      "item_id": "Chrome",
+      "ram_mb": 1226,
+      "context_type": "APP",
+      "importance": 0.62
+    },
+    {
+      "tick": 106,
+      "timestamp": "2026-05-12 13:19:42",
+      "item_id": "Spotify",
+      "ram_mb": 615,
+      "context_type": "APP",
+      "importance": 0.46
+    },
+    {
+      "tick": 107,
+      "timestamp": "2026-05-12 13:23:09",
+      "item_id": "Chrome",
+      "ram_mb": 1155,
+      "context_type": "APP",
+      "importance": 0.75
+    },
+    {
+      "tick": 108,
+      "timestamp": "2026-05-12 13:24:09",
+      "item_id": "Spotify",
+      "ram_mb": 618,
+      "context_type": "APP",
+      "importance": 0.74
+    },
+    {
+      "tick": 109,
+      "timestamp": "2026-05-12 13:28:00",
+      "item_id": "Chrome",
+      "ram_mb": 1205,
+      "context_type": "APP",
+      "importance": 0.43
+    },
+    {
+      "tick": 110,
+      "timestamp": "2026-05-12 13:31:50",
+      "item_id": "WhatsApp",
+      "ram_mb": 529,
+      "context_type": "APP",
+      "importance": 0.56
+    },
+    {
+      "tick": 111,
+      "timestamp": "2026-05-12 13:33:21",
+      "item_id": "Gemini",
+      "ram_mb": 788,
+      "context_type": "APP",
+      "importance": 0.65
+    },
+    {
+      "tick": 112,
+      "timestamp": "2026-05-12 13:37:11",
+      "item_id": "Spotify",
+      "ram_mb": 601,
+      "context_type": "APP",
+      "importance": 0.75
+    },
+    {
+      "tick": 113,
+      "timestamp": "2026-05-12 13:40:32",
+      "item_id": "Chrome",
+      "ram_mb": 1203,
+      "context_type": "APP",
+      "importance": 0.73
+    },
+    {
+      "tick": 114,
+      "timestamp": "2026-05-12 13:43:09",
+      "item_id": "Gemini",
+      "ram_mb": 772,
+      "context_type": "APP",
+      "importance": 0.71
+    },
+    {
+      "tick": 115,
+      "timestamp": "2026-05-12 13:45:26",
+      "item_id": "Spotify",
+      "ram_mb": 550,
+      "context_type": "APP",
+      "importance": 0.55
+    },
+    {
+      "tick": 116,
+      "timestamp": "2026-05-12 13:47:19",
+      "item_id": "Spotify",
+      "ram_mb": 624,
+      "context_type": "APP",
+      "importance": 0.7
+    },
+    {
+      "tick": 117,
+      "timestamp": "2026-05-12 13:49:41",
+      "item_id": "Spotify",
+      "ram_mb": 606,
+      "context_type": "APP",
+      "importance": 0.74
+    },
+    {
+      "tick": 118,
+      "timestamp": "2026-05-12 13:52:51",
+      "item_id": "Spotify",
+      "ram_mb": 644,
+      "context_type": "APP",
+      "importance": 0.48
+    },
+    {
+      "tick": 119,
+      "timestamp": "2026-05-12 13:54:12",
+      "item_id": "YouTube",
+      "ram_mb": 934,
+      "context_type": "APP",
+      "importance": 0.72
+    },
+    {
+      "tick": 120,
+      "timestamp": "2026-05-12 13:56:37",
+      "item_id": "Chrome",
+      "ram_mb": 1246,
+      "context_type": "APP",
+      "importance": 0.52
+    },
+    {
+      "tick": 121,
+      "timestamp": "2026-05-12 13:58:56",
+      "item_id": "YouTube",
+      "ram_mb": 875,
+      "context_type": "APP",
+      "importance": 0.47
+    },
+    {
+      "tick": 122,
+      "timestamp": "2026-05-12 14:00:07",
+      "item_id": "YouTube",
+      "ram_mb": 910,
+      "context_type": "APP",
+      "importance": 0.71
+    },
+    {
+      "tick": 123,
+      "timestamp": "2026-05-12 14:01:25",
+      "item_id": "Spotify",
+      "ram_mb": 630,
+      "context_type": "APP",
+      "importance": 0.69
+    },
+    {
+      "tick": 124,
+      "timestamp": "2026-05-12 14:05:23",
+      "item_id": "YouTube",
+      "ram_mb": 901,
+      "context_type": "APP",
+      "importance": 0.52
+    },
+    {
+      "tick": 125,
+      "timestamp": "2026-05-12 14:09:10",
+      "item_id": "Gemini",
+      "ram_mb": 846,
+      "context_type": "APP",
+      "importance": 0.83
+    },
+    {
+      "tick": 126,
+      "timestamp": "2026-05-12 14:10:37",
+      "item_id": "Gemini",
+      "ram_mb": 778,
+      "context_type": "APP",
+      "importance": 0.49
+    },
+    {
+      "tick": 127,
+      "timestamp": "2026-05-12 14:14:35",
+      "item_id": "Spotify",
+      "ram_mb": 556,
+      "context_type": "APP",
+      "importance": 0.68
+    },
+    {
+      "tick": 128,
+      "timestamp": "2026-05-12 14:16:06",
+      "item_id": "Spotify",
+      "ram_mb": 609,
+      "context_type": "APP",
+      "importance": 0.73
+    },
+    {
+      "tick": 129,
+      "timestamp": "2026-05-12 14:19:29",
+      "item_id": "Spotify",
+      "ram_mb": 646,
+      "context_type": "APP",
+      "importance": 0.85
+    },
+    {
+      "tick": 130,
+      "timestamp": "2026-05-12 14:23:05",
+      "item_id": "WhatsApp",
+      "ram_mb": 514,
+      "context_type": "APP",
+      "importance": 0.61
+    },
+    {
+      "tick": 131,
+      "timestamp": "2026-05-12 14:26:25",
+      "item_id": "Spotify",
+      "ram_mb": 570,
+      "context_type": "APP",
+      "importance": 0.77
+    },
+    {
+      "tick": 132,
+      "timestamp": "2026-05-12 14:29:26",
+      "item_id": "Spotify",
+      "ram_mb": 646,
+      "context_type": "APP",
+      "importance": 0.52
+    },
+    {
+      "tick": 133,
+      "timestamp": "2026-05-12 14:33:09",
+      "item_id": "YouTube",
+      "ram_mb": 949,
+      "context_type": "APP",
+      "importance": 0.66
+    },
+    {
+      "tick": 134,
+      "timestamp": "2026-05-12 14:36:49",
+      "item_id": "YouTube",
+      "ram_mb": 906,
+      "context_type": "APP",
+      "importance": 0.44
+    },
+    {
+      "tick": 135,
+      "timestamp": "2026-05-12 14:39:02",
+      "item_id": "YouTube",
+      "ram_mb": 892,
+      "context_type": "APP",
+      "importance": 0.56
+    },
+    {
+      "tick": 136,
+      "timestamp": "2026-05-12 14:42:20",
+      "item_id": "Chrome",
+      "ram_mb": 1169,
+      "context_type": "APP",
+      "importance": 0.52
+    },
+    {
+      "tick": 137,
+      "timestamp": "2026-05-12 14:46:17",
+      "item_id": "Chrome",
+      "ram_mb": 1177,
+      "context_type": "APP",
+      "importance": 0.43
+    },
+    {
+      "tick": 138,
+      "timestamp": "2026-05-12 14:49:01",
+      "item_id": "YouTube",
+      "ram_mb": 909,
+      "context_type": "APP",
+      "importance": 0.61
+    },
+    {
+      "tick": 139,
+      "timestamp": "2026-05-12 14:50:53",
+      "item_id": "WhatsApp",
+      "ram_mb": 499,
+      "context_type": "APP",
+      "importance": 0.85
+    },
+    {
+      "tick": 140,
+      "timestamp": "2026-05-12 14:54:22",
+      "item_id": "WhatsApp",
+      "ram_mb": 452,
+      "context_type": "APP",
+      "importance": 0.83
+    },
+    {
+      "tick": 141,
+      "timestamp": "2026-05-12 14:57:49",
+      "item_id": "YouTube",
+      "ram_mb": 850,
+      "context_type": "APP",
+      "importance": 0.87
+    },
+    {
+      "tick": 142,
+      "timestamp": "2026-05-12 15:00:05",
+      "item_id": "Gemini",
+      "ram_mb": 803,
+      "context_type": "APP",
+      "importance": 0.67
+    },
+    {
+      "tick": 143,
+      "timestamp": "2026-05-12 15:03:24",
+      "item_id": "Gemini",
+      "ram_mb": 778,
+      "context_type": "APP",
+      "importance": 0.64
+    },
+    {
+      "tick": 144,
+      "timestamp": "2026-05-12 15:05:33",
+      "item_id": "Spotify",
+      "ram_mb": 553,
+      "context_type": "APP",
+      "importance": 0.59
+    },
+    {
+      "tick": 145,
+      "timestamp": "2026-05-12 15:09:24",
+      "item_id": "Gemini",
+      "ram_mb": 801,
+      "context_type": "APP",
+      "importance": 0.76
+    },
+    {
+      "tick": 146,
+      "timestamp": "2026-05-12 15:12:23",
+      "item_id": "WhatsApp",
+      "ram_mb": 529,
+      "context_type": "APP",
+      "importance": 0.67
+    },
+    {
+      "tick": 147,
+      "timestamp": "2026-05-12 15:15:03",
+      "item_id": "Spotify",
+      "ram_mb": 634,
+      "context_type": "APP",
+      "importance": 0.41
+    },
+    {
+      "tick": 148,
+      "timestamp": "2026-05-12 15:18:47",
+      "item_id": "Spotify",
+      "ram_mb": 609,
+      "context_type": "APP",
+      "importance": 0.49
+    },
+    {
+      "tick": 149,
+      "timestamp": "2026-05-12 15:20:53",
+      "item_id": "YouTube",
+      "ram_mb": 877,
+      "context_type": "APP",
+      "importance": 0.63
+    },
+    {
+      "tick": 150,
+      "timestamp": "2026-05-12 15:23:19",
+      "item_id": "Gemini",
+      "ram_mb": 798,
+      "context_type": "APP",
+      "importance": 0.54
+    },
+    {
+      "tick": 151,
+      "timestamp": "2026-05-12 15:26:06",
+      "item_id": "YouTube",
+      "ram_mb": 860,
+      "context_type": "APP",
+      "importance": 0.64
+    },
+    {
+      "tick": 152,
+      "timestamp": "2026-05-12 15:29:24",
+      "item_id": "Chrome",
+      "ram_mb": 1194,
+      "context_type": "APP",
+      "importance": 0.51
+    },
+    {
+      "tick": 153,
+      "timestamp": "2026-05-12 15:30:41",
+      "item_id": "Gemini",
+      "ram_mb": 833,
+      "context_type": "APP",
+      "importance": 0.42
+    },
+    {
+      "tick": 154,
+      "timestamp": "2026-05-12 15:31:48",
+      "item_id": "WhatsApp",
+      "ram_mb": 475,
+      "context_type": "APP",
+      "importance": 0.82
+    },
+    {
+      "tick": 155,
+      "timestamp": "2026-05-12 15:35:27",
+      "item_id": "Chrome",
+      "ram_mb": 1166,
+      "context_type": "APP",
+      "importance": 0.64
+    },
+    {
+      "tick": 156,
+      "timestamp": "2026-05-12 15:36:56",
+      "item_id": "Spotify",
+      "ram_mb": 577,
+      "context_type": "APP",
+      "importance": 0.63
+    },
+    {
+      "tick": 157,
+      "timestamp": "2026-05-12 15:39:01",
+      "item_id": "Gemini",
+      "ram_mb": 771,
+      "context_type": "APP",
+      "importance": 0.7
+    },
+    {
+      "tick": 158,
+      "timestamp": "2026-05-12 15:40:30",
+      "item_id": "Gemini",
+      "ram_mb": 770,
+      "context_type": "APP",
+      "importance": 0.88
+    },
+    {
+      "tick": 159,
+      "timestamp": "2026-05-12 15:41:57",
+      "item_id": "Spotify",
+      "ram_mb": 589,
+      "context_type": "APP",
+      "importance": 0.69
+    },
+    {
+      "tick": 160,
+      "timestamp": "2026-05-12 15:44:33",
+      "item_id": "YouTube",
+      "ram_mb": 941,
+      "context_type": "APP",
+      "importance": 0.5
+    },
+    {
+      "tick": 161,
+      "timestamp": "2026-05-12 15:48:04",
+      "item_id": "Gemini",
+      "ram_mb": 830,
+      "context_type": "APP",
+      "importance": 0.52
+    },
+    {
+      "tick": 162,
+      "timestamp": "2026-05-12 15:52:02",
+      "item_id": "Gemini",
+      "ram_mb": 837,
+      "context_type": "APP",
+      "importance": 0.7
+    },
+    {
+      "tick": 163,
+      "timestamp": "2026-05-12 15:53:32",
+      "item_id": "Gemini",
+      "ram_mb": 822,
+      "context_type": "APP",
+      "importance": 0.79
+    },
+    {
+      "tick": 164,
+      "timestamp": "2026-05-12 15:56:00",
+      "item_id": "Spotify",
+      "ram_mb": 634,
+      "context_type": "APP",
+      "importance": 0.59
+    },
+    {
+      "tick": 165,
+      "timestamp": "2026-05-12 15:59:09",
+      "item_id": "Gemini",
+      "ram_mb": 751,
+      "context_type": "APP",
+      "importance": 0.82
+    },
+    {
+      "tick": 166,
+      "timestamp": "2026-05-12 16:02:14",
+      "item_id": "Chrome",
+      "ram_mb": 1196,
+      "context_type": "APP",
+      "importance": 0.72
+    },
+    {
+      "tick": 167,
+      "timestamp": "2026-05-12 16:05:11",
+      "item_id": "Gemini",
+      "ram_mb": 805,
+      "context_type": "APP",
+      "importance": 0.49
+    },
+    {
+      "tick": 168,
+      "timestamp": "2026-05-12 16:08:24",
+      "item_id": "WhatsApp",
+      "ram_mb": 484,
+      "context_type": "APP",
+      "importance": 0.71
+    },
+    {
+      "tick": 169,
+      "timestamp": "2026-05-12 16:11:41",
+      "item_id": "Gemini",
+      "ram_mb": 809,
+      "context_type": "APP",
+      "importance": 0.62
+    },
+    {
+      "tick": 170,
+      "timestamp": "2026-05-12 16:15:12",
+      "item_id": "YouTube",
+      "ram_mb": 881,
+      "context_type": "APP",
+      "importance": 0.82
+    },
+    {
+      "tick": 171,
+      "timestamp": "2026-05-12 16:16:34",
+      "item_id": "YouTube",
+      "ram_mb": 907,
+      "context_type": "APP",
+      "importance": 0.52
+    },
+    {
+      "tick": 172,
+      "timestamp": "2026-05-12 16:19:32",
+      "item_id": "Spotify",
+      "ram_mb": 635,
+      "context_type": "APP",
+      "importance": 0.59
+    },
+    {
+      "tick": 173,
+      "timestamp": "2026-05-12 16:20:39",
+      "item_id": "Spotify",
+      "ram_mb": 591,
+      "context_type": "APP",
+      "importance": 0.49
+    },
+    {
+      "tick": 174,
+      "timestamp": "2026-05-12 16:22:33",
+      "item_id": "YouTube",
+      "ram_mb": 883,
+      "context_type": "APP",
+      "importance": 0.57
+    },
+    {
+      "tick": 175,
+      "timestamp": "2026-05-12 16:26:05",
+      "item_id": "Gemini",
+      "ram_mb": 785,
+      "context_type": "APP",
+      "importance": 0.68
+    },
+    {
+      "tick": 176,
+      "timestamp": "2026-05-12 16:29:17",
+      "item_id": "WhatsApp",
+      "ram_mb": 460,
+      "context_type": "APP",
+      "importance": 0.52
+    },
+    {
+      "tick": 177,
+      "timestamp": "2026-05-12 16:32:01",
+      "item_id": "Spotify",
+      "ram_mb": 647,
+      "context_type": "APP",
+      "importance": 0.52
+    },
+    {
+      "tick": 178,
+      "timestamp": "2026-05-12 16:35:02",
+      "item_id": "Gemini",
+      "ram_mb": 812,
+      "context_type": "APP",
+      "importance": 0.62
+    },
+    {
+      "tick": 179,
+      "timestamp": "2026-05-12 16:36:06",
+      "item_id": "Chrome",
+      "ram_mb": 1178,
+      "context_type": "APP",
+      "importance": 0.6
+    },
+    {
+      "tick": 180,
+      "timestamp": "2026-05-12 16:38:08",
+      "item_id": "YouTube",
+      "ram_mb": 924,
+      "context_type": "APP",
+      "importance": 0.58
+    },
+    {
+      "tick": 181,
+      "timestamp": "2026-05-12 16:41:29",
+      "item_id": "Spotify",
+      "ram_mb": 604,
+      "context_type": "APP",
+      "importance": 0.9
+    },
+    {
+      "tick": 182,
+      "timestamp": "2026-05-12 16:44:49",
+      "item_id": "YouTube",
+      "ram_mb": 939,
+      "context_type": "APP",
+      "importance": 0.63
+    },
+    {
+      "tick": 183,
+      "timestamp": "2026-05-12 16:47:07",
+      "item_id": "YouTube",
+      "ram_mb": 865,
+      "context_type": "APP",
+      "importance": 0.76
+    },
+    {
+      "tick": 184,
+      "timestamp": "2026-05-12 16:49:27",
+      "item_id": "Chrome",
+      "ram_mb": 1218,
+      "context_type": "APP",
+      "importance": 0.88
+    },
+    {
+      "tick": 185,
+      "timestamp": "2026-05-12 16:53:23",
+      "item_id": "Chrome",
+      "ram_mb": 1177,
+      "context_type": "APP",
+      "importance": 0.77
+    },
+    {
+      "tick": 186,
+      "timestamp": "2026-05-12 16:55:33",
+      "item_id": "Gemini",
+      "ram_mb": 847,
+      "context_type": "APP",
+      "importance": 0.66
+    },
+    {
+      "tick": 187,
+      "timestamp": "2026-05-12 16:57:45",
+      "item_id": "WhatsApp",
+      "ram_mb": 474,
+      "context_type": "APP",
+      "importance": 0.55
+    },
+    {
+      "tick": 188,
+      "timestamp": "2026-05-12 17:00:17",
+      "item_id": "Chrome",
+      "ram_mb": 1151,
+      "context_type": "APP",
+      "importance": 0.75
+    },
+    {
+      "tick": 189,
+      "timestamp": "2026-05-12 17:01:49",
+      "item_id": "YouTube",
+      "ram_mb": 856,
+      "context_type": "APP",
+      "importance": 0.68
+    },
+    {
+      "tick": 190,
+      "timestamp": "2026-05-12 17:05:47",
+      "item_id": "WhatsApp",
+      "ram_mb": 531,
+      "context_type": "APP",
+      "importance": 0.83
+    },
+    {
+      "tick": 191,
+      "timestamp": "2026-05-12 17:08:52",
+      "item_id": "Chrome",
+      "ram_mb": 1151,
+      "context_type": "APP",
+      "importance": 0.69
+    },
+    {
+      "tick": 192,
+      "timestamp": "2026-05-12 17:11:52",
+      "item_id": "Spotify",
+      "ram_mb": 593,
+      "context_type": "APP",
+      "importance": 0.49
+    },
+    {
+      "tick": 193,
+      "timestamp": "2026-05-12 17:13:05",
+      "item_id": "YouTube",
+      "ram_mb": 911,
+      "context_type": "APP",
+      "importance": 0.46
+    },
+    {
+      "tick": 194,
+      "timestamp": "2026-05-12 17:14:21",
+      "item_id": "Spotify",
+      "ram_mb": 559,
+      "context_type": "APP",
+      "importance": 0.69
+    },
+    {
+      "tick": 195,
+      "timestamp": "2026-05-12 17:18:16",
+      "item_id": "Chrome",
+      "ram_mb": 1169,
+      "context_type": "APP",
+      "importance": 0.81
+    },
+    {
+      "tick": 196,
+      "timestamp": "2026-05-12 17:20:33",
+      "item_id": "Chrome",
+      "ram_mb": 1181,
+      "context_type": "APP",
+      "importance": 0.46
+    },
+    {
+      "tick": 197,
+      "timestamp": "2026-05-12 17:23:19",
+      "item_id": "Gemini",
+      "ram_mb": 829,
+      "context_type": "APP",
+      "importance": 0.51
+    },
+    {
+      "tick": 198,
+      "timestamp": "2026-05-12 17:26:32",
+      "item_id": "YouTube",
+      "ram_mb": 906,
+      "context_type": "APP",
+      "importance": 0.55
+    },
+    {
+      "tick": 199,
+      "timestamp": "2026-05-12 17:30:02",
+      "item_id": "WhatsApp",
+      "ram_mb": 489,
+      "context_type": "APP",
+      "importance": 0.68
+    },
+    {
+      "tick": 200,
+      "timestamp": "2026-05-12 17:31:17",
+      "item_id": "Gemini",
+      "ram_mb": 844,
+      "context_type": "APP",
+      "importance": 0.45
+    },
+    {
+      "tick": 201,
+      "timestamp": "2026-05-12 17:33:10",
+      "item_id": "Gemini",
+      "ram_mb": 783,
+      "context_type": "APP",
+      "importance": 0.73
+    },
+    {
+      "tick": 202,
+      "timestamp": "2026-05-12 17:34:50",
+      "item_id": "YouTube",
+      "ram_mb": 920,
+      "context_type": "APP",
+      "importance": 0.44
+    },
+    {
+      "tick": 203,
+      "timestamp": "2026-05-12 17:35:50",
+      "item_id": "Spotify",
+      "ram_mb": 638,
+      "context_type": "APP",
+      "importance": 0.7
+    },
+    {
+      "tick": 204,
+      "timestamp": "2026-05-12 17:38:04",
+      "item_id": "Chrome",
+      "ram_mb": 1186,
+      "context_type": "APP",
+      "importance": 0.75
+    },
+    {
+      "tick": 205,
+      "timestamp": "2026-05-12 17:42:03",
+      "item_id": "WhatsApp",
+      "ram_mb": 459,
+      "context_type": "APP",
+      "importance": 0.74
+    },
+    {
+      "tick": 206,
+      "timestamp": "2026-05-12 17:44:10",
+      "item_id": "Gemini",
+      "ram_mb": 830,
+      "context_type": "APP",
+      "importance": 0.69
+    },
+    {
+      "tick": 207,
+      "timestamp": "2026-05-12 17:46:00",
+      "item_id": "Spotify",
+      "ram_mb": 619,
+      "context_type": "APP",
+      "importance": 0.51
+    },
+    {
+      "tick": 208,
+      "timestamp": "2026-05-12 17:47:38",
+      "item_id": "WhatsApp",
+      "ram_mb": 468,
+      "context_type": "APP",
+      "importance": 0.44
+    },
+    {
+      "tick": 209,
+      "timestamp": "2026-05-12 17:49:20",
+      "item_id": "Gemini",
+      "ram_mb": 826,
+      "context_type": "APP",
+      "importance": 0.77
+    },
+    {
+      "tick": 210,
+      "timestamp": "2026-05-12 17:52:45",
+      "item_id": "WhatsApp",
+      "ram_mb": 506,
+      "context_type": "APP",
+      "importance": 0.46
+    },
+    {
+      "tick": 211,
+      "timestamp": "2026-05-12 17:56:41",
+      "item_id": "YouTube",
+      "ram_mb": 901,
+      "context_type": "APP",
+      "importance": 0.87
+    },
+    {
+      "tick": 212,
+      "timestamp": "2026-05-12 17:59:49",
+      "item_id": "Spotify",
+      "ram_mb": 606,
+      "context_type": "APP",
+      "importance": 0.44
+    },
+    {
+      "tick": 213,
+      "timestamp": "2026-05-12 18:00:59",
+      "item_id": "WhatsApp",
+      "ram_mb": 544,
+      "context_type": "APP",
+      "importance": 0.56
+    },
+    {
+      "tick": 214,
+      "timestamp": "2026-05-12 18:03:03",
+      "item_id": "Chrome",
+      "ram_mb": 1179,
+      "context_type": "APP",
+      "importance": 0.88
+    },
+    {
+      "tick": 215,
+      "timestamp": "2026-05-12 18:06:30",
+      "item_id": "Spotify",
+      "ram_mb": 552,
+      "context_type": "APP",
+      "importance": 0.9
+    },
+    {
+      "tick": 216,
+      "timestamp": "2026-05-12 18:10:22",
+      "item_id": "WhatsApp",
+      "ram_mb": 523,
+      "context_type": "APP",
+      "importance": 0.42
+    },
+    {
+      "tick": 217,
+      "timestamp": "2026-05-12 18:12:06",
+      "item_id": "Spotify",
+      "ram_mb": 633,
+      "context_type": "APP",
+      "importance": 0.62
+    },
+    {
+      "tick": 218,
+      "timestamp": "2026-05-12 18:14:17",
+      "item_id": "Chrome",
+      "ram_mb": 1224,
+      "context_type": "APP",
+      "importance": 0.62
+    },
+    {
+      "tick": 219,
+      "timestamp": "2026-05-12 18:17:22",
+      "item_id": "WhatsApp",
+      "ram_mb": 510,
+      "context_type": "APP",
+      "importance": 0.57
+    },
+    {
+      "tick": 220,
+      "timestamp": "2026-05-12 18:19:47",
+      "item_id": "YouTube",
+      "ram_mb": 863,
+      "context_type": "APP",
+      "importance": 0.83
+    },
+    {
+      "tick": 221,
+      "timestamp": "2026-05-12 18:22:11",
+      "item_id": "Spotify",
+      "ram_mb": 613,
+      "context_type": "APP",
+      "importance": 0.54
+    },
+    {
+      "tick": 222,
+      "timestamp": "2026-05-12 18:24:53",
+      "item_id": "WhatsApp",
+      "ram_mb": 520,
+      "context_type": "APP",
+      "importance": 0.42
+    },
+    {
+      "tick": 223,
+      "timestamp": "2026-05-12 18:26:15",
+      "item_id": "YouTube",
+      "ram_mb": 891,
+      "context_type": "APP",
+      "importance": 0.46
+    },
+    {
+      "tick": 224,
+      "timestamp": "2026-05-12 18:28:58",
+      "item_id": "WhatsApp",
+      "ram_mb": 450,
+      "context_type": "APP",
+      "importance": 0.73
+    },
+    {
+      "tick": 225,
+      "timestamp": "2026-05-12 18:32:16",
+      "item_id": "Spotify",
+      "ram_mb": 556,
+      "context_type": "APP",
+      "importance": 0.49
+    },
+    {
+      "tick": 226,
+      "timestamp": "2026-05-12 18:34:48",
+      "item_id": "Gemini",
+      "ram_mb": 813,
+      "context_type": "APP",
+      "importance": 0.71
+    },
+    {
+      "tick": 227,
+      "timestamp": "2026-05-12 18:36:01",
+      "item_id": "YouTube",
+      "ram_mb": 920,
+      "context_type": "APP",
+      "importance": 0.47
+    },
+    {
+      "tick": 228,
+      "timestamp": "2026-05-12 18:38:14",
+      "item_id": "Spotify",
+      "ram_mb": 639,
+      "context_type": "APP",
+      "importance": 0.64
+    },
+    {
+      "tick": 229,
+      "timestamp": "2026-05-12 18:39:21",
+      "item_id": "WhatsApp",
+      "ram_mb": 527,
+      "context_type": "APP",
+      "importance": 0.8
+    },
+    {
+      "tick": 230,
+      "timestamp": "2026-05-12 18:41:01",
+      "item_id": "YouTube",
+      "ram_mb": 851,
+      "context_type": "APP",
+      "importance": 0.68
+    },
+    {
+      "tick": 231,
+      "timestamp": "2026-05-12 18:42:24",
+      "item_id": "YouTube",
+      "ram_mb": 864,
+      "context_type": "APP",
+      "importance": 0.63
+    },
+    {
+      "tick": 232,
+      "timestamp": "2026-05-12 18:43:54",
+      "item_id": "Gemini",
+      "ram_mb": 769,
+      "context_type": "APP",
+      "importance": 0.65
+    },
+    {
+      "tick": 233,
+      "timestamp": "2026-05-12 18:46:08",
+      "item_id": "Spotify",
+      "ram_mb": 584,
+      "context_type": "APP",
+      "importance": 0.61
+    },
+    {
+      "tick": 234,
+      "timestamp": "2026-05-12 18:49:11",
+      "item_id": "WhatsApp",
+      "ram_mb": 481,
+      "context_type": "APP",
+      "importance": 0.63
+    },
+    {
+      "tick": 235,
+      "timestamp": "2026-05-12 18:50:48",
+      "item_id": "YouTube",
+      "ram_mb": 926,
+      "context_type": "APP",
+      "importance": 0.65
+    },
+    {
+      "tick": 236,
+      "timestamp": "2026-05-12 18:52:22",
+      "item_id": "WhatsApp",
+      "ram_mb": 485,
+      "context_type": "APP",
+      "importance": 0.79
+    },
+    {
+      "tick": 237,
+      "timestamp": "2026-05-12 18:55:08",
+      "item_id": "YouTube",
+      "ram_mb": 950,
+      "context_type": "APP",
+      "importance": 0.65
+    },
+    {
+      "tick": 238,
+      "timestamp": "2026-05-12 18:56:08",
+      "item_id": "YouTube",
+      "ram_mb": 888,
+      "context_type": "APP",
+      "importance": 0.82
+    },
+    {
+      "tick": 239,
+      "timestamp": "2026-05-12 18:59:36",
+      "item_id": "WhatsApp",
+      "ram_mb": 512,
+      "context_type": "APP",
+      "importance": 0.83
+    },
+    {
+      "tick": 240,
+      "timestamp": "2026-05-12 19:02:30",
+      "item_id": "Spotify",
+      "ram_mb": 594,
+      "context_type": "APP",
+      "importance": 0.57
+    },
+    {
+      "tick": 241,
+      "timestamp": "2026-05-12 19:05:49",
+      "item_id": "YouTube",
+      "ram_mb": 891,
+      "context_type": "APP",
+      "importance": 0.83
+    },
+    {
+      "tick": 242,
+      "timestamp": "2026-05-12 19:09:47",
+      "item_id": "YouTube",
+      "ram_mb": 899,
+      "context_type": "APP",
+      "importance": 0.52
+    },
+    {
+      "tick": 243,
+      "timestamp": "2026-05-12 19:12:32",
+      "item_id": "Chrome",
+      "ram_mb": 1245,
+      "context_type": "APP",
+      "importance": 0.64
+    },
+    {
+      "tick": 244,
+      "timestamp": "2026-05-12 19:15:09",
+      "item_id": "YouTube",
+      "ram_mb": 934,
+      "context_type": "APP",
+      "importance": 0.8
+    },
+    {
+      "tick": 245,
+      "timestamp": "2026-05-12 19:18:55",
+      "item_id": "WhatsApp",
+      "ram_mb": 513,
+      "context_type": "APP",
+      "importance": 0.88
+    },
+    {
+      "tick": 246,
+      "timestamp": "2026-05-12 19:20:27",
+      "item_id": "Spotify",
+      "ram_mb": 625,
+      "context_type": "APP",
+      "importance": 0.57
+    },
+    {
+      "tick": 247,
+      "timestamp": "2026-05-12 19:21:52",
+      "item_id": "WhatsApp",
+      "ram_mb": 506,
+      "context_type": "APP",
+      "importance": 0.45
+    },
+    {
+      "tick": 248,
+      "timestamp": "2026-05-12 19:24:48",
+      "item_id": "Chrome",
+      "ram_mb": 1168,
+      "context_type": "APP",
+      "importance": 0.6
+    },
+    {
+      "tick": 249,
+      "timestamp": "2026-05-12 19:28:35",
+      "item_id": "WhatsApp",
+      "ram_mb": 459,
+      "context_type": "APP",
+      "importance": 0.63
+    },
+    {
+      "tick": 250,
+      "timestamp": "2026-05-12 19:30:42",
+      "item_id": "YouTube",
+      "ram_mb": 938,
+      "context_type": "APP",
+      "importance": 0.6
+    },
+    {
+      "tick": 251,
+      "timestamp": "2026-05-12 19:32:02",
+      "item_id": "WhatsApp",
+      "ram_mb": 536,
+      "context_type": "APP",
+      "importance": 0.83
+    },
+    {
+      "tick": 252,
+      "timestamp": "2026-05-12 19:34:39",
+      "item_id": "WhatsApp",
+      "ram_mb": 530,
+      "context_type": "APP",
+      "importance": 0.76
+    },
+    {
+      "tick": 253,
+      "timestamp": "2026-05-12 19:37:43",
+      "item_id": "WhatsApp",
+      "ram_mb": 454,
+      "context_type": "APP",
+      "importance": 0.71
+    },
+    {
+      "tick": 254,
+      "timestamp": "2026-05-12 19:39:43",
+      "item_id": "Gemini",
+      "ram_mb": 786,
+      "context_type": "APP",
+      "importance": 0.9
+    },
+    {
+      "tick": 255,
+      "timestamp": "2026-05-12 19:41:06",
+      "item_id": "Spotify",
+      "ram_mb": 562,
+      "context_type": "APP",
+      "importance": 0.78
+    },
+    {
+      "tick": 256,
+      "timestamp": "2026-05-12 19:45:06",
+      "item_id": "WhatsApp",
+      "ram_mb": 506,
+      "context_type": "APP",
+      "importance": 0.48
+    },
+    {
+      "tick": 257,
+      "timestamp": "2026-05-12 19:47:22",
+      "item_id": "WhatsApp",
+      "ram_mb": 455,
+      "context_type": "APP",
+      "importance": 0.56
+    },
+    {
+      "tick": 258,
+      "timestamp": "2026-05-12 19:48:36",
+      "item_id": "YouTube",
+      "ram_mb": 897,
+      "context_type": "APP",
+      "importance": 0.62
+    },
+    {
+      "tick": 259,
+      "timestamp": "2026-05-12 19:50:38",
+      "item_id": "Spotify",
+      "ram_mb": 622,
+      "context_type": "APP",
+      "importance": 0.74
+    },
+    {
+      "tick": 260,
+      "timestamp": "2026-05-12 19:52:24",
+      "item_id": "Chrome",
+      "ram_mb": 1160,
+      "context_type": "APP",
+      "importance": 0.7
+    },
+    {
+      "tick": 261,
+      "timestamp": "2026-05-12 19:55:01",
+      "item_id": "Gemini",
+      "ram_mb": 780,
+      "context_type": "APP",
+      "importance": 0.65
+    },
+    {
+      "tick": 262,
+      "timestamp": "2026-05-12 19:58:30",
+      "item_id": "Chrome",
+      "ram_mb": 1209,
+      "context_type": "APP",
+      "importance": 0.72
+    },
+    {
+      "tick": 263,
+      "timestamp": "2026-05-12 20:01:27",
+      "item_id": "YouTube",
+      "ram_mb": 851,
+      "context_type": "APP",
+      "importance": 0.85
+    },
+    {
+      "tick": 264,
+      "timestamp": "2026-05-12 20:04:26",
+      "item_id": "WhatsApp",
+      "ram_mb": 536,
+      "context_type": "APP",
+      "importance": 0.67
+    },
+    {
+      "tick": 265,
+      "timestamp": "2026-05-12 20:05:44",
+      "item_id": "Spotify",
+      "ram_mb": 594,
+      "context_type": "APP",
+      "importance": 0.89
+    },
+    {
+      "tick": 266,
+      "timestamp": "2026-05-12 20:08:00",
+      "item_id": "Gemini",
+      "ram_mb": 804,
+      "context_type": "APP",
+      "importance": 0.75
+    },
+    {
+      "tick": 267,
+      "timestamp": "2026-05-12 20:10:56",
+      "item_id": "WhatsApp",
+      "ram_mb": 475,
+      "context_type": "APP",
+      "importance": 0.9
+    },
+    {
+      "tick": 268,
+      "timestamp": "2026-05-12 20:13:59",
+      "item_id": "Chrome",
+      "ram_mb": 1198,
+      "context_type": "APP",
+      "importance": 0.69
+    },
+    {
+      "tick": 269,
+      "timestamp": "2026-05-12 20:17:26",
+      "item_id": "YouTube",
+      "ram_mb": 939,
+      "context_type": "APP",
+      "importance": 0.55
+    },
+    {
+      "tick": 270,
+      "timestamp": "2026-05-12 20:21:14",
+      "item_id": "YouTube",
+      "ram_mb": 851,
+      "context_type": "APP",
+      "importance": 0.68
+    },
+    {
+      "tick": 271,
+      "timestamp": "2026-05-12 20:25:09",
+      "item_id": "Gemini",
+      "ram_mb": 756,
+      "context_type": "APP",
+      "importance": 0.86
+    },
+    {
+      "tick": 272,
+      "timestamp": "2026-05-12 20:28:16",
+      "item_id": "WhatsApp",
+      "ram_mb": 486,
+      "context_type": "APP",
+      "importance": 0.79
+    },
+    {
+      "tick": 273,
+      "timestamp": "2026-05-12 20:30:14",
+      "item_id": "Gemini",
+      "ram_mb": 795,
+      "context_type": "APP",
+      "importance": 0.51
+    },
+    {
+      "tick": 274,
+      "timestamp": "2026-05-12 20:32:02",
+      "item_id": "Gemini",
+      "ram_mb": 836,
+      "context_type": "APP",
+      "importance": 0.78
+    },
+    {
+      "tick": 275,
+      "timestamp": "2026-05-12 20:35:50",
+      "item_id": "Gemini",
+      "ram_mb": 767,
+      "context_type": "APP",
+      "importance": 0.71
+    },
+    {
+      "tick": 276,
+      "timestamp": "2026-05-12 20:39:30",
+      "item_id": "Gemini",
+      "ram_mb": 789,
+      "context_type": "APP",
+      "importance": 0.79
+    },
+    {
+      "tick": 277,
+      "timestamp": "2026-05-12 20:40:38",
+      "item_id": "Spotify",
+      "ram_mb": 643,
+      "context_type": "APP",
+      "importance": 0.47
+    },
+    {
+      "tick": 278,
+      "timestamp": "2026-05-12 20:42:53",
+      "item_id": "YouTube",
+      "ram_mb": 903,
+      "context_type": "APP",
+      "importance": 0.49
+    },
+    {
+      "tick": 279,
+      "timestamp": "2026-05-12 20:44:26",
+      "item_id": "Gemini",
+      "ram_mb": 796,
+      "context_type": "APP",
+      "importance": 0.67
+    },
+    {
+      "tick": 280,
+      "timestamp": "2026-05-12 20:46:35",
+      "item_id": "WhatsApp",
+      "ram_mb": 482,
+      "context_type": "APP",
+      "importance": 0.86
+    },
+    {
+      "tick": 281,
+      "timestamp": "2026-05-12 20:49:38",
+      "item_id": "WhatsApp",
+      "ram_mb": 487,
+      "context_type": "APP",
+      "importance": 0.77
+    },
+    {
+      "tick": 282,
+      "timestamp": "2026-05-12 20:52:04",
+      "item_id": "WhatsApp",
+      "ram_mb": 509,
+      "context_type": "APP",
+      "importance": 0.88
+    },
+    {
+      "tick": 283,
+      "timestamp": "2026-05-12 20:53:40",
+      "item_id": "Gemini",
+      "ram_mb": 778,
+      "context_type": "APP",
+      "importance": 0.83
+    },
+    {
+      "tick": 284,
+      "timestamp": "2026-05-12 20:57:32",
+      "item_id": "WhatsApp",
+      "ram_mb": 521,
+      "context_type": "APP",
+      "importance": 0.58
+    },
+    {
+      "tick": 285,
+      "timestamp": "2026-05-12 21:00:13",
+      "item_id": "Chrome",
+      "ram_mb": 1218,
+      "context_type": "APP",
+      "importance": 0.46
+    },
+    {
+      "tick": 286,
+      "timestamp": "2026-05-12 21:02:47",
+      "item_id": "Gemini",
+      "ram_mb": 836,
+      "context_type": "APP",
+      "importance": 0.53
+    },
+    {
+      "tick": 287,
+      "timestamp": "2026-05-12 21:05:24",
+      "item_id": "WhatsApp",
+      "ram_mb": 497,
+      "context_type": "APP",
+      "importance": 0.45
+    },
+    {
+      "tick": 288,
+      "timestamp": "2026-05-12 21:07:23",
+      "item_id": "Spotify",
+      "ram_mb": 629,
+      "context_type": "APP",
+      "importance": 0.84
+    },
+    {
+      "tick": 289,
+      "timestamp": "2026-05-12 21:10:46",
+      "item_id": "YouTube",
+      "ram_mb": 928,
+      "context_type": "APP",
+      "importance": 0.51
+    },
+    {
+      "tick": 290,
+      "timestamp": "2026-05-12 21:12:02",
+      "item_id": "Gemini",
+      "ram_mb": 809,
+      "context_type": "APP",
+      "importance": 0.85
+    },
+    {
+      "tick": 291,
+      "timestamp": "2026-05-12 21:14:19",
+      "item_id": "Gemini",
+      "ram_mb": 764,
+      "context_type": "APP",
+      "importance": 0.47
+    },
+    {
+      "tick": 292,
+      "timestamp": "2026-05-12 21:15:28",
+      "item_id": "YouTube",
+      "ram_mb": 913,
+      "context_type": "APP",
+      "importance": 0.46
+    },
+    {
+      "tick": 293,
+      "timestamp": "2026-05-12 21:17:28",
+      "item_id": "WhatsApp",
+      "ram_mb": 467,
+      "context_type": "APP",
+      "importance": 0.59
+    },
+    {
+      "tick": 294,
+      "timestamp": "2026-05-12 21:20:02",
+      "item_id": "Gemini",
+      "ram_mb": 845,
+      "context_type": "APP",
+      "importance": 0.75
+    },
+    {
+      "tick": 295,
+      "timestamp": "2026-05-12 21:23:20",
+      "item_id": "Spotify",
+      "ram_mb": 645,
+      "context_type": "APP",
+      "importance": 0.76
+    },
+    {
+      "tick": 296,
+      "timestamp": "2026-05-12 21:26:06",
+      "item_id": "Gemini",
+      "ram_mb": 812,
+      "context_type": "APP",
+      "importance": 0.71
+    },
+    {
+      "tick": 297,
+      "timestamp": "2026-05-12 21:28:17",
+      "item_id": "Chrome",
+      "ram_mb": 1197,
+      "context_type": "APP",
+      "importance": 0.51
+    },
+    {
+      "tick": 298,
+      "timestamp": "2026-05-12 21:31:10",
+      "item_id": "WhatsApp",
+      "ram_mb": 496,
+      "context_type": "APP",
+      "importance": 0.45
+    },
+    {
+      "tick": 299,
+      "timestamp": "2026-05-12 21:35:05",
+      "item_id": "YouTube",
+      "ram_mb": 932,
+      "context_type": "APP",
+      "importance": 0.58
+    },
+    {
+      "tick": 300,
+      "timestamp": "2026-05-12 21:37:46",
+      "item_id": "YouTube",
+      "ram_mb": 865,
+      "context_type": "APP",
+      "importance": 0.87
+    },
+    {
+      "tick": 301,
+      "timestamp": "2026-05-12 21:40:42",
+      "item_id": "Chrome",
+      "ram_mb": 1177,
+      "context_type": "APP",
+      "importance": 0.72
+    },
+    {
+      "tick": 302,
+      "timestamp": "2026-05-12 21:44:14",
+      "item_id": "WhatsApp",
+      "ram_mb": 456,
+      "context_type": "APP",
+      "importance": 0.79
+    },
+    {
+      "tick": 303,
+      "timestamp": "2026-05-12 21:46:16",
+      "item_id": "WhatsApp",
+      "ram_mb": 550,
+      "context_type": "APP",
+      "importance": 0.68
+    },
+    {
+      "tick": 304,
+      "timestamp": "2026-05-12 21:47:33",
+      "item_id": "WhatsApp",
+      "ram_mb": 520,
+      "context_type": "APP",
+      "importance": 0.5
+    },
+    {
+      "tick": 305,
+      "timestamp": "2026-05-12 21:49:28",
+      "item_id": "WhatsApp",
+      "ram_mb": 479,
+      "context_type": "APP",
+      "importance": 0.56
+    },
+    {
+      "tick": 306,
+      "timestamp": "2026-05-12 21:51:05",
+      "item_id": "Gemini",
+      "ram_mb": 826,
+      "context_type": "APP",
+      "importance": 0.4
+    },
+    {
+      "tick": 307,
+      "timestamp": "2026-05-12 21:52:42",
+      "item_id": "WhatsApp",
+      "ram_mb": 519,
+      "context_type": "APP",
+      "importance": 0.53
+    },
+    {
+      "tick": 308,
+      "timestamp": "2026-05-12 21:54:26",
+      "item_id": "Chrome",
+      "ram_mb": 1153,
+      "context_type": "APP",
+      "importance": 0.47
+    },
+    {
+      "tick": 309,
+      "timestamp": "2026-05-12 21:56:57",
+      "item_id": "Gemini",
+      "ram_mb": 780,
+      "context_type": "APP",
+      "importance": 0.69
+    },
+    {
+      "tick": 310,
+      "timestamp": "2026-05-12 21:58:01",
+      "item_id": "Chrome",
+      "ram_mb": 1156,
+      "context_type": "APP",
+      "importance": 0.46
+    },
+    {
+      "tick": 311,
+      "timestamp": "2026-05-12 22:00:48",
+      "item_id": "Spotify",
+      "ram_mb": 645,
+      "context_type": "APP",
+      "importance": 0.43
+    },
+    {
+      "tick": 312,
+      "timestamp": "2026-05-12 22:03:42",
+      "item_id": "Gemini",
+      "ram_mb": 815,
+      "context_type": "APP",
+      "importance": 0.7
+    },
+    {
+      "tick": 313,
+      "timestamp": "2026-05-12 22:06:37",
+      "item_id": "Spotify",
+      "ram_mb": 628,
+      "context_type": "APP",
+      "importance": 0.42
+    },
+    {
+      "tick": 314,
+      "timestamp": "2026-05-12 22:10:25",
+      "item_id": "Spotify",
+      "ram_mb": 608,
+      "context_type": "APP",
+      "importance": 0.72
+    },
+    {
+      "tick": 315,
+      "timestamp": "2026-05-12 22:11:32",
+      "item_id": "Chrome",
+      "ram_mb": 1211,
+      "context_type": "APP",
+      "importance": 0.82
+    },
+    {
+      "tick": 316,
+      "timestamp": "2026-05-12 22:14:21",
+      "item_id": "Gemini",
+      "ram_mb": 812,
+      "context_type": "APP",
+      "importance": 0.76
+    },
+    {
+      "tick": 317,
+      "timestamp": "2026-05-12 22:17:14",
+      "item_id": "Chrome",
+      "ram_mb": 1160,
+      "context_type": "APP",
+      "importance": 0.56
+    },
+    {
+      "tick": 318,
+      "timestamp": "2026-05-12 22:18:51",
+      "item_id": "Chrome",
+      "ram_mb": 1185,
+      "context_type": "APP",
+      "importance": 0.71
+    },
+    {
+      "tick": 319,
+      "timestamp": "2026-05-12 22:22:20",
+      "item_id": "Spotify",
+      "ram_mb": 591,
+      "context_type": "APP",
+      "importance": 0.59
+    },
+    {
+      "tick": 320,
+      "timestamp": "2026-05-12 22:25:52",
+      "item_id": "Spotify",
+      "ram_mb": 608,
+      "context_type": "APP",
+      "importance": 0.65
+    },
+    {
+      "tick": 321,
+      "timestamp": "2026-05-12 22:28:42",
+      "item_id": "Chrome",
+      "ram_mb": 1239,
+      "context_type": "APP",
+      "importance": 0.46
+    },
+    {
+      "tick": 322,
+      "timestamp": "2026-05-12 22:32:29",
+      "item_id": "Gemini",
+      "ram_mb": 848,
+      "context_type": "APP",
+      "importance": 0.68
+    },
+    {
+      "tick": 323,
+      "timestamp": "2026-05-12 22:34:24",
+      "item_id": "Spotify",
+      "ram_mb": 579,
+      "context_type": "APP",
+      "importance": 0.61
+    },
+    {
+      "tick": 324,
+      "timestamp": "2026-05-12 22:37:20",
+      "item_id": "YouTube",
+      "ram_mb": 943,
+      "context_type": "APP",
+      "importance": 0.45
+    },
+    {
+      "tick": 325,
+      "timestamp": "2026-05-12 22:40:09",
+      "item_id": "YouTube",
+      "ram_mb": 882,
+      "context_type": "APP",
+      "importance": 0.59
+    },
+    {
+      "tick": 326,
+      "timestamp": "2026-05-12 22:41:48",
+      "item_id": "Gemini",
+      "ram_mb": 810,
+      "context_type": "APP",
+      "importance": 0.43
+    },
+    {
+      "tick": 327,
+      "timestamp": "2026-05-12 22:43:09",
+      "item_id": "Chrome",
+      "ram_mb": 1162,
+      "context_type": "APP",
+      "importance": 0.77
+    },
+    {
+      "tick": 328,
+      "timestamp": "2026-05-12 22:45:44",
+      "item_id": "WhatsApp",
+      "ram_mb": 521,
+      "context_type": "APP",
+      "importance": 0.43
+    },
+    {
+      "tick": 329,
+      "timestamp": "2026-05-12 22:49:07",
+      "item_id": "Spotify",
+      "ram_mb": 635,
+      "context_type": "APP",
+      "importance": 0.46
+    },
+    {
+      "tick": 330,
+      "timestamp": "2026-05-12 22:51:37",
+      "item_id": "WhatsApp",
+      "ram_mb": 546,
+      "context_type": "APP",
+      "importance": 0.61
+    },
+    {
+      "tick": 331,
+      "timestamp": "2026-05-12 22:52:50",
+      "item_id": "WhatsApp",
+      "ram_mb": 526,
+      "context_type": "APP",
+      "importance": 0.56
+    },
+    {
+      "tick": 332,
+      "timestamp": "2026-05-12 22:54:16",
+      "item_id": "Spotify",
+      "ram_mb": 577,
+      "context_type": "APP",
+      "importance": 0.48
+    },
+    {
+      "tick": 333,
+      "timestamp": "2026-05-12 22:57:19",
+      "item_id": "YouTube",
+      "ram_mb": 863,
+      "context_type": "APP",
+      "importance": 0.58
+    },
+    {
+      "tick": 334,
+      "timestamp": "2026-05-12 23:00:41",
+      "item_id": "YouTube",
+      "ram_mb": 947,
+      "context_type": "APP",
+      "importance": 0.54
+    },
+    {
+      "tick": 335,
+      "timestamp": "2026-05-12 23:02:38",
+      "item_id": "WhatsApp",
+      "ram_mb": 521,
+      "context_type": "APP",
+      "importance": 0.89
+    },
+    {
+      "tick": 336,
+      "timestamp": "2026-05-12 23:06:17",
+      "item_id": "Gemini",
+      "ram_mb": 832,
+      "context_type": "APP",
+      "importance": 0.68
+    },
+    {
+      "tick": 337,
+      "timestamp": "2026-05-12 23:09:52",
+      "item_id": "WhatsApp",
+      "ram_mb": 538,
+      "context_type": "APP",
+      "importance": 0.53
+    },
+    {
+      "tick": 338,
+      "timestamp": "2026-05-12 23:11:38",
+      "item_id": "YouTube",
+      "ram_mb": 947,
+      "context_type": "APP",
+      "importance": 0.55
+    },
+    {
+      "tick": 339,
+      "timestamp": "2026-05-12 23:14:04",
+      "item_id": "YouTube",
+      "ram_mb": 873,
+      "context_type": "APP",
+      "importance": 0.83
+    },
+    {
+      "tick": 340,
+      "timestamp": "2026-05-12 23:17:28",
+      "item_id": "Gemini",
+      "ram_mb": 758,
+      "context_type": "APP",
+      "importance": 0.47
+    },
+    {
+      "tick": 341,
+      "timestamp": "2026-05-12 23:21:10",
+      "item_id": "WhatsApp",
+      "ram_mb": 461,
+      "context_type": "APP",
+      "importance": 0.77
+    },
+    {
+      "tick": 342,
+      "timestamp": "2026-05-12 23:23:05",
+      "item_id": "YouTube",
+      "ram_mb": 908,
+      "context_type": "APP",
+      "importance": 0.57
+    },
+    {
+      "tick": 343,
+      "timestamp": "2026-05-12 23:25:39",
+      "item_id": "YouTube",
+      "ram_mb": 891,
+      "context_type": "APP",
+      "importance": 0.79
+    },
+    {
+      "tick": 344,
+      "timestamp": "2026-05-12 23:29:04",
+      "item_id": "Spotify",
+      "ram_mb": 556,
+      "context_type": "APP",
+      "importance": 0.48
+    },
+    {
+      "tick": 345,
+      "timestamp": "2026-05-12 23:32:42",
+      "item_id": "Chrome",
+      "ram_mb": 1160,
+      "context_type": "APP",
+      "importance": 0.54
+    },
+    {
+      "tick": 346,
+      "timestamp": "2026-05-12 23:36:31",
+      "item_id": "Spotify",
+      "ram_mb": 627,
+      "context_type": "APP",
+      "importance": 0.62
+    },
+    {
+      "tick": 347,
+      "timestamp": "2026-05-12 23:38:40",
+      "item_id": "YouTube",
+      "ram_mb": 915,
+      "context_type": "APP",
+      "importance": 0.46
+    },
+    {
+      "tick": 348,
+      "timestamp": "2026-05-12 23:41:30",
+      "item_id": "Chrome",
+      "ram_mb": 1236,
+      "context_type": "APP",
+      "importance": 0.74
+    },
+    {
+      "tick": 349,
+      "timestamp": "2026-05-12 23:44:34",
+      "item_id": "Spotify",
+      "ram_mb": 589,
+      "context_type": "APP",
+      "importance": 0.42
+    },
+    {
+      "tick": 350,
+      "timestamp": "2026-05-12 23:47:15",
+      "item_id": "WhatsApp",
+      "ram_mb": 457,
+      "context_type": "APP",
+      "importance": 0.4
+    },
+    {
+      "tick": 351,
+      "timestamp": "2026-05-12 23:49:32",
+      "item_id": "WhatsApp",
+      "ram_mb": 548,
+      "context_type": "APP",
+      "importance": 0.47
+    },
+    {
+      "tick": 352,
+      "timestamp": "2026-05-12 23:51:37",
+      "item_id": "YouTube",
+      "ram_mb": 865,
+      "context_type": "APP",
+      "importance": 0.4
+    },
+    {
+      "tick": 353,
+      "timestamp": "2026-05-12 23:54:27",
+      "item_id": "Chrome",
+      "ram_mb": 1198,
+      "context_type": "APP",
+      "importance": 0.67
+    },
+    {
+      "tick": 354,
+      "timestamp": "2026-05-12 23:56:25",
+      "item_id": "Spotify",
+      "ram_mb": 635,
+      "context_type": "APP",
+      "importance": 0.8
+    },
+    {
+      "tick": 355,
+      "timestamp": "2026-05-12 23:57:43",
+      "item_id": "YouTube",
+      "ram_mb": 944,
+      "context_type": "APP",
+      "importance": 0.42
+    },
+    {
+      "tick": 356,
+      "timestamp": "2026-05-12 23:58:47",
+      "item_id": "Spotify",
+      "ram_mb": 559,
+      "context_type": "APP",
+      "importance": 0.83
+    },
+    {
+      "tick": 357,
+      "timestamp": "2026-05-13 00:02:14",
+      "item_id": "Spotify",
+      "ram_mb": 601,
+      "context_type": "APP",
+      "importance": 0.75
+    },
+    {
+      "tick": 358,
+      "timestamp": "2026-05-13 00:05:00",
+      "item_id": "YouTube",
+      "ram_mb": 901,
+      "context_type": "APP",
+      "importance": 0.41
+    },
+    {
+      "tick": 359,
+      "timestamp": "2026-05-13 00:07:23",
+      "item_id": "Chrome",
+      "ram_mb": 1229,
+      "context_type": "APP",
+      "importance": 0.63
+    },
+    {
+      "tick": 360,
+      "timestamp": "2026-05-13 00:11:19",
+      "item_id": "WhatsApp",
+      "ram_mb": 461,
+      "context_type": "APP",
+      "importance": 0.62
+    },
+    {
+      "tick": 361,
+      "timestamp": "2026-05-13 00:12:46",
+      "item_id": "YouTube",
+      "ram_mb": 925,
+      "context_type": "APP",
+      "importance": 0.6
+    },
+    {
+      "tick": 362,
+      "timestamp": "2026-05-13 00:14:06",
+      "item_id": "YouTube",
+      "ram_mb": 889,
+      "context_type": "APP",
+      "importance": 0.77
+    },
+    {
+      "tick": 363,
+      "timestamp": "2026-05-13 00:16:02",
+      "item_id": "YouTube",
+      "ram_mb": 871,
+      "context_type": "APP",
+      "importance": 0.44
+    },
+    {
+      "tick": 364,
+      "timestamp": "2026-05-13 00:19:44",
+      "item_id": "Chrome",
+      "ram_mb": 1215,
+      "context_type": "APP",
+      "importance": 0.5
+    },
+    {
+      "tick": 365,
+      "timestamp": "2026-05-13 00:22:13",
+      "item_id": "YouTube",
+      "ram_mb": 932,
+      "context_type": "APP",
+      "importance": 0.81
+    },
+    {
+      "tick": 366,
+      "timestamp": "2026-05-13 00:24:13",
+      "item_id": "Chrome",
+      "ram_mb": 1182,
+      "context_type": "APP",
+      "importance": 0.5
+    },
+    {
+      "tick": 367,
+      "timestamp": "2026-05-13 00:27:47",
+      "item_id": "Chrome",
+      "ram_mb": 1247,
+      "context_type": "APP",
+      "importance": 0.73
+    },
+    {
+      "tick": 368,
+      "timestamp": "2026-05-13 00:29:32",
+      "item_id": "WhatsApp",
+      "ram_mb": 530,
+      "context_type": "APP",
+      "importance": 0.65
+    },
+    {
+      "tick": 369,
+      "timestamp": "2026-05-13 00:32:56",
+      "item_id": "Gemini",
+      "ram_mb": 807,
+      "context_type": "APP",
+      "importance": 0.74
+    },
+    {
+      "tick": 370,
+      "timestamp": "2026-05-13 00:36:20",
+      "item_id": "Gemini",
+      "ram_mb": 829,
+      "context_type": "APP",
+      "importance": 0.56
+    },
+    {
+      "tick": 371,
+      "timestamp": "2026-05-13 00:40:00",
+      "item_id": "YouTube",
+      "ram_mb": 906,
+      "context_type": "APP",
+      "importance": 0.43
+    },
+    {
+      "tick": 372,
+      "timestamp": "2026-05-13 00:42:53",
+      "item_id": "Gemini",
+      "ram_mb": 785,
+      "context_type": "APP",
+      "importance": 0.7
+    },
+    {
+      "tick": 373,
+      "timestamp": "2026-05-13 00:45:23",
+      "item_id": "Spotify",
+      "ram_mb": 589,
+      "context_type": "APP",
+      "importance": 0.63
+    },
+    {
+      "tick": 374,
+      "timestamp": "2026-05-13 00:46:32",
+      "item_id": "Chrome",
+      "ram_mb": 1186,
+      "context_type": "APP",
+      "importance": 0.44
+    },
+    {
+      "tick": 375,
+      "timestamp": "2026-05-13 00:47:55",
+      "item_id": "Gemini",
+      "ram_mb": 814,
+      "context_type": "APP",
+      "importance": 0.59
+    },
+    {
+      "tick": 376,
+      "timestamp": "2026-05-13 00:51:23",
+      "item_id": "Spotify",
+      "ram_mb": 644,
+      "context_type": "APP",
+      "importance": 0.85
+    },
+    {
+      "tick": 377,
+      "timestamp": "2026-05-13 00:54:18",
+      "item_id": "WhatsApp",
+      "ram_mb": 523,
+      "context_type": "APP",
+      "importance": 0.73
+    },
+    {
+      "tick": 378,
+      "timestamp": "2026-05-13 00:56:40",
+      "item_id": "Gemini",
+      "ram_mb": 814,
+      "context_type": "APP",
+      "importance": 0.48
+    },
+    {
+      "tick": 379,
+      "timestamp": "2026-05-13 00:57:55",
+      "item_id": "Spotify",
+      "ram_mb": 593,
+      "context_type": "APP",
+      "importance": 0.89
+    },
+    {
+      "tick": 380,
+      "timestamp": "2026-05-13 00:59:16",
+      "item_id": "Spotify",
+      "ram_mb": 572,
+      "context_type": "APP",
+      "importance": 0.42
+    },
+    {
+      "tick": 381,
+      "timestamp": "2026-05-13 01:02:08",
+      "item_id": "WhatsApp",
+      "ram_mb": 517,
+      "context_type": "APP",
+      "importance": 0.66
+    },
+    {
+      "tick": 382,
+      "timestamp": "2026-05-13 01:03:48",
+      "item_id": "YouTube",
+      "ram_mb": 886,
+      "context_type": "APP",
+      "importance": 0.59
+    },
+    {
+      "tick": 383,
+      "timestamp": "2026-05-13 01:06:14",
+      "item_id": "Gemini",
+      "ram_mb": 756,
+      "context_type": "APP",
+      "importance": 0.79
+    },
+    {
+      "tick": 384,
+      "timestamp": "2026-05-13 01:09:59",
+      "item_id": "YouTube",
+      "ram_mb": 892,
+      "context_type": "APP",
+      "importance": 0.45
+    },
+    {
+      "tick": 385,
+      "timestamp": "2026-05-13 01:13:52",
+      "item_id": "YouTube",
+      "ram_mb": 882,
+      "context_type": "APP",
+      "importance": 0.76
+    },
+    {
+      "tick": 386,
+      "timestamp": "2026-05-13 01:17:40",
+      "item_id": "WhatsApp",
+      "ram_mb": 527,
+      "context_type": "APP",
+      "importance": 0.84
+    },
+    {
+      "tick": 387,
+      "timestamp": "2026-05-13 01:20:05",
+      "item_id": "Chrome",
+      "ram_mb": 1234,
+      "context_type": "APP",
+      "importance": 0.47
+    },
+    {
+      "tick": 388,
+      "timestamp": "2026-05-13 01:22:34",
+      "item_id": "YouTube",
+      "ram_mb": 933,
+      "context_type": "APP",
+      "importance": 0.75
+    },
+    {
+      "tick": 389,
+      "timestamp": "2026-05-13 01:25:14",
+      "item_id": "Chrome",
+      "ram_mb": 1240,
+      "context_type": "APP",
+      "importance": 0.87
+    },
+    {
+      "tick": 390,
+      "timestamp": "2026-05-13 01:27:33",
+      "item_id": "Spotify",
+      "ram_mb": 632,
+      "context_type": "APP",
+      "importance": 0.8
+    },
+    {
+      "tick": 391,
+      "timestamp": "2026-05-13 01:29:05",
+      "item_id": "Gemini",
+      "ram_mb": 844,
+      "context_type": "APP",
+      "importance": 0.9
+    },
+    {
+      "tick": 392,
+      "timestamp": "2026-05-13 01:32:19",
+      "item_id": "Chrome",
+      "ram_mb": 1235,
+      "context_type": "APP",
+      "importance": 0.61
+    },
+    {
+      "tick": 393,
+      "timestamp": "2026-05-13 01:34:51",
+      "item_id": "Chrome",
+      "ram_mb": 1189,
+      "context_type": "APP",
+      "importance": 0.49
+    },
+    {
+      "tick": 394,
+      "timestamp": "2026-05-13 01:36:45",
+      "item_id": "YouTube",
+      "ram_mb": 948,
+      "context_type": "APP",
+      "importance": 0.64
+    },
+    {
+      "tick": 395,
+      "timestamp": "2026-05-13 01:38:42",
+      "item_id": "WhatsApp",
+      "ram_mb": 469,
+      "context_type": "APP",
+      "importance": 0.44
+    },
+    {
+      "tick": 396,
+      "timestamp": "2026-05-13 01:40:07",
+      "item_id": "Spotify",
+      "ram_mb": 619,
+      "context_type": "APP",
+      "importance": 0.82
+    },
+    {
+      "tick": 397,
+      "timestamp": "2026-05-13 01:43:21",
+      "item_id": "Chrome",
+      "ram_mb": 1193,
+      "context_type": "APP",
+      "importance": 0.84
+    },
+    {
+      "tick": 398,
+      "timestamp": "2026-05-13 01:46:59",
+      "item_id": "Chrome",
+      "ram_mb": 1198,
+      "context_type": "APP",
+      "importance": 0.48
+    },
+    {
+      "tick": 399,
+      "timestamp": "2026-05-13 01:48:45",
+      "item_id": "WhatsApp",
+      "ram_mb": 548,
+      "context_type": "APP",
+      "importance": 0.71
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "metrics": {
+    "strategy_name": "Pressure-Only",
+    "workload_name": "random",
+    "seed": 46,
+    "num_requests": 120,
+    "cache_hit_rate_pct": 66.67,
+    "avg_launch_latency_sec": 1.1133,
+    "p95_launch_latency_sec": 2.4,
+    "p99_launch_latency_sec": 2.4,
+    "avg_ram_mb": 2221.0,
+    "peak_ram_mb": 2490.0,
+    "min_ram_mb": 900.0,
+    "memory_time_mb_ticks": 266520.0,
+    "total_reclaimed_mb": 37875.0,
+    "compression_savings_mb_ticks": 0.0,
+    "budget_violations_count": 0,
+    "thrashing_count": 39,
+    "oscillation_count": 0,
+    "unnecessary_evictions_count": 0,
+    "total_evictions_count": 40,
+    "state_distribution": {
+      "ACTIVE": 20.0,
+      "CACHED": 28.0,
+      "COMPRESSED": 22.5,
+      "ARCHIVED": 29.5
+    },
+    "prediction_top_1_accuracy": 16.81,
+    "prediction_top_3_accuracy": 55.46,
+    "mean_prediction_confidence": 0.0264
+  },
+  "trace_length": 120,
+  "pred_metrics": {
+    "top_1_accuracy": 16.81,
+    "top_3_accuracy": 55.46,
+    "top_k_accuracy": 55.46,
+    "mean_confidence": 0.0264,
+    "mean_entropy": 2.2606,
+    "brier_score": 0.8254,
+    "sample_count": 119
+  }
+}

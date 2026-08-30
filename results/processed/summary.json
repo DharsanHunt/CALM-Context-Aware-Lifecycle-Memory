@@ -1,0 +1,1437 @@
+{
+  "predictable": {
+    "Random": {
+      "cache_hit_rate": {
+        "mean": 38.17,
+        "std": 3.27,
+        "min": 33.33,
+        "max": 41.67
+      },
+      "avg_launch_latency": {
+        "mean": 1.6127,
+        "std": 0.0567,
+        "min": 1.5433,
+        "max": 1.6954
+      },
+      "thrashing_count": {
+        "mean": 73.2,
+        "std": 3.92
+      },
+      "avg_ram_mb": {
+        "mean": 2004.5,
+        "std": 14.9
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 240540.0
+      }
+    },
+    "LRU": {
+      "cache_hit_rate": {
+        "mean": 32.83,
+        "std": 2.67,
+        "min": 28.33,
+        "max": 36.67
+      },
+      "avg_launch_latency": {
+        "mean": 1.7194,
+        "std": 0.0586,
+        "min": 1.655,
+        "max": 1.8275
+      },
+      "thrashing_count": {
+        "mean": 79.6,
+        "std": 3.2
+      },
+      "avg_ram_mb": {
+        "mean": 1999.2,
+        "std": 31.8
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 239900.0
+      }
+    },
+    "LFU": {
+      "cache_hit_rate": {
+        "mean": 37.83,
+        "std": 5.23,
+        "min": 29.17,
+        "max": 45.0
+      },
+      "avg_launch_latency": {
+        "mean": 1.6194,
+        "std": 0.1148,
+        "min": 1.4621,
+        "max": 1.8108
+      },
+      "thrashing_count": {
+        "mean": 73.6,
+        "std": 6.28
+      },
+      "avg_ram_mb": {
+        "mean": 2011.3,
+        "std": 51.2
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 241360.0
+      }
+    },
+    "Reactive": {
+      "cache_hit_rate": {
+        "mean": 50.67,
+        "std": 3.85,
+        "min": 43.33,
+        "max": 54.17
+      },
+      "avg_launch_latency": {
+        "mean": 1.4876,
+        "std": 0.0526,
+        "min": 1.4325,
+        "max": 1.5858
+      },
+      "thrashing_count": {
+        "mean": 58.2,
+        "std": 4.62
+      },
+      "avg_ram_mb": {
+        "mean": 2244.0,
+        "std": 19.3
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 269279.0
+      }
+    },
+    "Predictive-Only": {
+      "cache_hit_rate": {
+        "mean": 69.0,
+        "std": 1.43,
+        "min": 66.67,
+        "max": 70.83
+      },
+      "avg_launch_latency": {
+        "mean": 1.2936,
+        "std": 0.0408,
+        "min": 1.2517,
+        "max": 1.37
+      },
+      "thrashing_count": {
+        "mean": 36.2,
+        "std": 1.72
+      },
+      "avg_ram_mb": {
+        "mean": 2171.8,
+        "std": 31.2
+      },
+      "peak_ram_mb": {
+        "mean": 2494.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 260614.0
+      }
+    },
+    "Pressure-Only": {
+      "cache_hit_rate": {
+        "mean": 55.16,
+        "std": 5.56,
+        "min": 45.83,
+        "max": 62.5
+      },
+      "avg_launch_latency": {
+        "mean": 1.4151,
+        "std": 0.1021,
+        "min": 1.2608,
+        "max": 1.565
+      },
+      "thrashing_count": {
+        "mean": 52.8,
+        "std": 6.68
+      },
+      "avg_ram_mb": {
+        "mean": 2238.9,
+        "std": 21.9
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 268664.0
+      }
+    },
+    "CALM": {
+      "cache_hit_rate": {
+        "mean": 62.67,
+        "std": 2.65,
+        "min": 60.0,
+        "max": 65.83
+      },
+      "avg_launch_latency": {
+        "mean": 1.2896,
+        "std": 0.0357,
+        "min": 1.2233,
+        "max": 1.3283
+      },
+      "thrashing_count": {
+        "mean": 43.8,
+        "std": 3.19
+      },
+      "avg_ram_mb": {
+        "mean": 2254.0,
+        "std": 26.9
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 270481.0
+      }
+    }
+  },
+  "random": {
+    "Random": {
+      "cache_hit_rate": {
+        "mean": 51.17,
+        "std": 5.24,
+        "min": 45.83,
+        "max": 59.17
+      },
+      "avg_launch_latency": {
+        "mean": 1.3067,
+        "std": 0.1078,
+        "min": 1.1408,
+        "max": 1.4163
+      },
+      "thrashing_count": {
+        "mean": 57.6,
+        "std": 6.28
+      },
+      "avg_ram_mb": {
+        "mean": 1993.2,
+        "std": 44.8
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 239180.0
+      }
+    },
+    "LRU": {
+      "cache_hit_rate": {
+        "mean": 51.17,
+        "std": 2.08,
+        "min": 49.17,
+        "max": 55.0
+      },
+      "avg_launch_latency": {
+        "mean": 1.3067,
+        "std": 0.0447,
+        "min": 1.2242,
+        "max": 1.3496
+      },
+      "thrashing_count": {
+        "mean": 57.6,
+        "std": 2.5
+      },
+      "avg_ram_mb": {
+        "mean": 2026.8,
+        "std": 52.0
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 243220.0
+      }
+    },
+    "LFU": {
+      "cache_hit_rate": {
+        "mean": 51.17,
+        "std": 4.14,
+        "min": 45.0,
+        "max": 56.67
+      },
+      "avg_launch_latency": {
+        "mean": 1.3067,
+        "std": 0.0851,
+        "min": 1.1938,
+        "max": 1.43
+      },
+      "thrashing_count": {
+        "mean": 57.6,
+        "std": 4.96
+      },
+      "avg_ram_mb": {
+        "mean": 2054.5,
+        "std": 36.3
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 246540.0
+      }
+    },
+    "Reactive": {
+      "cache_hit_rate": {
+        "mean": 66.5,
+        "std": 3.31,
+        "min": 63.33,
+        "max": 72.5
+      },
+      "avg_launch_latency": {
+        "mean": 1.1074,
+        "std": 0.0421,
+        "min": 1.0346,
+        "max": 1.1517
+      },
+      "thrashing_count": {
+        "mean": 39.2,
+        "std": 3.97
+      },
+      "avg_ram_mb": {
+        "mean": 2224.2,
+        "std": 33.9
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 266908.0
+      }
+    },
+    "Predictive-Only": {
+      "cache_hit_rate": {
+        "mean": 74.0,
+        "std": 2.55,
+        "min": 70.83,
+        "max": 78.33
+      },
+      "avg_launch_latency": {
+        "mean": 1.0892,
+        "std": 0.0455,
+        "min": 1.0229,
+        "max": 1.1642
+      },
+      "thrashing_count": {
+        "mean": 30.2,
+        "std": 3.06
+      },
+      "avg_ram_mb": {
+        "mean": 2099.3,
+        "std": 30.9
+      },
+      "peak_ram_mb": {
+        "mean": 2498.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 251919.0
+      }
+    },
+    "Pressure-Only": {
+      "cache_hit_rate": {
+        "mean": 67.17,
+        "std": 2.82,
+        "min": 62.5,
+        "max": 70.83
+      },
+      "avg_launch_latency": {
+        "mean": 1.1057,
+        "std": 0.0633,
+        "min": 1.0388,
+        "max": 1.2142
+      },
+      "thrashing_count": {
+        "mean": 38.4,
+        "std": 3.38
+      },
+      "avg_ram_mb": {
+        "mean": 2208.2,
+        "std": 16.2
+      },
+      "peak_ram_mb": {
+        "mean": 2498.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 264981.0
+      }
+    },
+    "CALM": {
+      "cache_hit_rate": {
+        "mean": 65.83,
+        "std": 1.9,
+        "min": 63.33,
+        "max": 68.33
+      },
+      "avg_launch_latency": {
+        "mean": 1.1102,
+        "std": 0.0537,
+        "min": 1.0275,
+        "max": 1.1829
+      },
+      "thrashing_count": {
+        "mean": 40.0,
+        "std": 2.28
+      },
+      "avg_ram_mb": {
+        "mean": 2234.8,
+        "std": 22.0
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 268174.0
+      }
+    }
+  },
+  "bursty": {
+    "Random": {
+      "cache_hit_rate": {
+        "mean": 74.0,
+        "std": 2.91,
+        "min": 68.33,
+        "max": 75.83
+      },
+      "avg_launch_latency": {
+        "mean": 0.7129,
+        "std": 0.0667,
+        "min": 0.65,
+        "max": 0.8408
+      },
+      "thrashing_count": {
+        "mean": 30.2,
+        "std": 3.49
+      },
+      "avg_ram_mb": {
+        "mean": 1969.5,
+        "std": 103.0
+      },
+      "peak_ram_mb": {
+        "mean": 2460.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 236340.0
+      }
+    },
+    "LRU": {
+      "cache_hit_rate": {
+        "mean": 74.67,
+        "std": 3.75,
+        "min": 69.17,
+        "max": 80.83
+      },
+      "avg_launch_latency": {
+        "mean": 0.6996,
+        "std": 0.0899,
+        "min": 0.55,
+        "max": 0.8242
+      },
+      "thrashing_count": {
+        "mean": 29.4,
+        "std": 4.5
+      },
+      "avg_ram_mb": {
+        "mean": 1999.5,
+        "std": 35.6
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 239940.0
+      }
+    },
+    "LFU": {
+      "cache_hit_rate": {
+        "mean": 74.83,
+        "std": 2.71,
+        "min": 71.67,
+        "max": 79.17
+      },
+      "avg_launch_latency": {
+        "mean": 0.6963,
+        "std": 0.0661,
+        "min": 0.6038,
+        "max": 0.7742
+      },
+      "thrashing_count": {
+        "mean": 29.2,
+        "std": 3.25
+      },
+      "avg_ram_mb": {
+        "mean": 2017.3,
+        "std": 52.3
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 242080.0
+      }
+    },
+    "Reactive": {
+      "cache_hit_rate": {
+        "mean": 83.0,
+        "std": 3.27,
+        "min": 76.67,
+        "max": 85.83
+      },
+      "avg_launch_latency": {
+        "mean": 0.5913,
+        "std": 0.0772,
+        "min": 0.4958,
+        "max": 0.7267
+      },
+      "thrashing_count": {
+        "mean": 19.4,
+        "std": 3.93
+      },
+      "avg_ram_mb": {
+        "mean": 2224.7,
+        "std": 32.0
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 266960.0
+      }
+    },
+    "Predictive-Only": {
+      "cache_hit_rate": {
+        "mean": 87.17,
+        "std": 2.15,
+        "min": 84.17,
+        "max": 90.0
+      },
+      "avg_launch_latency": {
+        "mean": 0.5907,
+        "std": 0.0701,
+        "min": 0.5,
+        "max": 0.6758
+      },
+      "thrashing_count": {
+        "mean": 14.4,
+        "std": 2.58
+      },
+      "avg_ram_mb": {
+        "mean": 1997.8,
+        "std": 30.3
+      },
+      "peak_ram_mb": {
+        "mean": 2493.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 239743.0
+      }
+    },
+    "Pressure-Only": {
+      "cache_hit_rate": {
+        "mean": 83.67,
+        "std": 2.02,
+        "min": 80.83,
+        "max": 86.67
+      },
+      "avg_launch_latency": {
+        "mean": 0.5954,
+        "std": 0.0635,
+        "min": 0.5179,
+        "max": 0.6842
+      },
+      "thrashing_count": {
+        "mean": 18.6,
+        "std": 2.42
+      },
+      "avg_ram_mb": {
+        "mean": 2154.2,
+        "std": 65.3
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 258510.0
+      }
+    },
+    "CALM": {
+      "cache_hit_rate": {
+        "mean": 83.33,
+        "std": 2.36,
+        "min": 80.83,
+        "max": 87.5
+      },
+      "avg_launch_latency": {
+        "mean": 0.5857,
+        "std": 0.0547,
+        "min": 0.5012,
+        "max": 0.6492
+      },
+      "thrashing_count": {
+        "mean": 19.0,
+        "std": 2.83
+      },
+      "avg_ram_mb": {
+        "mean": 2221.9,
+        "std": 31.4
+      },
+      "peak_ram_mb": {
+        "mean": 2482.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 266625.0
+      }
+    }
+  },
+  "productivity": {
+    "Random": {
+      "cache_hit_rate": {
+        "mean": 59.5,
+        "std": 4.17,
+        "min": 53.33,
+        "max": 65.83
+      },
+      "avg_launch_latency": {
+        "mean": 1.1861,
+        "std": 0.0879,
+        "min": 1.0454,
+        "max": 1.31
+      },
+      "thrashing_count": {
+        "mean": 47.6,
+        "std": 5.0
+      },
+      "avg_ram_mb": {
+        "mean": 2170.7,
+        "std": 62.7
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 260480.0
+      }
+    },
+    "LRU": {
+      "cache_hit_rate": {
+        "mean": 63.0,
+        "std": 3.75,
+        "min": 58.33,
+        "max": 69.17
+      },
+      "avg_launch_latency": {
+        "mean": 1.1161,
+        "std": 0.0779,
+        "min": 0.9788,
+        "max": 1.21
+      },
+      "thrashing_count": {
+        "mean": 43.4,
+        "std": 4.5
+      },
+      "avg_ram_mb": {
+        "mean": 2186.5,
+        "std": 36.6
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 262380.0
+      }
+    },
+    "LFU": {
+      "cache_hit_rate": {
+        "mean": 65.0,
+        "std": 3.61,
+        "min": 61.67,
+        "max": 71.67
+      },
+      "avg_launch_latency": {
+        "mean": 1.0761,
+        "std": 0.0777,
+        "min": 0.9288,
+        "max": 1.155
+      },
+      "thrashing_count": {
+        "mean": 41.0,
+        "std": 4.34
+      },
+      "avg_ram_mb": {
+        "mean": 2190.2,
+        "std": 60.5
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 262820.0
+      }
+    },
+    "Reactive": {
+      "cache_hit_rate": {
+        "mean": 73.16,
+        "std": 3.89,
+        "min": 68.33,
+        "max": 80.0
+      },
+      "avg_launch_latency": {
+        "mean": 0.9839,
+        "std": 0.0743,
+        "min": 0.8379,
+        "max": 1.045
+      },
+      "thrashing_count": {
+        "mean": 31.2,
+        "std": 4.66
+      },
+      "avg_ram_mb": {
+        "mean": 2314.6,
+        "std": 27.5
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 277752.0
+      }
+    },
+    "Predictive-Only": {
+      "cache_hit_rate": {
+        "mean": 81.17,
+        "std": 2.15,
+        "min": 79.17,
+        "max": 84.17
+      },
+      "avg_launch_latency": {
+        "mean": 0.9511,
+        "std": 0.0531,
+        "min": 0.8538,
+        "max": 1.0092
+      },
+      "thrashing_count": {
+        "mean": 21.6,
+        "std": 2.58
+      },
+      "avg_ram_mb": {
+        "mean": 2245.9,
+        "std": 41.7
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 269515.0
+      }
+    },
+    "Pressure-Only": {
+      "cache_hit_rate": {
+        "mean": 77.5,
+        "std": 2.3,
+        "min": 75.0,
+        "max": 81.67
+      },
+      "avg_launch_latency": {
+        "mean": 0.9159,
+        "std": 0.0588,
+        "min": 0.8104,
+        "max": 0.9875
+      },
+      "thrashing_count": {
+        "mean": 26.0,
+        "std": 2.76
+      },
+      "avg_ram_mb": {
+        "mean": 2319.4,
+        "std": 42.0
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 278329.0
+      }
+    },
+    "CALM": {
+      "cache_hit_rate": {
+        "mean": 77.83,
+        "std": 2.61,
+        "min": 75.0,
+        "max": 82.5
+      },
+      "avg_launch_latency": {
+        "mean": 0.9046,
+        "std": 0.067,
+        "min": 0.7821,
+        "max": 0.9767
+      },
+      "thrashing_count": {
+        "mean": 25.6,
+        "std": 3.14
+      },
+      "avg_ram_mb": {
+        "mean": 2310.0,
+        "std": 30.6
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 277207.0
+      }
+    }
+  },
+  "social_media": {
+    "Random": {
+      "cache_hit_rate": {
+        "mean": 59.0,
+        "std": 5.38,
+        "min": 52.5,
+        "max": 67.5
+      },
+      "avg_launch_latency": {
+        "mean": 1.1961,
+        "std": 0.1111,
+        "min": 1.0121,
+        "max": 1.3383
+      },
+      "thrashing_count": {
+        "mean": 48.2,
+        "std": 6.46
+      },
+      "avg_ram_mb": {
+        "mean": 1976.2,
+        "std": 34.4
+      },
+      "peak_ram_mb": {
+        "mean": 2420.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 237140.0
+      }
+    },
+    "LRU": {
+      "cache_hit_rate": {
+        "mean": 61.5,
+        "std": 5.15,
+        "min": 55.83,
+        "max": 70.83
+      },
+      "avg_launch_latency": {
+        "mean": 1.1461,
+        "std": 0.1088,
+        "min": 0.9454,
+        "max": 1.2717
+      },
+      "thrashing_count": {
+        "mean": 45.2,
+        "std": 6.18
+      },
+      "avg_ram_mb": {
+        "mean": 1972.7,
+        "std": 24.4
+      },
+      "peak_ram_mb": {
+        "mean": 2380.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 236720.0
+      }
+    },
+    "LFU": {
+      "cache_hit_rate": {
+        "mean": 65.0,
+        "std": 7.8,
+        "min": 54.17,
+        "max": 77.5
+      },
+      "avg_launch_latency": {
+        "mean": 1.0761,
+        "std": 0.1614,
+        "min": 0.8121,
+        "max": 1.305
+      },
+      "thrashing_count": {
+        "mean": 41.0,
+        "std": 9.36
+      },
+      "avg_ram_mb": {
+        "mean": 1942.5,
+        "std": 41.3
+      },
+      "peak_ram_mb": {
+        "mean": 2340.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 233100.0
+      }
+    },
+    "Reactive": {
+      "cache_hit_rate": {
+        "mean": 75.5,
+        "std": 4.91,
+        "min": 70.83,
+        "max": 84.17
+      },
+      "avg_launch_latency": {
+        "mean": 0.9641,
+        "std": 0.1033,
+        "min": 0.7721,
+        "max": 1.0658
+      },
+      "thrashing_count": {
+        "mean": 28.4,
+        "std": 5.89
+      },
+      "avg_ram_mb": {
+        "mean": 2243.4,
+        "std": 15.1
+      },
+      "peak_ram_mb": {
+        "mean": 2485.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 269214.0
+      }
+    },
+    "Predictive-Only": {
+      "cache_hit_rate": {
+        "mean": 85.0,
+        "std": 1.58,
+        "min": 83.33,
+        "max": 87.5
+      },
+      "avg_launch_latency": {
+        "mean": 0.9328,
+        "std": 0.0541,
+        "min": 0.8338,
+        "max": 0.9842
+      },
+      "thrashing_count": {
+        "mean": 17.0,
+        "std": 1.9
+      },
+      "avg_ram_mb": {
+        "mean": 2122.2,
+        "std": 47.8
+      },
+      "peak_ram_mb": {
+        "mean": 2487.0,
+        "max": 2490.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 254659.0
+      }
+    },
+    "Pressure-Only": {
+      "cache_hit_rate": {
+        "mean": 80.17,
+        "std": 3.51,
+        "min": 75.0,
+        "max": 85.0
+      },
+      "avg_launch_latency": {
+        "mean": 0.8941,
+        "std": 0.092,
+        "min": 0.7554,
+        "max": 1.04
+      },
+      "thrashing_count": {
+        "mean": 22.8,
+        "std": 4.21
+      },
+      "avg_ram_mb": {
+        "mean": 2224.8,
+        "std": 35.6
+      },
+      "peak_ram_mb": {
+        "mean": 2466.0,
+        "max": 2485.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 266971.0
+      }
+    },
+    "CALM": {
+      "cache_hit_rate": {
+        "mean": 80.67,
+        "std": 2.95,
+        "min": 76.67,
+        "max": 83.33
+      },
+      "avg_launch_latency": {
+        "mean": 0.8876,
+        "std": 0.079,
+        "min": 0.7888,
+        "max": 1.0183
+      },
+      "thrashing_count": {
+        "mean": 22.2,
+        "std": 3.54
+      },
+      "avg_ram_mb": {
+        "mean": 2221.1,
+        "std": 20.5
+      },
+      "peak_ram_mb": {
+        "mean": 2455.0,
+        "max": 2485.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 266524.0
+      }
+    }
+  },
+  "context_switching": {
+    "Random": {
+      "cache_hit_rate": {
+        "mean": 61.67,
+        "std": 3.25,
+        "min": 55.83,
+        "max": 65.0
+      },
+      "avg_launch_latency": {
+        "mean": 1.1334,
+        "std": 0.0684,
+        "min": 1.0738,
+        "max": 1.2571
+      },
+      "thrashing_count": {
+        "mean": 45.0,
+        "std": 3.9
+      },
+      "avg_ram_mb": {
+        "mean": 2032.2,
+        "std": 53.3
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 243860.0
+      }
+    },
+    "LRU": {
+      "cache_hit_rate": {
+        "mean": 67.67,
+        "std": 3.47,
+        "min": 61.67,
+        "max": 70.83
+      },
+      "avg_launch_latency": {
+        "mean": 1.0134,
+        "std": 0.0707,
+        "min": 0.9475,
+        "max": 1.1317
+      },
+      "thrashing_count": {
+        "mean": 37.8,
+        "std": 4.17
+      },
+      "avg_ram_mb": {
+        "mean": 2036.2,
+        "std": 41.5
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 244340.0
+      }
+    },
+    "LFU": {
+      "cache_hit_rate": {
+        "mean": 60.33,
+        "std": 7.26,
+        "min": 54.17,
+        "max": 74.17
+      },
+      "avg_launch_latency": {
+        "mean": 1.1601,
+        "std": 0.143,
+        "min": 0.8904,
+        "max": 1.2904
+      },
+      "thrashing_count": {
+        "mean": 46.6,
+        "std": 8.71
+      },
+      "avg_ram_mb": {
+        "mean": 2026.7,
+        "std": 59.8
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 243200.0
+      }
+    },
+    "Reactive": {
+      "cache_hit_rate": {
+        "mean": 73.83,
+        "std": 2.82,
+        "min": 70.0,
+        "max": 76.67
+      },
+      "avg_launch_latency": {
+        "mean": 0.9333,
+        "std": 0.0621,
+        "min": 0.8717,
+        "max": 1.0233
+      },
+      "thrashing_count": {
+        "mean": 30.4,
+        "std": 3.38
+      },
+      "avg_ram_mb": {
+        "mean": 2282.3,
+        "std": 27.6
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 273873.0
+      }
+    },
+    "Predictive-Only": {
+      "cache_hit_rate": {
+        "mean": 83.0,
+        "std": 2.01,
+        "min": 79.17,
+        "max": 85.0
+      },
+      "avg_launch_latency": {
+        "mean": 0.9156,
+        "std": 0.0387,
+        "min": 0.8471,
+        "max": 0.9537
+      },
+      "thrashing_count": {
+        "mean": 19.4,
+        "std": 2.42
+      },
+      "avg_ram_mb": {
+        "mean": 2110.0,
+        "std": 81.0
+      },
+      "peak_ram_mb": {
+        "mean": 2482.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 253205.0
+      }
+    },
+    "Pressure-Only": {
+      "cache_hit_rate": {
+        "mean": 76.0,
+        "std": 4.42,
+        "min": 70.0,
+        "max": 83.33
+      },
+      "avg_launch_latency": {
+        "mean": 0.9506,
+        "std": 0.0818,
+        "min": 0.8296,
+        "max": 1.0846
+      },
+      "thrashing_count": {
+        "mean": 27.8,
+        "std": 5.31
+      },
+      "avg_ram_mb": {
+        "mean": 2242.6,
+        "std": 35.7
+      },
+      "peak_ram_mb": {
+        "mean": 2484.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 269104.0
+      }
+    },
+    "CALM": {
+      "cache_hit_rate": {
+        "mean": 78.17,
+        "std": 3.31,
+        "min": 75.0,
+        "max": 84.17
+      },
+      "avg_launch_latency": {
+        "mean": 0.8793,
+        "std": 0.0652,
+        "min": 0.7604,
+        "max": 0.9496
+      },
+      "thrashing_count": {
+        "mean": 25.2,
+        "std": 3.97
+      },
+      "avg_ram_mb": {
+        "mean": 2261.8,
+        "std": 28.8
+      },
+      "peak_ram_mb": {
+        "mean": 2468.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 271419.0
+      }
+    }
+  },
+  "adversarial": {
+    "Random": {
+      "cache_hit_rate": {
+        "mean": 28.0,
+        "std": 4.14,
+        "min": 23.33,
+        "max": 35.0
+      },
+      "avg_launch_latency": {
+        "mean": 1.84,
+        "std": 0.0827,
+        "min": 1.7,
+        "max": 1.9333
+      },
+      "thrashing_count": {
+        "mean": 85.4,
+        "std": 4.96
+      },
+      "avg_ram_mb": {
+        "mean": 2017.2,
+        "std": 27.4
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 242060.0
+      }
+    },
+    "LRU": {
+      "cache_hit_rate": {
+        "mean": 20.5,
+        "std": 5.54,
+        "min": 15.83,
+        "max": 29.17
+      },
+      "avg_launch_latency": {
+        "mean": 1.99,
+        "std": 0.1108,
+        "min": 1.8167,
+        "max": 2.0833
+      },
+      "thrashing_count": {
+        "mean": 94.4,
+        "std": 6.65
+      },
+      "avg_ram_mb": {
+        "mean": 1994.3,
+        "std": 20.1
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 239320.0
+      }
+    },
+    "LFU": {
+      "cache_hit_rate": {
+        "mean": 37.83,
+        "std": 3.64,
+        "min": 33.33,
+        "max": 42.5
+      },
+      "avg_launch_latency": {
+        "mean": 1.6433,
+        "std": 0.0727,
+        "min": 1.55,
+        "max": 1.7333
+      },
+      "thrashing_count": {
+        "mean": 73.6,
+        "std": 4.36
+      },
+      "avg_ram_mb": {
+        "mean": 2055.5,
+        "std": 71.1
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 246660.0
+      }
+    },
+    "Reactive": {
+      "cache_hit_rate": {
+        "mean": 30.33,
+        "std": 5.54,
+        "min": 24.17,
+        "max": 40.0
+      },
+      "avg_launch_latency": {
+        "mean": 1.8622,
+        "std": 0.1098,
+        "min": 1.6758,
+        "max": 1.975
+      },
+      "thrashing_count": {
+        "mean": 82.6,
+        "std": 6.65
+      },
+      "avg_ram_mb": {
+        "mean": 2262.3,
+        "std": 8.3
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 271478.0
+      }
+    },
+    "Predictive-Only": {
+      "cache_hit_rate": {
+        "mean": 75.33,
+        "std": 4.0,
+        "min": 70.83,
+        "max": 80.83
+      },
+      "avg_launch_latency": {
+        "mean": 1.325,
+        "std": 0.054,
+        "min": 1.2542,
+        "max": 1.3975
+      },
+      "thrashing_count": {
+        "mean": 28.6,
+        "std": 4.8
+      },
+      "avg_ram_mb": {
+        "mean": 2232.8,
+        "std": 19.4
+      },
+      "peak_ram_mb": {
+        "mean": 2498.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 267930.0
+      }
+    },
+    "Pressure-Only": {
+      "cache_hit_rate": {
+        "mean": 40.67,
+        "std": 4.72,
+        "min": 34.17,
+        "max": 45.83
+      },
+      "avg_launch_latency": {
+        "mean": 1.701,
+        "std": 0.0822,
+        "min": 1.6333,
+        "max": 1.8275
+      },
+      "thrashing_count": {
+        "mean": 70.2,
+        "std": 5.67
+      },
+      "avg_ram_mb": {
+        "mean": 2265.3,
+        "std": 20.0
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 271838.0
+      }
+    },
+    "CALM": {
+      "cache_hit_rate": {
+        "mean": 62.33,
+        "std": 3.47,
+        "min": 57.5,
+        "max": 66.67
+      },
+      "avg_launch_latency": {
+        "mean": 1.3925,
+        "std": 0.0681,
+        "min": 1.31,
+        "max": 1.4892
+      },
+      "thrashing_count": {
+        "mean": 44.2,
+        "std": 4.17
+      },
+      "avg_ram_mb": {
+        "mean": 2271.8,
+        "std": 7.6
+      },
+      "peak_ram_mb": {
+        "mean": 2500.0,
+        "max": 2500.0
+      },
+      "memory_time_mb_ticks": {
+        "mean": 272618.0
+      }
+    }
+  }
+}

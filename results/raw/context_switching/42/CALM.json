@@ -1,0 +1,42 @@
+{
+  "metrics": {
+    "strategy_name": "CALM",
+    "workload_name": "context_switching",
+    "seed": 42,
+    "num_requests": 120,
+    "cache_hit_rate_pct": 75.0,
+    "avg_launch_latency_sec": 0.9496,
+    "p95_launch_latency_sec": 2.4,
+    "p99_launch_latency_sec": 2.4,
+    "avg_ram_mb": 2242.2,
+    "peak_ram_mb": 2420.0,
+    "min_ram_mb": 900.0,
+    "memory_time_mb_ticks": 269065.0,
+    "total_reclaimed_mb": 28010.0,
+    "compression_savings_mb_ticks": 0.0,
+    "budget_violations_count": 0,
+    "thrashing_count": 29,
+    "oscillation_count": 0,
+    "unnecessary_evictions_count": 0,
+    "total_evictions_count": 30,
+    "state_distribution": {
+      "ACTIVE": 20.0,
+      "CACHED": 31.33,
+      "COMPRESSED": 19.17,
+      "ARCHIVED": 29.5
+    },
+    "prediction_top_1_accuracy": 47.9,
+    "prediction_top_3_accuracy": 85.71,
+    "mean_prediction_confidence": 0.2506
+  },
+  "trace_length": 120,
+  "pred_metrics": {
+    "top_1_accuracy": 47.9,
+    "top_3_accuracy": 85.71,
+    "top_k_accuracy": 85.71,
+    "mean_confidence": 0.2506,
+    "mean_entropy": 1.74,
+    "brier_score": 0.6394,
+    "sample_count": 119
+  }
+}

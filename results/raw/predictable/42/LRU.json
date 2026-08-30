@@ -1,0 +1,42 @@
+{
+  "metrics": {
+    "strategy_name": "LRU",
+    "workload_name": "predictable",
+    "seed": 42,
+    "num_requests": 120,
+    "cache_hit_rate_pct": 33.33,
+    "avg_launch_latency_sec": 1.6954,
+    "p95_launch_latency_sec": 2.4,
+    "p99_launch_latency_sec": 2.4,
+    "avg_ram_mb": 1970.8,
+    "peak_ram_mb": 2500.0,
+    "min_ram_mb": 800.0,
+    "memory_time_mb_ticks": 236500.0,
+    "total_reclaimed_mb": 63300.0,
+    "compression_savings_mb_ticks": 0.0,
+    "budget_violations_count": 0,
+    "thrashing_count": 79,
+    "oscillation_count": 0,
+    "unnecessary_evictions_count": 0,
+    "total_evictions_count": 80,
+    "state_distribution": {
+      "ACTIVE": 20.0,
+      "CACHED": 29.17,
+      "COMPRESSED": 0.0,
+      "ARCHIVED": 50.83
+    },
+    "prediction_top_1_accuracy": 62.18,
+    "prediction_top_3_accuracy": 84.87,
+    "mean_prediction_confidence": 0.3113
+  },
+  "trace_length": 120,
+  "pred_metrics": {
+    "top_1_accuracy": 62.18,
+    "top_3_accuracy": 84.87,
+    "top_k_accuracy": 84.87,
+    "mean_confidence": 0.3113,
+    "mean_entropy": 1.5991,
+    "brier_score": 0.5759,
+    "sample_count": 119
+  }
+}

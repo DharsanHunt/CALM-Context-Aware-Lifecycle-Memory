@@ -1,0 +1,42 @@
+{
+  "metrics": {
+    "strategy_name": "LFU",
+    "workload_name": "predictable",
+    "seed": 43,
+    "num_requests": 120,
+    "cache_hit_rate_pct": 39.17,
+    "avg_launch_latency_sec": 1.5758,
+    "p95_launch_latency_sec": 2.4,
+    "p99_launch_latency_sec": 2.4,
+    "avg_ram_mb": 1973.3,
+    "peak_ram_mb": 2500.0,
+    "min_ram_mb": 500.0,
+    "memory_time_mb_ticks": 236800.0,
+    "total_reclaimed_mb": 54800.0,
+    "compression_savings_mb_ticks": 0.0,
+    "budget_violations_count": 0,
+    "thrashing_count": 72,
+    "oscillation_count": 0,
+    "unnecessary_evictions_count": 0,
+    "total_evictions_count": 73,
+    "state_distribution": {
+      "ACTIVE": 20.0,
+      "CACHED": 25.83,
+      "COMPRESSED": 0.0,
+      "ARCHIVED": 54.17
+    },
+    "prediction_top_1_accuracy": 56.3,
+    "prediction_top_3_accuracy": 82.35,
+    "mean_prediction_confidence": 0.308
+  },
+  "trace_length": 120,
+  "pred_metrics": {
+    "top_1_accuracy": 56.3,
+    "top_3_accuracy": 82.35,
+    "top_k_accuracy": 82.35,
+    "mean_confidence": 0.308,
+    "mean_entropy": 1.6067,
+    "brier_score": 0.6477,
+    "sample_count": 119
+  }
+}

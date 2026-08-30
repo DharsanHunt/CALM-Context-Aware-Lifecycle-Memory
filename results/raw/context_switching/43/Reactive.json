@@ -1,0 +1,42 @@
+{
+  "metrics": {
+    "strategy_name": "Reactive",
+    "workload_name": "context_switching",
+    "seed": 43,
+    "num_requests": 120,
+    "cache_hit_rate_pct": 70.0,
+    "avg_launch_latency_sec": 1.0233,
+    "p95_launch_latency_sec": 2.4,
+    "p99_launch_latency_sec": 2.4,
+    "avg_ram_mb": 2288.2,
+    "peak_ram_mb": 2500.0,
+    "min_ram_mb": 500.0,
+    "memory_time_mb_ticks": 274580.0,
+    "total_reclaimed_mb": 31175.0,
+    "compression_savings_mb_ticks": 0.0,
+    "budget_violations_count": 0,
+    "thrashing_count": 35,
+    "oscillation_count": 0,
+    "unnecessary_evictions_count": 0,
+    "total_evictions_count": 36,
+    "state_distribution": {
+      "ACTIVE": 20.0,
+      "CACHED": 35.83,
+      "COMPRESSED": 15.67,
+      "ARCHIVED": 28.5
+    },
+    "prediction_top_1_accuracy": 39.5,
+    "prediction_top_3_accuracy": 82.35,
+    "mean_prediction_confidence": 0.2489
+  },
+  "trace_length": 120,
+  "pred_metrics": {
+    "top_1_accuracy": 39.5,
+    "top_3_accuracy": 82.35,
+    "top_k_accuracy": 82.35,
+    "mean_confidence": 0.2489,
+    "mean_entropy": 1.7439,
+    "brier_score": 0.7014,
+    "sample_count": 119
+  }
+}
