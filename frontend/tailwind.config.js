@@ -25,6 +25,8 @@ export default {
       fontFamily: {
         sans: ['Inter', '-apple-system', 'sans-serif'],
         mono: ['IBM Plex Mono', 'monospace'],
+        serif: ['Newsreader', 'Playfair Display', 'Georgia', 'serif'],
+        display: ['Newsreader', 'Playfair Display', 'serif'],
       },
     },
   },

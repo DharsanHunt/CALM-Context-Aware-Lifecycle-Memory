@@ -67,19 +67,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex">
-      {/* Side Navigation Bar */}
-      <Sidebar
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-        onSimulate={handleSimulate}
-        isSimulating={isSimulating}
-      />
-
-      {/* Main Content Area */}
-      <div className="flex-1 ml-56 flex flex-col min-h-screen">
+    <div className="min-h-screen bg-[#F8F9FB] text-slate-800 antialiased selection:bg-purple-100 selection:text-purple-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <Header
-          activeTabTitle={tabTitles[activeTab] || 'CALM Console'}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
           workload={workload}
           setWorkload={setWorkload}
           ramLimit={ramLimit}
@@ -88,10 +80,20 @@ export default function App() {
           setAggression={setAggression}
           mode={mode}
           setMode={setMode}
+          onSimulate={handleSimulate}
+          isSimulating={isSimulating}
         />
 
-        <main className="flex-1 mt-16 p-8 max-w-7xl w-full mx-auto">
-          {activeTab === 'overview' && <Overview simData={simData} />}
+        <main className="mt-6">
+          {activeTab === 'overview' && (
+            <Overview
+              simData={simData}
+              workload={workload}
+              setWorkload={setWorkload}
+              onSimulate={handleSimulate}
+              isSimulating={isSimulating}
+            />
+          )}
           {activeTab === 'lifecycle' && <LifecycleMonitor simData={simData} />}
           {activeTab === 'prediction' && <Prediction simData={simData} />}
           {activeTab === 'memory' && <MemoryManagement simData={simData} config={simData?.config || {}} />}
