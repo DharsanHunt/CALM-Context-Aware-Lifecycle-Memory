@@ -8,6 +8,7 @@ const TABS = [
   { id: 'benchmarks', label: 'Benchmarks', icon: 'speed' },
   { id: 'ablation', label: 'Ablation', icon: 'science' },
   { id: 'agent', label: 'Agent Memory', icon: 'smart_toy' },
+  { id: 'real_os', label: 'Host OS Monitor', icon: 'terminal' },
 ];
 
 export function Sidebar({ activeTab, setActiveTab, onSimulate, isSimulating }) {

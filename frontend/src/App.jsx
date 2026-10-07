@@ -8,6 +8,7 @@ import { MemoryManagement } from './views/MemoryManagement';
 import { BenchmarkSuite } from './views/BenchmarkSuite';
 import { ComponentAblation } from './views/ComponentAblation';
 import { AgentMemory } from './views/AgentMemory';
+import { LiveOSMonitor } from './views/LiveOSMonitor';
 import { runSimulation } from './api';
 
 export default function App() {
@@ -62,6 +63,7 @@ export default function App() {
     benchmarks: 'Benchmark Suite',
     ablation: 'Component Ablation',
     agent: 'AI Agent Memory (Mode B)',
+    real_os: 'Host Operating System Monitor',
   };
 
   return (
@@ -96,6 +98,7 @@ export default function App() {
           {activeTab === 'benchmarks' && <BenchmarkSuite simData={simData} />}
           {activeTab === 'ablation' && <ComponentAblation />}
           {activeTab === 'agent' && <AgentMemory />}
+          {activeTab === 'real_os' && <LiveOSMonitor />}
         </main>
       </div>
     </div>

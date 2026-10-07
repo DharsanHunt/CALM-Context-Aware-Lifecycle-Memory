@@ -135,6 +135,70 @@ def cmd_llm(args: argparse.Namespace) -> None:
     print(f"Estimated Cost Savings   : ${res.cost_savings_usd_per_1k_calls:.4f} per 1,000 queries\n")
 
 
+def cmd_trim(args: argparse.Namespace) -> None:
+    """Trims working set of a specific PID or all background apps."""
+    adapter = RealOSTelemetryAdapter()
+    if args.pid:
+        res = adapter.trim_process_working_set(args.pid)
+        print("\n=======================================================")
+        print(f"  CALM Real OS Working Set Trim: PID {args.pid}")
+        print("=======================================================")
+        if res.get("success"):
+            print(f"Process Name   : {res.get('name')}")
+            print(f"Initial RSS    : {res.get('before_rss_mb')} MB")
+            print(f"Post-Trim RSS  : {res.get('after_rss_mb')} MB")
+            print(f"RAM Reclaimed  : {res.get('reclaimed_mb')} MB ({res.get('reclaimed_pct')}%)")
+            print("Status         : Working set pages flushed to standby list successfully.\n")
+        else:
+            print(f"Failed: {res.get('reason') or res.get('error')}\n")
+    else:
+        res = adapter.trim_all_background_processes(min_rss_mb=args.min_rss)
+        print("\n=======================================================")
+        print("  CALM Bulk Background Working Set Trim")
+        print("=======================================================")
+        print(f"Processes Trimmed : {res['trimmed_process_count']}")
+        print(f"Total Reclaimed   : {res['total_reclaimed_mb']} MB")
+        for p in res["processes"]:
+            print(f"  PID {p['pid']:<6} {p['name']:<20}: {p['before_rss_mb']} MB -> {p['after_rss_mb']} MB (Reclaimed {p['reclaimed_mb']} MB)")
+        print("")
+
+
+def cmd_daemon(args: argparse.Namespace) -> None:
+    """Runs autonomous background memory pressure watchdog."""
+    import time
+    adapter = RealOSTelemetryAdapter()
+    print("\n=======================================================")
+    print(f"  CALM Real-Time Memory Pressure Daemon")
+    print(f"  Watchdog Interval: {args.interval}s | Pressure Threshold: {args.threshold}%")
+    print("=======================================================")
+    print("Press Ctrl+C to terminate daemon.\n")
+
+    iterations = 0
+    total_lifetime_reclaimed = 0.0
+
+    try:
+        while True:
+            mem = adapter.get_host_memory()
+            pressure_flag = f"[{mem.pressure_level}]"
+            print(f"[{time.strftime('%H:%M:%S')}] Host RAM: {mem.used_mb:,.0f}/{mem.total_mb:,.0f} MB ({mem.percent_used:.1f}%) {pressure_flag:<10}", end="")
+
+            if mem.percent_used >= args.threshold:
+                print(" ➔ Triggering proactive working set reclamation...", end="")
+                res = adapter.trim_all_background_processes(min_rss_mb=50.0)
+                reclaimed = res.get("total_reclaimed_mb", 0.0)
+                total_lifetime_reclaimed += reclaimed
+                print(f" [Freed {reclaimed:.1f} MB across {res.get('trimmed_process_count', 0)} procs]")
+            else:
+                print(" [Normal Headroom]")
+
+            iterations += 1
+            if args.iterations and iterations >= args.iterations:
+                break
+            time.sleep(args.interval)
+    except KeyboardInterrupt:
+        print(f"\n[DAEMON] Terminated. Lifetime physical RAM reclaimed: {total_lifetime_reclaimed:.1f} MB.")
+
+
 def cmd_serve(args: argparse.Namespace) -> None:
     """Launches the REST API server and React console."""
     import server
@@ -180,6 +244,19 @@ def main() -> None:
     p_llm.add_argument("--budget", type=int, default=1500)
     p_llm.add_argument("--window", type=int, default=2)
     p_llm.set_defaults(func=cmd_llm)
+
+    # trim
+    p_trim = subparsers.add_parser("trim", help="Execute real OS working set trimming on PID or all background apps")
+    p_trim.add_argument("--pid", type=int, help="Target process PID (omit to trim all background apps)")
+    p_trim.add_argument("--min-rss", type=float, default=50.0, help="Minimum RSS in MB to target for bulk trim")
+    p_trim.set_defaults(func=cmd_trim)
+
+    # daemon
+    p_daemon = subparsers.add_parser("daemon", help="Run autonomous background memory pressure watchdog")
+    p_daemon.add_argument("--interval", type=float, default=2.0, help="Watchdog check interval in seconds")
+    p_daemon.add_argument("--threshold", type=float, default=75.0, help="Host RAM pressure threshold %% to trigger trim")
+    p_daemon.add_argument("--iterations", type=int, default=None, help="Stop after N iterations (default runs forever)")
+    p_daemon.set_defaults(func=cmd_daemon)
 
     # serve
     p_srv = subparsers.add_parser("serve", help="Launch Flask REST API & React console")

@@ -295,6 +295,17 @@ def trim_real_os_process():
     return jsonify(result)
 
 
+@app.route("/api/real_os/trim_all", methods=["POST"])
+def trim_all_real_os_processes():
+    from calm.adapters.real_os import RealOSTelemetryAdapter
+    req = request.get_json(force=True) or {}
+    min_rss = float(req.get("min_rss_mb", 50.0))
+    adapter = RealOSTelemetryAdapter()
+    result = adapter.trim_all_background_processes(min_rss_mb=min_rss)
+    return jsonify(result)
+
+
+
 # ── Real LLM Context Optimization Endpoints ──────────────────────────────────
 
 @app.route("/api/llm/optimize", methods=["POST"])
