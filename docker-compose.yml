@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  calm-console:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: calm-v2-systems-console
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+    volumes:
+      - ./results:/app/results
+    restart: unless-stopped

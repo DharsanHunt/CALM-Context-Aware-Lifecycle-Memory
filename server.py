@@ -269,6 +269,54 @@ def access_agent_chunk():
     })
 
 
+# ── Real OS Telemetry Endpoints ──────────────────────────────────────────────
+
+@app.route("/api/real_os/status", methods=["GET"])
+def get_real_os_status():
+    from calm.adapters.real_os import RealOSTelemetryAdapter
+    adapter = RealOSTelemetryAdapter()
+    mem = adapter.get_host_memory()
+    procs = adapter.scan_target_processes()
+    return jsonify({
+        "memory": mem.to_dict(),
+        "processes": [p.to_dict() for p in procs[:15]],
+    })
+
+
+@app.route("/api/real_os/trim", methods=["POST"])
+def trim_real_os_process():
+    from calm.adapters.real_os import RealOSTelemetryAdapter
+    req = request.get_json(force=True) or {}
+    pid = req.get("pid")
+    if not pid:
+        return jsonify({"error": "Missing pid"}), 400
+    adapter = RealOSTelemetryAdapter()
+    result = adapter.trim_process_working_set(int(pid))
+    return jsonify(result)
+
+
+# ── Real LLM Context Optimization Endpoints ──────────────────────────────────
+
+@app.route("/api/llm/optimize", methods=["POST"])
+def optimize_llm_context():
+    from calm.adapters.llm_context import LLMContextManager, ItemType
+    req = request.get_json(force=True) or {}
+    token_budget = int(req.get("token_budget", 1500))
+    window_turns = int(req.get("active_window_turns", 2))
+
+    mgr = LLMContextManager(token_budget=token_budget, active_window_turns=window_turns)
+    mgr.add_message("system", "You are an autonomous AI systems architect managing memory lifecycles.", importance=1.0)
+    mgr.add_message("user", "Analyze the Android Low Memory Killer (LMK) trace logs.", importance=0.8)
+    mgr.add_message("assistant", "Parsed 450 events. Detected rising pressure slope at tick 82.", importance=0.7)
+    mgr.add_message("tool", "PAGE FAULT TRACE LOG: page_fault=1200, swap_used=412MB, psi_some=12.4%, psi_full=3.1%" * 20, item_type=ItemType.TOOL_RESULT, importance=0.3)
+    mgr.add_message("user", "What is the recommended proactive policy?", importance=0.9)
+    mgr.add_message("assistant", "Recommend proactive compression of low-priority background buffers to avoid synchronous direct reclaim stall.", importance=0.85)
+
+    res = mgr.optimize_context()
+    return jsonify(res.to_dict())
+
+
+
 # ── Serve Built React Frontend ───────────────────────────────────────────────
 
 @app.route("/", defaults={"path": ""})

@@ -45,3 +45,21 @@ class BenchmarkReporter:
                 "Memory-Time (MB·ticks)": f"{stats['memory_time_mean']:,.0f}",
             })
         return pd.DataFrame(rows)
+
+    @staticmethod
+    def format_comparison_table(metrics_list: List[Any]) -> str:
+        """Formats a list of RunResultMetrics into a clean ASCII table."""
+        header = f"{'Strategy':<18} {'Hit Rate (%)':<14} {'Avg Latency (s)':<16} {'P95 Lat (s)':<14} {'Avg RAM (MB)':<14} {'Thrashing':<10}"
+        sep = "-" * len(header)
+        lines = [header, sep]
+        for m in metrics_list:
+            lines.append(
+                f"{m.strategy_name:<18} "
+                f"{m.cache_hit_rate_pct:<14.1f} "
+                f"{m.avg_launch_latency_sec:<16.4f} "
+                f"{m.p95_launch_latency_sec:<14.4f} "
+                f"{m.avg_ram_mb:<14.0f} "
+                f"{m.thrashing_count:<10}"
+            )
+        return "\n".join(lines)
+
