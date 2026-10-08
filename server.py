@@ -342,6 +342,16 @@ def serve_frontend(path):
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8000))
+    import socket
+
+    def is_port_in_use(p):
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            return s.connect_ex(('127.0.0.1', p)) == 0
+
+    default_port = 8000
+    if is_port_in_use(default_port) and "PORT" not in os.environ:
+        default_port = 8080
+
+    port = int(os.environ.get("PORT", default_port))
     print(f"🚀 CALM V2 React + Flask Console running on http://localhost:{port}")
     app.run(host="0.0.0.0", port=port, debug=False)
